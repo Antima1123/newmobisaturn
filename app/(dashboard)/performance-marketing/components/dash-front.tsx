@@ -16,7 +16,7 @@ const DashPerformance = () =>{
                 </div>
 
                 <div className="mt-4 w-full">
-                    <Image src='/Mobile-Marketing.png' height={1000} width={1000} alt="dash" className="lg:w-[1000px] w-[300px] object-contain"/>
+                    <Image src='/wifi.png' height={1000} width={1000} alt="dash" className="lg:w-[1000px] w-[300px] object-contain"/>
                 </div>
             </div>
             </section>

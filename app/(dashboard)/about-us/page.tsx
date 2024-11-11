@@ -15,7 +15,7 @@ export default function AboutUs() {
         )
       }
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-[#D9083C] to-[#ff1f59] py-20">
+      <section className="relative bg-gradient-to-r from-red-500 to-red-700 py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">

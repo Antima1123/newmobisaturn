@@ -17,7 +17,7 @@ const DashFront = () =>{
                 </div>
 
                 <div className="mt-4 w-full">
-                    <Image src='/Marketing-consulting.png' height={1000} width={1000} alt="pageimg" className="lg:w-[1000px] w-[300px] object-contain"/>
+                    <Image src='/bg.png' height={1000} width={1000} alt="pageimg" className="lg:w-[1000px] w-[300px] object-contain"/>
                 </div>
             </div>
             </section>
