@@ -16,29 +16,9 @@ const Header = () =>{
         setActive(!active)
     }
 
-
-    const [showCard, setShowCard] = useState(false)
-
-     // Disable body scroll when popup is shown
-  useEffect(() => {
-    if (showCard) { 
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-    return () => {
-      document.body.style.overflow = "auto"; // Cleanup on component unmount
-    };
-  }, [showCard]);
-
-
-  const closeCard = (e: React.MouseEvent) => {
-    e.stopPropagation(); // Prevents the click from triggering handleCard
-    setShowCard(false);
-  };
     return(
-        <>
-            <div className="sticky top-0 z-[90] flex lg:hidden justify-between items-center py-4 px-4 bg-white ">
+        <div className=" sticky top-0 w-full bg-white z-[99]">
+            <div className=" z-[90] flex lg:hidden justify-between items-center py-4 px-4 bg-white ">
                 {/* Mobile */}
                 <div className="text-2xl font-[600] text-[#D9083C] flex">
                     {/* <Image src="/logo.png" height={240} width={240} alt="logo"/> */}
@@ -96,7 +76,7 @@ const Header = () =>{
                 )}
             </div>
              {/* large screen  */}
-            <div className="lg:flex hidden py-4 justify-between items-center px-24 border border-b shadow-md sticky top-0 z-[90] bg-white">
+            <div className="lg:flex hidden py-4 justify-between items-center px-24 border border-b shadow-md z-[90] bg-white">
                 <div className="text-2xl font-[600] text-[#D9083C] flex">
                     {/* <Image src="/logo.png" height={240} width={240} alt="logo"/> */}
                     <p className="text-black">adbyte</p><p>hub</p>
@@ -124,7 +104,7 @@ const Header = () =>{
                    </Button>
             </div>
             
-        </>
+        </div>
     )
 }
 export default Header
