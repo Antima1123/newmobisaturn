@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { X } from 'lucide-react'
 import { useOpenContactUs } from '@/hook/contact-open'
+import { useCreateContact } from '@/features/api/use-contact'
 
 interface FormData {
   name: string
@@ -20,6 +21,8 @@ interface FormData {
 
 export default function ContactForm() {
     const {isOpen, onClose} = useOpenContactUs();
+    const mutation = useCreateContact();
+
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -40,7 +43,21 @@ export default function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    console.log('Form data to send:', formData)
+    const values = {
+            name: formData.name,
+            company: formData.company,
+            content: formData.interests,
+            email: formData.email,
+            location: formData.location,
+            marketingSpend: formData.marketingSpend,
+            phone: formData.phone
+    };
+    
+    mutation.mutate(values, {
+      onSuccess: () => {
+        onClose();
+      }
+    })
   }
 
   if (!isOpen) return null

@@ -95,7 +95,6 @@ const Header = () =>{
                     </motion.div>
                 )}
             </div>
-
              {/* large screen  */}
             <div className="lg:flex hidden py-4 justify-between items-center px-24 border border-b shadow-md">
                 <div className="text-2xl font-[600] text-[#D9083C] flex">
