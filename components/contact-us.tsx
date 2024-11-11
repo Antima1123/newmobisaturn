@@ -1,9 +1,51 @@
 import Image from "next/image"
+import { useState } from "react"
+import { Input } from "./ui/input"
+import { Textarea } from "./ui/textarea"
+import { Button } from "./ui/button"
+
+
+interface FormData {
+    name: string
+    email: string
+    phone: string
+    company: string
+    marketingSpend: string
+    location: string
+    interests: string
+  }
 
 const ContactUs =()=>{
+
+    const [isOpen, setIsOpen] = useState(true)
+    const [formData, setFormData] = useState<FormData>({
+      name: '',
+      email: '',
+      phone: '',
+      company: '',
+      marketingSpend: '',
+      location: '',
+      interests: ''
+    })
+  
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      const { name, value } = e.target
+      setFormData(prevData => ({
+        ...prevData,
+        [name]: value
+      }))
+    }
+  
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault()
+      console.log('Form data to send:', formData)
+    }
+  
+    if (!isOpen) return null
+
     return (
         <div className="bg-white font-sans py-10">
-            <div className=" h-[18rem] w-[60rem] grid grid-cols-2 bg-white px-12">
+            <div className=" w-[60rem] grid grid-cols-2 bg-white px-12">
                 
                 <div className="flex flex-col gap-y-4 justify-center">
                     <div className="text-2xl font-[600] text-[#D9083C] flex">
@@ -53,51 +95,67 @@ const ContactUs =()=>{
                         </div>
                 </div>
 
-                <form className="gap-2 flex flex-col w-[26rem]">
-                    <div className="flex justify-between">
-                        <input
-                            type="text"
-                            placeholder="Name"
-                            className=" outline-none p-2 border border-gray-400 rounded-md"
-                        />
-                         <input
-                            type="email"
-                            placeholder="Email"
-                            className=" outline-none p-2 border border-gray-400 rounded-md"
-                        />
-                    </div>
-
-                    <div className="flex justify-between">
-                        <input
-                            type="phone"
-                            placeholder="Phone"
-                            className=" outline-none p-2 border border-gray-400 rounded-md"
-                        />
-                         <input
-                            type="text"
-                            placeholder="Company"
-                            className=" outline-none p-2 border border-gray-400  rounded-md"
-                        />
-                    </div>
-
-                    <input
-                        type="text"
-                        placeholder="What's your current performance marketing spends? "
-                        className=" outline-none p-2 border border-gray-400 rounded-md"
-                    />
-
-                    <input
-                        type="text"
-                        placeholder="Location"
-                        className=" outline-none p-2 border border-gray-400 rounded-md"
-                    />
-                    <input
-                        type="text"
-                        placeholder="What are you intrested in? "
-                        className=" outline-none p-2 border border-gray-400 rounded-md"
-                    />
-                   <button className="w-full bg-[#D9083C] text-white py-2 rounded-md text-lg">Book Demo</button>
-                </form>
+                <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="grid grid-cols-2 gap-4">
+            <Input
+              name="name"
+              placeholder="Name"
+              value={formData.name}
+              onChange={handleInputChange}
+              required
+            />
+            <Input
+              name="email"
+              type="email"
+              placeholder="Work Email"
+              value={formData.email}
+              onChange={handleInputChange}
+              required
+            />
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <Input
+              name="phone"
+              type="tel"
+              placeholder="Phone"
+              value={formData.phone}
+              onChange={handleInputChange}
+              required
+            />
+            <Input
+              name="company"
+              placeholder="Company"
+              value={formData.company}
+              onChange={handleInputChange}
+              required
+            />
+          </div>
+          <Input
+            name="marketingSpend"
+            placeholder="What's your current performance marketing spend?"
+            value={formData.marketingSpend}
+            onChange={handleInputChange}
+            required
+          />
+          <Input
+            name="location"
+            placeholder="Location"
+            value={formData.location}
+            onChange={handleInputChange}
+            required
+          />
+          <Textarea
+            name="interests"
+            placeholder="What are you interested in?"
+            className="min-h-[100px]"
+            value={formData.interests}
+            onChange={handleInputChange}
+            required
+          />
+          <Button type="submit" className="w-full bg-red-600 hover:bg-red-700">
+            BOOK DEMO
+          </Button>
+        </form>
             </div>
         </div>
     )

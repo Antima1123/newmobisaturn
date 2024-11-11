@@ -6,9 +6,12 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { IoIosClose } from "react-icons/io";
 import ContactUs from "./contact-us";
+import { useOpenContactUs } from "@/hook/contact-open";
 
 const Header = () =>{
     const [active, setActive] = useState(false);
+    const {onOpen, isOpen} = useOpenContactUs();
+
     const handleClick = () =>{
         setActive(!active)
     }
@@ -28,9 +31,6 @@ const Header = () =>{
     };
   }, [showCard]);
 
-  const handleCard = () => {
-    setShowCard(true);
-  };
 
   const closeCard = (e: React.MouseEvent) => {
     e.stopPropagation(); // Prevents the click from triggering handleCard
@@ -45,9 +45,11 @@ const Header = () =>{
                     <p className="text-black">skill</p><p>io</p>
                 </div>
 
-                <div className="flex  gap-x-4">
+                {
+                    !isOpen && 
+                    <div className="flex  gap-x-4 z-[90]">
 
-                    <motion.div className={`flex flex-col items-center justify-center gap-[6px] z-[100]`} onClick={handleClick}>
+                    <motion.div className={`flex flex-col items-center justify-center gap-[6px] z-[90]`} onClick={handleClick}>
                         <motion.div 
                             className={`h-[3px] w-6 origin-left bg-[#D9083C]`} 
                             animate={{rotate: active ? 45 : 0}}>
@@ -64,6 +66,7 @@ const Header = () =>{
                         </motion.div>
                     </motion.div>
                 </div>
+                }
                 
 
                 {active && (
@@ -71,7 +74,7 @@ const Header = () =>{
                         initial={{y: -1000}} 
                         animate={{y: 0}} 
                         transition={{ ease: "easeInOut",}} 
-                        className=" text-black flex w-screen h-[10rem] absolute z-[80] left-0 top-16 bg-[#ffc6c6] px-10 py-6 "
+                        className=" text-black flex w-screen h-[14rem] absolute z-[80] left-0 top-16 bg-[#ffc6c6] px-10 py-6 "
                         >
                         <nav className="font-[600] gap-y-6 flex flex-col">
                             <Link href="/">
@@ -85,6 +88,9 @@ const Header = () =>{
                             <Link href="/contact-us" >
                                 About Us
                             </Link>
+                            <div onClick={() => {onOpen(), setActive(false)}} className=" cursor-pointer" >
+                                Contact Us
+                            </div>
                         </nav>
                     </motion.div>
                 )}
@@ -112,12 +118,12 @@ const Header = () =>{
                 </div>
                 
                    <Button 
-                        onClick={handleCard}
+                        onClick={() => onOpen()}
                         className="bg-[#D9083C] text-[16px] font-[400]"
                    >
                         Contact Us
                    </Button>
-                   {showCard && (
+                   {/* {showCard && (
                         <div
                             className="fixed inset-0 z-[200] flex items-center justify-center bg-black bg-opacity-80 h-full" >
                         <div
@@ -135,7 +141,7 @@ const Header = () =>{
                             </div>
                         </div>
                         </div>
-                    )}
+                    )} */}
             </div>
             
         </>
