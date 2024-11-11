@@ -22,7 +22,7 @@ export default function AboutUs() {
               Driving Growth Through Data-Driven Marketing
             </h1>
             <p className="text-lg md:text-xl mb-8">
-              We're a performance marketing agency specializing in user acquisition and data-driven targeting, helping brands
+              We&apos;re a performance marketing agency specializing in user acquisition and data-driven targeting, helping brands
               achieve exceptional growth across multiple verticals.
             </p>
             <button onClick={() => onOpen()} className="w-[9rem]  mt-2 rounded-sm py-2 bg-[#fff] text-red-600 ">Contact us</button>

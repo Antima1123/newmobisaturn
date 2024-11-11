@@ -8,7 +8,7 @@ export default function CampaignGoals() {
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Campaign Goals</h2>
           <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed">
-            Enhance your mobile app's user acquisition, retention, and brand performance using predictive algorithms and
+            Enhance your mobile app&apos;s user acquisition, retention, and brand performance using predictive algorithms and
             machine learning techniques.
           </p>
         </div>
