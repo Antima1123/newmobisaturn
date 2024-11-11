@@ -135,20 +135,22 @@ export default function ContactForm() {
               required
             />
           </div>
-          <Input
-            name="marketingSpend"
-            placeholder="What's your current performance marketing spend?"
-            value={formData.marketingSpend}
-            onChange={handleInputChange}
-            required
-          />
-          <Input
-            name="location"
-            placeholder="Location"
-            value={formData.location}
-            onChange={handleInputChange}
-            required
-          />
+          <div className="grid grid-cols-2 gap-4">
+            <Input
+              name="marketingSpend"
+              placeholder="What's your marketing spend?"
+              value={formData.marketingSpend}
+              onChange={handleInputChange}
+              required
+            />
+            <Input
+              name="location"
+              placeholder="Location"
+              value={formData.location}
+              onChange={handleInputChange}
+              required
+            />
+          </div>
           <Textarea
             name="interests"
             placeholder="What are you interested in?"
