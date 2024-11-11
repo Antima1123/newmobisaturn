@@ -63,7 +63,16 @@ export default function ContactForm() {
   if (!isOpen) return null
 
   return (
-    <Card className="fixed inset-0 z-[100] grid grid-cols-2 m-auto w-full max-w-5xl md:max-h-[60vh] overflow-auto bg-white p-6">
+    <Card className=" fixed inset-0 z-[100] m-auto w-full max-w-5xl md:max-h-[60vh] overflow-auto bg-white p-6">
+        <div className=' relative'>
+          <button 
+            onClick={() => onClose()}
+            className="absolute right-0 -top-2 p-2 hover:bg-gray-100 rounded-full z-[100]"
+          >
+            <X className="h-4 w-4" />
+          </button>
+        </div>
+      <div className=' w-full grid md:grid-cols-2'>
       <CardHeader className="relative p-0 mb-6 mt-8">
         <div className="space-y-6">
         <div className="text-2xl font-[600] text-[#D9083C] flex">
@@ -91,12 +100,6 @@ export default function ContactForm() {
         </div>
       </CardHeader>
       <CardContent className="p-0 relative">
-        <button 
-          onClick={() => onClose()}
-          className="absolute right-0 top-0 p-2 hover:bg-gray-100 rounded-full"
-        >
-          <X className="h-4 w-4" />
-        </button>
         <form onSubmit={handleSubmit} className="space-y-4 mt-8">
           <div className="grid grid-cols-2 gap-4">
             <Input
@@ -159,6 +162,7 @@ export default function ContactForm() {
           </Button>
         </form>
       </CardContent>
+      </div>
     </Card>
   )
 }
