@@ -17,7 +17,7 @@ export const WhyMobiSaturn = () =>{
 
 
                         <div className="flex gap-8 md:w-[30rem] w-[22rem] h-[7rem] items-center">
-                            <div className="w-20 h-20 rounded-full bg-[#D9083C] items-center justify-center flex">
+                            <div className="w-20 h-20 rounded-full bg-[#472282] items-center justify-center flex">
                                 <BiSolidMedal color="white" size={45}/>
                             </div>
                             <div>
@@ -27,7 +27,7 @@ export const WhyMobiSaturn = () =>{
                         </div>
 
                         <div className="flex gap-8 md:w-[30rem] w-[22rem] h-[7rem] items-center">
-                            <div className="w-20 h-20 rounded-full bg-[#D9083C] items-center justify-center flex">
+                            <div className="w-20 h-20 rounded-full bg-[#472282] items-center justify-center flex">
                                 <FaEye color="white" size={45}/>
                             </div>
                             <div>
@@ -37,7 +37,7 @@ export const WhyMobiSaturn = () =>{
                         </div>
 
                         <div className="flex gap-8 md:w-[30rem] w-[22rem] h-[7rem] items-center ">
-                            <div className="w-20 h-20 rounded-full bg-[#D9083C] items-center justify-center flex">
+                            <div className="w-20 h-20 rounded-full bg-[#472282] items-center justify-center flex">
                                 <RiCustomerService2Fill color="white" size={45}/>
                             </div>
                             <div>
@@ -47,7 +47,7 @@ export const WhyMobiSaturn = () =>{
                         </div>
 
                         <div className="flex gap-8 md:w-[30rem] w-[22rem] h-[7rem] items-center ">
-                            <div className="w-20 h-20 rounded-full bg-[#D9083C] items-center justify-center flex">
+                            <div className="w-20 h-20 rounded-full bg-[#472282] items-center justify-center flex">
                                 <FaHandshake color="white" size={45}/>
                             </div>
                             <div>

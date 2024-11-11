@@ -75,7 +75,7 @@ export default function ContactForm() {
       <div className=' w-full grid md:grid-cols-2'>
       <CardHeader className="relative p-0 mb-6 mt-8">
         <div className="space-y-6">
-        <div className="text-2xl font-[600] text-[#D9083C] flex">
+        <div className="text-2xl font-[600] text-[#472282] flex">
                             {/* <Image src="/logo.png" height={240} width={240} alt="logo"/> */}
                             <p className="text-black">adbyte</p><p>hub</p>
                         </div>

@@ -15,7 +15,7 @@ export default function AboutUs() {
         )
       }
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-red-500 to-red-700 py-20">
+      <section className="relative bg-gradient-to-r from-[#472282] to-[#8a66c3] py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -42,7 +42,7 @@ export default function AboutUs() {
             ].map((stat, index) => (
               <Card key={index} className="text-center p-6">
                 <CardContent>
-                  <div className="text-3xl font-bold text-[#D9083C] mb-2">{stat.number}</div>
+                  <div className="text-3xl font-bold text-[#472282] mb-2">{stat.number}</div>
                   <div className="text-gray-600">{stat.label}</div>
                 </CardContent>
               </Card>
@@ -58,18 +58,18 @@ export default function AboutUs() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                icon: <ChartBar className="w-10 h-10 text-[#D9083C]" />,
+                icon: <ChartBar className="w-10 h-10 text-[#472282]" />,
                 title: "Performance Marketing",
                 description:
                   "Data-driven campaigns optimized for maximum ROI across multiple channels and platforms.",
               },
               {
-                icon: <Users className="w-10 h-10 text-[#D9083C]" />,
+                icon: <Users className="w-10 h-10 text-[#472282]" />,
                 title: "User Acquisition",
                 description: "Strategic user acquisition campaigns focused on quality and retention.",
               },
               {
-                icon: <Target className="w-10 h-10 text-[#D9083C]" />,
+                icon: <Target className="w-10 h-10 text-[#472282]" />,
                 title: "Targeted Advertising",
                 description: "Precision targeting using advanced data analytics and audience segmentation.",
               },
@@ -103,7 +103,7 @@ export default function AboutUs() {
             ].map((vertical, index) => (
               <Card key={index} className="p-6">
                 <CardContent className="flex flex-col items-center text-center gap-2">
-                  <div className="rounded-full bg-[#D9083C] p-4 text-white">{vertical.icon}</div>
+                  <div className="rounded-full bg-[#472282] p-4 text-white">{vertical.icon}</div>
                   <h3 className="font-semibold">{vertical.name}</h3>
                 </CardContent>
               </Card>
@@ -143,7 +143,7 @@ export default function AboutUs() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-[#D9083C] py-16">
+      <section className="bg-gradient-to-r from-[#472282] to-[#8a66c3] py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-3xl font-bold mb-6">Ready to Grow Your Business?</h2>

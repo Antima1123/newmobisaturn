@@ -10,10 +10,10 @@ const DashFront = () =>{
             <div className="grid md:grid-cols-2 w-full items-center max-w-screen-2xl mx-auto ">
                 
                 <div className="lg:w-[32rem] w-full lg:text-start  lg:items-start gap-8 flex flex-col font-[600]">
-                    <h1 className="text-xl text-[#D9083C] ">A Trusted Performance Marketing Agency</h1>
+                    <h1 className="text-xl text-[#472282] ">A Trusted Performance Marketing Agency</h1>
                     <h1 className="text-5xl font-[600]">We&apos;re A premier performance marketing company</h1>
                     <p className="text-[#b9b5c9] text-md w-full lg:w-[90%]">Our mobile marketing team runs a high-quality campaign with optimal performance and minimal fraud.</p>
-                    <button onClick={() => onOpen()} className="w-[9rem]  mt-2 rounded-sm py-2 bg-[#D9083C] text-white ">Contact us</button>
+                    <button onClick={() => onOpen()} className="w-[9rem]  mt-2 rounded-sm py-2 bg-[#472282] text-white ">Contact us</button>
                 </div>
 
                 <div className="mt-4 w-full">

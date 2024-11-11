@@ -17,7 +17,7 @@ const Header = () =>{
         <div className=" sticky top-0 w-full bg-white z-[99]">
             <div className=" z-[90] flex lg:hidden justify-between items-center py-4 px-4 bg-white ">
                 {/* Mobile */}
-                <div className="text-2xl font-[600] text-[#D9083C] flex">
+                <div className="text-2xl font-[600] text-[#472282] flex">
                     {/* <Image src="/logo.png" height={240} width={240} alt="logo"/> */}
                     <p className="text-black">adbyte</p><p>hub</p>
                 </div>
@@ -28,17 +28,17 @@ const Header = () =>{
 
                     <motion.div className={`flex flex-col items-center justify-center gap-[6px] z-[100]`} onClick={handleClick}>
                         <motion.div 
-                            className={`h-[3px] w-6 origin-left bg-[#D9083C]`} 
+                            className={`h-[3px] w-6 origin-left bg-[#472282]`} 
                             animate={{rotate: active ? 45 : 0}}>
                         </motion.div>
 
                         <motion.div 
-                            className="h-[3px] w-6 bg-[#D9083C]"  
+                            className="h-[3px] w-6 bg-[#472282]"  
                             animate={{opacity: active ? 0 : 1}}>
                         </motion.div>
                         
                         <motion.div 
-                            className={`h-[3px] w-6 origin-left bg-[#D9083C] `} 
+                            className={`h-[3px] w-6 origin-left bg-[#472282] `} 
                             animate={{rotate: active ? -45 : 0}}>
                         </motion.div>
                     </motion.div>
@@ -74,7 +74,7 @@ const Header = () =>{
             </div>
              {/* large screen  */}
             <div className="lg:flex hidden py-4 justify-between items-center px-24 border border-b shadow-md z-[90] bg-white">
-                <div className="text-2xl font-[600] text-[#D9083C] flex">
+                <div className="text-2xl font-[600] text-[#472282] flex">
                     {/* <Image src="/logo.png" height={240} width={240} alt="logo"/> */}
                     <p className="text-black">adbyte</p><p>hub</p>
                 </div>
@@ -95,7 +95,7 @@ const Header = () =>{
                 
                    <Button 
                         onClick={() => onOpen()}
-                        className="bg-[#D9083C] text-[16px] font-[400] z-[110]"
+                        className="bg-[#472282] text-[16px] font-[400] z-[110]"
                    >
                         Contact Us
                    </Button>

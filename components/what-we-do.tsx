@@ -12,7 +12,7 @@ const WhatWeDo = () => {
                     {/* cards */}
                 <div className="grid md:grid-cols-3 mx-auto gap-24 mt-4 px-2 md:px-0">
                     <div className="flex flex-col  items-center w-72">
-                        <FaRegUserCircle size={40} color="#D9083C" className="mb-4"/>
+                        <FaRegUserCircle size={40} color="#472282" className="mb-4"/>
                         <div className="text-xl font-[600] text-center">
                             User Acquisition  
                         </div>
@@ -23,7 +23,7 @@ const WhatWeDo = () => {
                     </div>
 
                     <div className="flex flex-col items-center w-72">
-                        <TbTargetArrow size={40} color="#D9083C" className="mb-4"/>
+                        <TbTargetArrow size={40} color="#472282" className="mb-4"/>
                         <div className="text-xl font-[600] text-center">
                             Retargeting  
                         </div>
@@ -34,7 +34,7 @@ const WhatWeDo = () => {
                     </div>
 
                     <div className="flex flex-col items-center w-72">
-                        <IoGameControllerOutline size={40} color="#D9083C" className="mb-4"/>
+                        <IoGameControllerOutline size={40} color="#472282" className="mb-4"/>
                         <div className="text-xl font-[600] text-center">
                             Gaming    
                         </div>

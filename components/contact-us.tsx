@@ -48,7 +48,7 @@ const ContactUs =()=>{
             <div className=" w-full grid md:grid-cols-2 gap-4 bg-white md:px-12 px-2">
                 
                 <div className="flex flex-col gap-y-4 justify-center">
-                    <div className="text-2xl font-[600] text-[#D9083C] flex">
+                    <div className="text-2xl font-[600] text-[#472282] flex">
                             <p className="text-black">adbyte</p><p>hub</p>
                         </div>
                         <h1 className="font-[700] text-2xl">We empower you to boost your business</h1>

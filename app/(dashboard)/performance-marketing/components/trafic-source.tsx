@@ -14,17 +14,17 @@ export const TrafficSource = () =>{
             <div className="grid md:grid-cols-3 md:gap-16 gap-32">
 
                 <div className="flex flex-col items-center justify-center">
-                    <VscDebugContinue className="md:size-10 size-20" color="#D9083C"/>
+                    <VscDebugContinue className="md:size-10 size-20" color="#472282"/>
                     <h1 className="text-md">Direct App Partners</h1>
                 </div>
                 
                 <div className="flex flex-col items-center justify-center ">
-                    <LuMonitorPlay  color="#D9083C" className="md:size-10 size-20"/>
+                    <LuMonitorPlay  color="#472282" className="md:size-10 size-20"/>
                     <h1 className="text-md">Major DSPs</h1>
                 </div>
 
                 <div className="flex flex-col items-center justify-center">
-                    <RiArrowLeftRightFill className="md:size-10 size-20" color="#D9083C"/>
+                    <RiArrowLeftRightFill className="md:size-10 size-20" color="#472282"/>
                     <h1 className="text-md">Other Networks</h1>
                 </div>
             </div>

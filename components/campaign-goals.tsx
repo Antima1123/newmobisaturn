@@ -17,7 +17,7 @@ export default function CampaignGoals() {
           <Card className="relative overflow-hidden h-[12rem] bg-[#1A0A0F] p-6 items-center justify-center flex">
             <div className="flex items-center gap-4">
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-white">
-                <FileText className="h-6 w-6 text-[#D9083C]" />
+                <FileText className="h-6 w-6 text-[#472282]" />
               </div>
               <div className="space-y-1">
                 <h3 className="text-xl font-bold text-white">CPR</h3>
@@ -28,7 +28,7 @@ export default function CampaignGoals() {
           <Card className="relative overflow-hidden bg-[#1A0A0F] p-6 h-[12rem] items-center justify-center flex">
             <div className="flex items-center gap-4">
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-white">
-                <Download className="h-6 w-6 text-[#D9083C]" />
+                <Download className="h-6 w-6 text-[#472282]" />
               </div>
               <div className="space-y-1">
                 <h3 className="text-xl font-bold text-white">CPI</h3>
@@ -40,7 +40,7 @@ export default function CampaignGoals() {
         <Card className="relative overflow-hidden bg-[#1A0A0F] p-6 items-center justify-center flex">
             <div className="flex items-start gap-4">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-white">
-                <Network className="h-6 w-6 text-[#D9083C]" />
+                <Network className="h-6 w-6 text-[#472282]" />
               </div>
               <div className="space-y-4">
                 <div className="space-y-1">

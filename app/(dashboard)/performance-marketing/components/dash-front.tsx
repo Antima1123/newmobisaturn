@@ -12,7 +12,7 @@ const DashPerformance = () =>{
                 <div className="lg:w-[32rem] w-full lg:text-start  lg:items-start gap-8 flex flex-col font-[600]">
                     <h1 className="text-6xl font-[600]">Data-driven targeting and user acquisition</h1>
                     <p className="text-[#b9b5c9] text-md w-full lg:w-[90%]">Enhance your mobile app&apos;s user acquisition, retention, and brand performance using predictive algorithms and machine learning techniques</p>
-                    <button onClick={() => onOpen()} className="w-[9rem]  mt-2 rounded-sm py-2 bg-[#D9083C] text-white ">Contact us</button>
+                    <button onClick={() => onOpen()} className="w-[9rem]  mt-2 rounded-sm py-2 bg-[#472282] text-white ">Contact us</button>
                 </div>
 
                 <div className="mt-4 w-full">

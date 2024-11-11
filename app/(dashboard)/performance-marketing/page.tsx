@@ -93,7 +93,7 @@ const PerformanceMarketing = () =>{
             <DashPerformance/>
             <div className="flex flex-col items-center justify-center max-w-screen-2xl mx-auto mt-20" >
                 <div className="mb-16 flex flex-col justify-center items-center gap-2 md:w-[40rem] w-[20rem]">
-                    <h1 className="text-md text-[#D9083C]">Our Services</h1>
+                    <h1 className="text-md text-[#472282]">Our Services</h1>
                     <h2 className="text-2xl font-[600] text-center ">Perfect Solution For Your Business</h2>
                     <p className="text-sm text-gray-400  text-center">We are proud to be associated with 250+ Brands and all the major agencies. Moreover, the 5,000+ direct app partners assist us to get high-intent users for our partners.</p>
                 </div>

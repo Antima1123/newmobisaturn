@@ -3,7 +3,7 @@ import Image from "next/image"
 export const WhoWeAre = () =>{
     const as = `'`;
     return(
-        <div className=" px-4 mt-24 md:px-28 w-full  ">
+        <div className=" px-4 mt-24 md:px-28 w-full py-10">
             <div className=" w-full flex flex-col justify-center  items-center  max-w-screen-2xl mx-auto">
                 <h1 className="text-2xl font-[700] mb-4">Who we are?</h1>
                 <p className="text-gray-400">We are a premier performance marketing company specializing in in-app marketing.</p>
@@ -16,7 +16,7 @@ export const WhoWeAre = () =>{
                     </div>
 
                     <div className="md:w-1/3 w-full lg:justify-start flex justify-center ">
-                        <Image src='/Search-amico-1.png' height={400} width={400} alt="pageimg" className="lg:w-[500px] w-[300px] object-contain"/>
+                        <Image src='/girl.webp' height={400} width={400} alt="pageimg" className="lg:w-[500px] w-[300px] object-contain"/>
                     </div>
                 </div>
                
