@@ -63,7 +63,7 @@ export default function ContactForm() {
   if (!isOpen) return null
 
   return (
-    <Card className="fixed inset-0 z-[100] m-auto w-full max-w-xl md:max-h-[75vh] overflow-auto bg-white p-6">
+    <Card className="fixed inset-0 z-[100] m-auto w-full max-w-xl md:max-h-[80vh] overflow-auto bg-white p-6">
       <CardHeader className="relative p-0 mb-6">
         <button 
           onClick={() => onClose()}

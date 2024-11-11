@@ -38,7 +38,7 @@ const Header = () =>{
   };
     return(
         <>
-            <div className="flex lg:hidden justify-between items-center py-4 px-4">
+            <div className="sticky top-0 z-[100] flex lg:hidden justify-between items-center py-4 px-4 bg-white ">
                 {/* Mobile */}
                 <div className="text-2xl font-[600] text-[#D9083C] flex">
                     {/* <Image src="/logo.png" height={240} width={240} alt="logo"/> */}
@@ -49,7 +49,7 @@ const Header = () =>{
                     !isOpen && 
                     <div className="flex  gap-x-4 z-[90]">
 
-                    <motion.div className={`flex flex-col items-center justify-center gap-[6px] z-[90]`} onClick={handleClick}>
+                    <motion.div className={`flex flex-col items-center justify-center gap-[6px] z-[100]`} onClick={handleClick}>
                         <motion.div 
                             className={`h-[3px] w-6 origin-left bg-[#D9083C]`} 
                             animate={{rotate: active ? 45 : 0}}>
@@ -96,7 +96,7 @@ const Header = () =>{
                 )}
             </div>
              {/* large screen  */}
-            <div className="lg:flex hidden py-4 justify-between items-center px-24 border border-b shadow-md">
+            <div className="lg:flex hidden py-4 justify-between items-center px-24 border border-b shadow-md sticky top-0 z-[100] bg-white">
                 <div className="text-2xl font-[600] text-[#D9083C] flex">
                     {/* <Image src="/logo.png" height={240} width={240} alt="logo"/> */}
                     <p className="text-black">skill</p><p>io</p>
@@ -118,29 +118,10 @@ const Header = () =>{
                 
                    <Button 
                         onClick={() => onOpen()}
-                        className="bg-[#D9083C] text-[16px] font-[400]"
+                        className="bg-[#D9083C] text-[16px] font-[400] z-[110]"
                    >
                         Contact Us
                    </Button>
-                   {/* {showCard && (
-                        <div
-                            className="fixed inset-0 z-[200] flex items-center justify-center bg-black bg-opacity-80 h-full" >
-                        <div
-                            className="relative w-screen h-[calc(100vh-200px)] flex justify-center items-center"
-                            onClick={(e) => e.stopPropagation()}>
-
-                           <ContactUs/>
-                            <div className=" h-full flex items-start justify-center">
-                                <button
-                                className=" z-[200] absolute top-20 transition-all ease-in-out duration-500 flex items-center justify-center w-10 h-10 rounded-xl hover:rounded-3xl border-2 border-white text-2xl font-bold text-white cursor-pointer"
-                                onClick={closeCard}
-                                >
-                                <IoIosClose size={28}/>
-                                </button>
-                            </div>
-                        </div>
-                        </div>
-                    )} */}
             </div>
             
         </>

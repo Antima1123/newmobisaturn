@@ -3,7 +3,7 @@ import Image from "next/image"
 const DashPerformance = () =>{
     const as = `'`;
     return(
-        <div className="flex flex-col px-4 mt-4 lg:px-28 w-full">
+        <div className="flex flex-col px-4 mt-4 lg:px-28 w-full z-[50]">
             <section id="home">
             <div className="grid md:grid-cols-2 w-full items-center max-w-screen-2xl mx-auto ">
                 
