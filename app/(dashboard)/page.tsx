@@ -21,7 +21,7 @@ export default function Home() {
       <MMPPartners/>
       {isOpen && 
         (
-          <div className="w-screen h-screen fixed top-0 right-0 bg-black bg-opacity-75 items-center justify-center flex"><ContactForm/></div>
+          <div className="w-screen h-screen inset-0 fixed top-0 right-0 bg-black bg-opacity-75 items-center justify-center flex z-[100]"><ContactForm/></div>
         )
       }
     </div>

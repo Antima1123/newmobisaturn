@@ -15,6 +15,7 @@ import { HiOutlineCurrencyRupee } from "react-icons/hi";
 import { TiSocialYoutubeCircular } from "react-icons/ti";
 import { PiAlignBottomBold } from "react-icons/pi";
 import { TrafficSource } from "./components/trafic-source";
+import CampaignGoals from "@/components/campaign-goals";
 
 
 const Services = [
@@ -125,11 +126,12 @@ const PerformanceMarketing = () =>{
             </div>
 
             <TrafficSource/>
+            <CampaignGoals/>
 
 
             {isOpen && 
             (
-                <div className="w-screen h-screen fixed top-0 right-0 bg-black bg-opacity-75 items-center justify-center flex"><ContactForm/></div>
+                <div className="w-screen h-screen fixed top-0 right-0 bg-black bg-opacity-75 items-center justify-center flex z-[100]"><ContactForm/></div>
             )
              }
 

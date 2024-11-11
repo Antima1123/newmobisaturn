@@ -38,11 +38,11 @@ const Header = () =>{
   };
     return(
         <>
-            <div className="sticky top-0 z-[100] flex lg:hidden justify-between items-center py-4 px-4 bg-white ">
+            <div className="sticky top-0 z-[90] flex lg:hidden justify-between items-center py-4 px-4 bg-white ">
                 {/* Mobile */}
                 <div className="text-2xl font-[600] text-[#D9083C] flex">
                     {/* <Image src="/logo.png" height={240} width={240} alt="logo"/> */}
-                    <p className="text-black">skill</p><p>io</p>
+                    <p className="text-black">adbyte</p><p>hub</p>
                 </div>
 
                 {
@@ -85,7 +85,7 @@ const Header = () =>{
                                 Performance Marketing
                             </Link>
 
-                            <Link href="/contact-us" >
+                            <Link href="/about-us" >
                                 About Us
                             </Link>
                             <div onClick={() => {onOpen(), setActive(false)}} className=" cursor-pointer" >
@@ -96,14 +96,14 @@ const Header = () =>{
                 )}
             </div>
              {/* large screen  */}
-            <div className="lg:flex hidden py-4 justify-between items-center px-24 border border-b shadow-md sticky top-0 z-[100] bg-white">
+            <div className="lg:flex hidden py-4 justify-between items-center px-24 border border-b shadow-md sticky top-0 z-[90] bg-white">
                 <div className="text-2xl font-[600] text-[#D9083C] flex">
                     {/* <Image src="/logo.png" height={240} width={240} alt="logo"/> */}
-                    <p className="text-black">skill</p><p>io</p>
+                    <p className="text-black">adbyte</p><p>hub</p>
                 </div>
 
                 <div className="gap-x-16 flex">
-                    <Link href="/" className="hover:underline underline-offset-8 underline">
+                    <Link href="/" >
                         Home
                     </Link>
 
@@ -111,7 +111,7 @@ const Header = () =>{
                         Performance Marketing
                     </Link>
 
-                    <Link href="/contact-us" className="">
+                    <Link href="/about-us" className="">
                         About Us
                     </Link>
                 </div>

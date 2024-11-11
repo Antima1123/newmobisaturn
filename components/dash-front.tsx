@@ -1,6 +1,9 @@
+import { useOpenContactUs } from "@/hook/contact-open"
 import Image from "next/image"
 
 const DashFront = () =>{
+
+    const {onOpen} = useOpenContactUs()
     return(
         <div className="flex flex-col px-4 mt-4 lg:px-28 w-full ">
             <section id="home">
@@ -10,7 +13,7 @@ const DashFront = () =>{
                     <h1 className="text-xl text-[#D9083C] ">A Trusted Performance Marketing Agency</h1>
                     <h1 className="text-5xl font-[600]">We&apos;re A premier performance marketing company</h1>
                     <p className="text-[#b9b5c9] text-md w-full lg:w-[90%]">Our mobile marketing team runs a high-quality campaign with optimal performance and minimal fraud.</p>
-                    <button className="w-[9rem]  mt-2 rounded-sm py-2 bg-[#D9083C] text-white ">Get Started</button>
+                    <button onClick={() => onOpen()} className="w-[9rem]  mt-2 rounded-sm py-2 bg-[#D9083C] text-white ">Contact us</button>
                 </div>
 
                 <div className="mt-4 w-full">

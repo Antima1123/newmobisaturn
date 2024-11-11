@@ -50,7 +50,7 @@ const ContactUs =()=>{
                 <div className="flex flex-col gap-y-4 justify-center">
                     <div className="text-2xl font-[600] text-[#D9083C] flex">
                             {/* <Image src="/logo.png" height={240} width={240} alt="logo"/> */}
-                            <p className="text-black">skill</p><p>io</p>
+                            <p className="text-black">adbyte</p><p>hub</p>
                         </div>
                         <h1 className="font-[700] text-2xl">We empower you to boost your business</h1>
                         <p className="font-[600] text-lg">Integrated with all major MMPs</p>

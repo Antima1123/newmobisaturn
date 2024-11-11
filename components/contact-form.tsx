@@ -74,7 +74,7 @@ export default function ContactForm() {
         <div className="space-y-6">
         <div className="text-2xl font-[600] text-[#D9083C] flex">
                             {/* <Image src="/logo.png" height={240} width={240} alt="logo"/> */}
-                            <p className="text-black">skill</p><p>io</p>
+                            <p className="text-black">adbyte</p><p>hub</p>
                         </div>
           <div className="space-y-2">
             <h2 className="text-2xl font-bold">
