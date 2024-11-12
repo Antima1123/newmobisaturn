@@ -1,6 +1,8 @@
 import Image from "next/image"
 import { Card, CardContent } from "./ui/card"
 import { motion } from "framer-motion"
+import useIntersectionObserver from "@/hook/visible"
+import { useState } from "react"
 
 type Props = {
     title: string
@@ -8,9 +10,21 @@ type Props = {
 }
 
 export const CategoryCard = ({title,url}: Props) => {
+
+    const {isVisible, elementRef} = useIntersectionObserver();
+    const [active, setActive] = useState(false)
+
+    if(isVisible) {
+        setTimeout(() => {
+            setActive(true)
+        },300)
+    }
+
     return (
         <motion.div
+            ref={elementRef}
             whileHover={{ scale: 1.05 }}
+            animate={active? {opacity: [0,1], scale: [0.7,1]}: {opacity:0}}
             transition={{ type: "spring", stiffness: 300, damping: 10 }}
             className="flex flex-col basis-1/3 items-center justify-center">
             <Card className="shadow-lg overflow-hidden">
