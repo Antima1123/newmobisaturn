@@ -72,7 +72,7 @@ export default function Component() {
         )
       }
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-emerald-400">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-emerald-600 to-purple-600">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
