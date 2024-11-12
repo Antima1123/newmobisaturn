@@ -134,19 +134,19 @@ export default function ContactForm() {
                   <div className="space-y-4">
                     <div>
                       <Label htmlFor="name">Your Name</Label>
-                      <Input id="name" name="name" value={formData.name} onChange={handleInputChange} required />
+                      <Input placeholder='Name' id="name" name="name" value={formData.name} onChange={handleInputChange} required />
                     </div>
                     <div>
                       <Label htmlFor="phone">Phone</Label>
-                      <Input id="phone" name="phone" value={formData.phone} onChange={handleInputChange} required />
+                      <Input placeholder='Phone number' id="phone" name="phone" value={formData.phone} onChange={handleInputChange} required />
                     </div>
                     <div>
                       <Label htmlFor="email">Email Address</Label>
-                      <Input id="email" name="email" type="email" value={formData.email} onChange={handleInputChange} required />
+                      <Input placeholder='email@email.com' id="email" name="email" type="email" value={formData.email} onChange={handleInputChange} required />
                     </div>
                     <div>
                       <Label htmlFor="company">Company Name</Label>
-                      <Input id="company" name="company" value={formData.company} onChange={handleInputChange} required />
+                      <Input placeholder='Company name' id="company" name="company" value={formData.company} onChange={handleInputChange} required />
                     </div>
                   </div>
                 </motion.div>
@@ -282,6 +282,7 @@ export default function ContactForm() {
                       <Textarea 
                         id="interests" 
                         name="interests" 
+                        placeholder='Please describe your intrest and query'
                         value={formData.interests} 
                         onChange={handleInputChange} 
                         className="min-h-[100px]"
