@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Label } from "@/components/ui/label"
-import { ChevronRight, Send, ArrowLeft, X } from 'lucide-react'
+import { ChevronRight, Send, ArrowLeft, X, Loader2 } from 'lucide-react'
 import { useOpenContactUs } from '@/hook/contact-open'
 import { useCreateContact } from '@/features/api/use-contact'
 import { toast } from 'sonner'
@@ -27,6 +27,7 @@ export default function ContactForm() {
   const [step, setStep] = useState(1)
   const {isOpen, onClose} = useOpenContactUs();
   const mutation = useCreateContact();
+  const [isPending,setIsPending] = useState(false)
 
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -57,6 +58,7 @@ export default function ContactForm() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (validateStep()) {
+      setIsPending(true)
 
     const phone = formData.std + formData.phone;
 
@@ -72,6 +74,7 @@ export default function ContactForm() {
     
     mutation.mutate(values, {
       onSuccess: () => {
+        setIsPending(false)
         onClose();
       }
     })
@@ -80,7 +83,7 @@ export default function ContactForm() {
 
   const validateStep = () => {
     if (step === 1) {
-      return formData.name && formData.phone && formData.email && formData.company;
+      return formData.name && formData.phone && formData.email && formData.company && formData.std;
     } else if (step === 2) {
       return formData.marketingSpend && formData.location;
     }
@@ -405,8 +408,8 @@ export default function ContactForm() {
                     Next <ChevronRight className="ml-2 h-4 w-4" />
                   </Button>
                 ) : (
-                  <Button type="button" onClick={handleFinalSubmit} className="flex items-center space-x-2">
-                    Submit <Send className="ml-2" />
+                  <Button type="button" onClick={handleFinalSubmit} className="">
+                    {isPending? <div className='flex items-center space-x-2'>Submitting <Loader2 className=' animate-spin transition-all ml-2'/></div>:<div className='flex items-center space-x-2'>Submit <Send className="ml-2" /></div>}
                   </Button>
                 )}
               </div>
