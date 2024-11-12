@@ -2,8 +2,15 @@
 import { motion } from 'framer-motion';
 import { useState } from "react";
 import Link from "next/link";
-import { Button } from "./ui/button";
 import { useOpenContactUs } from "@/hook/contact-open";
+import { Button } from "@/components/ui/button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { ChevronDown } from "lucide-react"
 
 const Header = () =>{
     const [active, setActive] = useState(false);
@@ -80,22 +87,41 @@ const Header = () =>{
                 </div>
 
                 <div className="gap-x-16 flex">
-                    <Link href="/" >
+                    <Link href="/" className='items-center hover:text-[#D9083C] transition-colors' >
                         Home
                     </Link>
 
-                    <Link href="/performance-marketing" className="">
-                        Performance Marketing
+                    <DropdownMenu>
+                        <DropdownMenuTrigger className="flex items-center hover:text-[#D9083C] transition-colors">
+                            Services
+                            <ChevronDown className="ml-1 h-4 w-4" />
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent className='z-[110]'>
+                            <DropdownMenuItem>
+                            <Link href="/bublisher" className="w-full">
+                                Publisher
+                            </Link>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem>
+                            <Link href="/advertiser" className="w-full">
+                                Advertiser
+                            </Link>
+                            </DropdownMenuItem>
+                        </DropdownMenuContent>
+                    </DropdownMenu>
+
+                    <Link href="/blog" className="items-center hover:text-[#D9083C] transition-colors">
+                        Blog
                     </Link>
 
-                    <Link href="/about-us" className="">
+                    <Link href="/about-us" className="items-center hover:text-[#D9083C] transition-colors">
                         About Us
                     </Link>
                 </div>
                 
                    <Button 
                         onClick={() => onOpen()}
-                        className="bg-[#472282] text-[16px] font-[400] z-[110]"
+                        className="bg-[#472282] text-[16px] font-[400] z-[110] "
                    >
                         Contact Us
                    </Button>
