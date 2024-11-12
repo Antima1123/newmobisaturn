@@ -166,7 +166,7 @@ export default function ContactForm() {
                     <div>
                       <Label htmlFor="phone">Phone</Label>
                       <div className='flex gap-2'>
-                      <Select onValueChange={(value) => console.log(value)}>
+                      <Select onValueChange={(value) => handleSelectChange('std', value)}>
                         <SelectTrigger className="w-40">
                           <SelectValue placeholder="STD" />
                         </SelectTrigger>
