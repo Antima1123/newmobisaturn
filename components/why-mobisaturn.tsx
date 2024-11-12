@@ -7,9 +7,9 @@ import { RiCustomerService2Fill } from "react-icons/ri";
 export const WhyMobiSaturn = () =>{
     const as = `'`;
     return(
-        <div className="flex flex-col md:px-28  px-4 mt-8  w-full">
+        <div className="flex flex-col md:px-28  px-4 mt-8 py-20 w-full">
             <div className=" justify-center items-center flex flex-col max-w-screen-2xl mx-auto w-full ">
-                <h1 className="text-2xl font-[700] mb-4">Why adbytehub?</h1>
+                <h1 className="text-4xl font-[700] mb-4 ">Why adbytehub?</h1>
                 <p className="text-center md:w-[50rem] w-[20rem] text-gray-400 mb-8">Our verified demand sources assist advertisers to achieve an effective ROAS, we thereby work on the integration between the traffic/demand sources and the advertisers.</p>
 
                 <div className="w-full grid md:grid-cols-2 gap-y-8">
@@ -17,8 +17,8 @@ export const WhyMobiSaturn = () =>{
 
 
                         <div className="flex gap-8 md:w-[30rem] w-[22rem] h-[7rem] items-center">
-                            <div className="w-20 h-20 rounded-full bg-[#472282] items-center justify-center flex">
-                                <BiSolidMedal color="white" size={45}/>
+                            <div className="w-20 h-20 rounded-full bg-emerald-100 text-emerald-600 items-center justify-center flex">
+                                <BiSolidMedal size={45}/>
                             </div>
                             <div>
                                 <h1 className="text-2xl font-[600]">Quality Traffic</h1>
@@ -27,8 +27,8 @@ export const WhyMobiSaturn = () =>{
                         </div>
 
                         <div className="flex gap-8 md:w-[30rem] w-[22rem] h-[7rem] items-center">
-                            <div className="w-20 h-20 rounded-full bg-[#472282] items-center justify-center flex">
-                                <FaEye color="white" size={45}/>
+                            <div className="w-20 h-20 rounded-full bg-emerald-100 text-emerald-600 items-center justify-center flex">
+                                <FaEye size={45}/>
                             </div>
                             <div>
                                 <h1 className="text-2xl font-[600]">Transparency</h1>
@@ -37,8 +37,8 @@ export const WhyMobiSaturn = () =>{
                         </div>
 
                         <div className="flex gap-8 md:w-[30rem] w-[22rem] h-[7rem] items-center ">
-                            <div className="w-20 h-20 rounded-full bg-[#472282] items-center justify-center flex">
-                                <RiCustomerService2Fill color="white" size={45}/>
+                            <div className="w-20 h-20 rounded-full bg-emerald-100 text-emerald-600 items-center justify-center flex">
+                                <RiCustomerService2Fill size={45}/>
                             </div>
                             <div>
                                 <h1 className="text-2xl font-[600]">Full Service</h1>
@@ -47,8 +47,8 @@ export const WhyMobiSaturn = () =>{
                         </div>
 
                         <div className="flex gap-8 md:w-[30rem] w-[22rem] h-[7rem] items-center ">
-                            <div className="w-20 h-20 rounded-full bg-[#472282] items-center justify-center flex">
-                                <FaHandshake color="white" size={45}/>
+                            <div className="w-20 h-20 rounded-full bg-emerald-100 text-emerald-600 items-center justify-center flex">
+                                <FaHandshake size={45}/>
                             </div>
                             <div>
                                 <h1 className="text-2xl font-[600]">Our Promise</h1>

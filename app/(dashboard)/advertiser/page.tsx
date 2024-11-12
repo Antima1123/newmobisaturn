@@ -9,6 +9,7 @@ import Link from "next/link"
 import Cardunique from "@/app/(dashboard)/advertiser/components/unique-card"
 import { useOpenContactUs } from "@/hook/contact-open"
 import ContactForm from "@/components/contact-form"
+import { motion } from "framer-motion"
 
 const uniqueCard = [
     {
@@ -110,7 +111,7 @@ export default function AdvertiserPage() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-emerald-600">
                   Reach Your Perfect Audience
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
@@ -118,7 +119,7 @@ export default function AdvertiserPage() {
                 </p>
               </div>
               <div className="space-x-4">
-                <Button size="lg" className="bg-[#472282]" onClick={()=> onOpen()}>Get Started</Button>
+                <Button size="lg" className="bg-gradient-to-br from-emerald-600 to-purple-600 p-6" onClick={()=> onOpen()}>Get Started</Button>
                 <Button variant="outline" size="lg">
                   Learn More
                 </Button>
@@ -126,23 +127,23 @@ export default function AdvertiserPage() {
             </div>
           </div>
         </section>
-        <section className="w-screen py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+        <section className="w-screen py-12 md:py-24 lg:py-32 bg-gradient-to-br from-emerald-600 to-purple-600 p-6">
           <div className="container px-4 md:px-6 max-w-screen-2xl mx-auto">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">Why Choose Us</h2>
-            <div className="grid gap-6 lg:grid-cols-3">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-white">Why Choose Us</h2>
+            <div className="grid gap-6 lg:grid-cols-3 ">
               <Card className="flex flex-col items-center text-center p-6">
-                <Globe className="h-12 w-12 mb-4 text-primary" />
-                <h3 className="text-xl font-bold mb-2">Global Reach</h3>
+                <Globe className="h-12 w-12 mb-4 text-primary text-emerald-600" />
+                <h3 className="text-xl font-bold mb-2 text-emerald-600">Global Reach</h3>
                 <p className="text-gray-500 dark:text-gray-400">Access a diverse audience of over two billion users across the globe.</p>
               </Card>
               <Card className="flex flex-col items-center text-center p-6">
-                <Target className="h-12 w-12 mb-4 text-primary" />
-                <h3 className="text-xl font-bold mb-2">Precision Targeting</h3>
+                <Target className="h-12 w-12 mb-4 text-primary text-emerald-600" />
+                <h3 className="text-xl font-bold mb-2 text-emerald-600">Precision Targeting</h3>
                 <p className="text-gray-500 dark:text-gray-400">Reach the right audience with our advanced targeting capabilities.</p>
               </Card>
               <Card className="flex flex-col items-center text-center p-6">
-                <TrendingUp className="h-12 w-12 mb-4 text-primary" />
-                <h3 className="text-xl font-bold mb-2">Performance Tracking</h3>
+                <TrendingUp className="h-12 w-12 mb-4 text-primary text-emerald-600" />
+                <h3 className="text-xl font-bold mb-2 text-emerald-600">Performance Tracking</h3>
                 <p className="text-gray-500 dark:text-gray-400">Monitor and optimize your campaigns with real-time analytics.</p>
               </Card>
             </div>
@@ -193,16 +194,23 @@ export default function AdvertiserPage() {
           <div className="max-w-screen-2xl mx-auto container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Ready to Get Started?</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-emerald-600">Ready to Get Started?</h2>
                 <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
                   Join thousands of successful advertisers and start growing your business today.
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
-                  <Button className="bg-[#472282]" onClick={()=> onOpen()}>
-                    Get Started
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+              <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                >
+                    <Button 
+                            onClick={() => onOpen()}
+                            className="bg-gradient-to-br from-emerald-600 to-purple-600 p-6 text-[16px] font-[400] z-[110] "
+                    >
+                            Contact Us
+                   </Button>
+              </motion.div>
               </div>
             </div>
           </div>

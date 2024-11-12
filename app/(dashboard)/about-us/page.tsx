@@ -1,9 +1,11 @@
 'use client'
 
 import ContactForm from "@/components/contact-form"
+import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { useOpenContactUs } from "@/hook/contact-open"
 import { ChartBar, Users, Target, Rocket, Trophy, Globe2 } from "lucide-react"
+import { motion } from "framer-motion"
 
 export default function AboutUs() {
     const { onOpen, isOpen } = useOpenContactUs()
@@ -15,7 +17,7 @@ export default function AboutUs() {
         )
       }
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-[#472282] to-[#8a66c3] py-20">
+      <section className="relative bg-gradient-to-br from-emerald-600 to-purple-600 p-6 py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -25,8 +27,17 @@ export default function AboutUs() {
               We&apos;re a performance marketing agency specializing in user acquisition and data-driven targeting, helping brands
               achieve exceptional growth across multiple verticals.
             </p>
-            <button onClick={() => onOpen()} className="w-[9rem]  mt-2 rounded-sm py-2 bg-[#fff] text-red-600 ">Contact us</button>
-          </div>
+            <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button 
+                onClick={() => onOpen()}
+                size="lg" className="bg-white text-emerald-600 hover:bg-white/90">
+                  Contact us
+                </Button>
+              </motion.div>      
+            </div>
         </div>
       </section>
 
@@ -42,7 +53,7 @@ export default function AboutUs() {
             ].map((stat, index) => (
               <Card key={index} className="text-center p-6">
                 <CardContent>
-                  <div className="text-3xl font-bold text-[#472282] mb-2">{stat.number}</div>
+                  <div className="text-3xl font-bold text-emerald-600 mb-2">{stat.number}</div>
                   <div className="text-gray-600">{stat.label}</div>
                 </CardContent>
               </Card>
@@ -58,18 +69,18 @@ export default function AboutUs() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                icon: <ChartBar className="w-10 h-10 text-[#472282]" />,
+                icon: <ChartBar className="w-10 h-10 text-emerald-600" />,
                 title: "Performance Marketing",
                 description:
                   "Data-driven campaigns optimized for maximum ROI across multiple channels and platforms.",
               },
               {
-                icon: <Users className="w-10 h-10 text-[#472282]" />,
+                icon: <Users className="w-10 h-10 text-emerald-600" />,
                 title: "User Acquisition",
                 description: "Strategic user acquisition campaigns focused on quality and retention.",
               },
               {
-                icon: <Target className="w-10 h-10 text-[#472282]" />,
+                icon: <Target className="w-10 h-10 text-emerald-600" />,
                 title: "Targeted Advertising",
                 description: "Precision targeting using advanced data analytics and audience segmentation.",
               },
@@ -103,7 +114,7 @@ export default function AboutUs() {
             ].map((vertical, index) => (
               <Card key={index} className="p-6">
                 <CardContent className="flex flex-col items-center text-center gap-2">
-                  <div className="rounded-full bg-[#472282] p-4 text-white">{vertical.icon}</div>
+                  <div className="rounded-full bg-emerald-100 text-emerald-600 p-4">{vertical.icon}</div>
                   <h3 className="font-semibold">{vertical.name}</h3>
                 </CardContent>
               </Card>
@@ -143,14 +154,23 @@ export default function AboutUs() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-[#472282] to-[#8a66c3] py-16">
+      <section className="bg-gradient-to-br from-emerald-600 to-purple-600 p-6 py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-3xl font-bold mb-6">Ready to Grow Your Business?</h2>
             <p className="text-lg mb-8">
               Join our network of successful partners and take your marketing performance to the next level.
             </p>
-            <button onClick={() => onOpen()} className="w-[9rem]  mt-2 rounded-sm py-2 bg-[#fff] text-red-600 ">Contact us</button>
+            <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button 
+                onClick={() => onOpen()}
+                size="lg" className="bg-white text-emerald-600 hover:bg-white/90">
+                  Contact us
+                </Button>
+              </motion.div>  
           </div>
         </div>
       </section>

@@ -25,7 +25,7 @@ const Header = () =>{
         <div className=" sticky top-0 w-full bg-white z-[99]">
             <div className=" z-[90] flex lg:hidden justify-between items-center py-4 px-4 bg-white ">
                 {/* Mobile */}
-                <div className="text-2xl font-[600] text-[#472282] flex">
+                <div className="text-2xl font-[600] text-emerald-600 flex">
                     {/* <Image src="/logo.png" height={240} width={240} alt="logo"/> */}
                     <p className="text-black">adbyte</p><p>hub</p>
                 </div>
@@ -88,59 +88,73 @@ const Header = () =>{
                             <Link href="/about-us" >
                                 About Us
                             </Link>
-                            <Button onClick={() => {onOpen(), setActive(false)}} className=" bg-[#472282]" >
-                                Contact Us
-                            </Button>
+                            <motion.div
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                >
+                                    <Button 
+                                            onClick={() => onOpen()}
+                                            className="bg-gradient-to-br from-emerald-600 to-purple-600 p-6 text-[16px] font-[400] z-[110] "
+                                    >
+                                            Contact Us
+                                </Button>
+                            </motion.div>
                         </nav>
                     </motion.div>
                 )}
             </div>
              {/* large screen  */}
             <div className="lg:flex hidden py-4 justify-between items-center px-24 border border-b shadow-md z-[90] bg-white">
-                <div className="text-2xl font-[600] text-[#472282] flex">
+                <div className="text-2xl font-[600] text-emerald-600 flex">
                     {/* <Image src="/logo.png" height={240} width={240} alt="logo"/> */}
                     <p className="text-black">adbyte</p><p>hub</p>
                 </div>
 
                 <div className="gap-x-16 flex">
-                    <Link href="/" className='items-center hover:text-[#D9083C] transition-colors' >
+                    <Link href="/" className='items-center hover:text-emerald-600 transition-colors' >
                         Home
                     </Link>
 
                     <DropdownMenu>
-                        <DropdownMenuTrigger className="flex items-center hover:text-[#D9083C] transition-colors">
+                        <DropdownMenuTrigger className="flex items-center hover:text-emerald-600 transition-colors">
                             Services
                             <ChevronDown className="ml-1 h-4 w-4" />
                         </DropdownMenuTrigger>
                         <DropdownMenuContent className='z-[110]'>
                             <DropdownMenuItem>
-                            <Link href="/publisher" className="w-full">
+                            <Link href="/publisher" className="w-full hover:text-emerald-600">
                                 Publisher
                             </Link>
                             </DropdownMenuItem>
                             <DropdownMenuItem>
-                            <Link href="/advertiser" className="w-full">
+                            <Link href="/advertiser" className="w-full hover:text-emerald-600">
                                 Advertiser
                             </Link>
                             </DropdownMenuItem>
                         </DropdownMenuContent>
                     </DropdownMenu>
 
-                    <Link href="/blog" className="items-center hover:text-[#D9083C] transition-colors">
+                    <Link href="/blog" className="items-center hover:text-emerald-600 transition-colors">
                         Blog
                     </Link>
 
-                    <Link href="/about-us" className="items-center hover:text-[#D9083C] transition-colors">
+                    <Link href="/about-us" className="items-center hover:text-emerald-600 transition-colors">
                         About Us
                     </Link>
                 </div>
                 
-                   <Button 
-                        onClick={() => onOpen()}
-                        className="bg-[#472282] text-[16px] font-[400] z-[110] "
-                   >
-                        Contact Us
+                   
+                   <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                >
+                    <Button 
+                            onClick={() => onOpen()}
+                            className="bg-gradient-to-br from-emerald-600 to-purple-600 p-6 text-[16px] font-[400] z-[110] "
+                    >
+                            Contact Us
                    </Button>
+              </motion.div>
             </div>
             
         </div>

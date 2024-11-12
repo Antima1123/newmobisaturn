@@ -5,7 +5,7 @@ export const WhoWeAre = () =>{
     return(
         <div className=" px-4 mt-24 md:px-28 w-full py-10">
             <div className=" w-full flex flex-col justify-center  items-center  max-w-screen-2xl mx-auto">
-                <h1 className="text-2xl font-[700] mb-4">Who we are?</h1>
+                <h1 className="text-4xl font-[700] mb-4 ">Who we are?</h1>
                 <p className="text-gray-400">We are a premier performance marketing company specializing in in-app marketing.</p>
                 <div className=" mt-8 flex lg:flex-row flex-col w-full justify-center lg:justify-between items-center pt-30 gap-24 max-w-screen-2xl mx-auto">
                     <div className="md:w-[44rem] w-full text-lg  flex flex-col gap-4 text-gray-600">

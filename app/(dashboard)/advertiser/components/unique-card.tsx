@@ -33,7 +33,7 @@ export default function Cardunique({
               </li>
             ))}
           </ul>
-          <Button size="lg" className="w-full md:w-auto bg-[#472282]">
+          <Button size="lg" className="w-full md:w-auto bg-gradient-to-br from-emerald-600 to-purple-600 p-6">
             {buttonText}
           </Button>
         </div>

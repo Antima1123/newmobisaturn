@@ -7,13 +7,15 @@ const WhatWeDo = () => {
         <div className="max-w-screen-2xl mx-auto w-full flex flex-col relative">
             <section className="w-full flex flex-col items-center gap-10 py-10">
                 <div className="w-full flex flex-col items-center gap-4 text-center">
-                    <p className="text-2xl font-[700]">What we do ?</p>
+                    <p className="text-4xl font-[700]">What we do ?</p>
                 </div>
                     {/* cards */}
                 <div className="grid md:grid-cols-3 mx-auto gap-24 mt-4 px-2 md:px-0">
                     <div className="flex flex-col  items-center w-72">
-                        <FaRegUserCircle size={40} color="#472282" className="mb-4"/>
-                        <div className="text-xl font-[600] text-center">
+                    <div className="p-3 rounded-full bg-emerald-100 text-emerald-600 mb-4">
+                        <FaRegUserCircle size={40}/>
+                    </div>
+                        <div className="text-xl font-[600] text-center text-emerald-600">
                             User Acquisition  
                         </div>
 
@@ -23,8 +25,10 @@ const WhatWeDo = () => {
                     </div>
 
                     <div className="flex flex-col items-center w-72">
-                        <TbTargetArrow size={40} color="#472282" className="mb-4"/>
-                        <div className="text-xl font-[600] text-center">
+                        <div className="p-3 rounded-full bg-emerald-100 text-emerald-600 mb-4">
+                            <TbTargetArrow size={40}/>
+                        </div>
+                        <div className="text-xl font-[600] text-center text-emerald-600">
                             Retargeting  
                         </div>
 
@@ -34,8 +38,10 @@ const WhatWeDo = () => {
                     </div>
 
                     <div className="flex flex-col items-center w-72">
-                        <IoGameControllerOutline size={40} color="#472282" className="mb-4"/>
-                        <div className="text-xl font-[600] text-center">
+                        <div className="p-3 rounded-full bg-emerald-100 text-emerald-600 mb-4">
+                        <IoGameControllerOutline size={40}/>
+                        </div>
+                        <div className="text-xl font-[600] text-center text-emerald-600">
                             Gaming    
                         </div>
 
