@@ -15,6 +15,7 @@ import { ChevronDown } from "lucide-react"
 const Header = () =>{
     const [active, setActive] = useState(false);
     const {onOpen, isOpen} = useOpenContactUs();
+    const [service,setService] = useState(false)
 
     const handleClick = () =>{
         setActive(!active)
@@ -58,23 +59,38 @@ const Header = () =>{
                         initial={{y: -1000}} 
                         animate={{y: 0}} 
                         transition={{ ease: "easeInOut",}} 
-                        className=" text-black flex w-screen h-[14rem] absolute z-[80] left-0 top-16 bg-[#ffc6c6] px-10 py-6 "
+                        className=" text-black flex w-screen shadow-lg absolute z-[80] left-0 top-16 bg-[#fff] px-10 py-6 "
                         >
                         <nav className="font-[600] gap-y-6 flex flex-col">
                             <Link href="/">
                                 Home
                             </Link>
 
-                            <Link href="/performance-marketing" >
-                                Performance Marketing
+                            <div onClick={() => setService(!service)} className='flex items-center'>
+                                <p>Services</p>
+                                <ChevronDown className={`${service? " rotate-180 ease-in-out transition-all":"ease-in-out transition-all"}`}/>
+                            </div>
+
+                            {service && (
+                                <div className='flex flex-col gap-2'>
+                                    <Link href={"/publisher"} className=''>
+                                        <button className='ml-2 text-md font-[500]'>Publisher</button>
+                                    </Link>
+                                    <Link href={"/advertiser"} className=''>
+                                        <button className='ml-2 text-md font-[500]'>Advertiser</button>
+                                    </Link>
+                                </div>
+                            )}
+                            <Link href="/about-us" >
+                               Blogs
                             </Link>
 
                             <Link href="/about-us" >
                                 About Us
                             </Link>
-                            <div onClick={() => {onOpen(), setActive(false)}} className=" cursor-pointer" >
+                            <Button onClick={() => {onOpen(), setActive(false)}} className=" bg-[#472282]" >
                                 Contact Us
-                            </div>
+                            </Button>
                         </nav>
                     </motion.div>
                 )}
@@ -98,7 +114,7 @@ const Header = () =>{
                         </DropdownMenuTrigger>
                         <DropdownMenuContent className='z-[110]'>
                             <DropdownMenuItem>
-                            <Link href="/bublisher" className="w-full">
+                            <Link href="/publisher" className="w-full">
                                 Publisher
                             </Link>
                             </DropdownMenuItem>
