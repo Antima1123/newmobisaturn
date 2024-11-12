@@ -197,7 +197,7 @@ export default function ContactForm() {
                             <SelectItem value="+243">+243 (Congo, Democratic Republic of the)</SelectItem>
                             <SelectItem value="+682">+682 (Cook Islands)</SelectItem>
                             <SelectItem value="+506">+506 (Costa Rica)</SelectItem>
-                            <SelectItem value="+225">+225 (Côte d'Ivoire)</SelectItem>
+                            <SelectItem value="+225">+225 (Côte d&apos;Ivoire)</SelectItem>
                             <SelectItem value="+385">+385 (Croatia)</SelectItem>
                             <SelectItem value="+53">+53 (Cuba)</SelectItem>
                             <SelectItem value="+357">+357 (Cyprus)</SelectItem>
