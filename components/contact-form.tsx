@@ -78,7 +78,6 @@ export default function ContactForm() {
     if (step === 1) {
       return formData.name && formData.phone && formData.email && formData.company;
     } else if (step === 2) {
-      toast.warning("please fill the form")
       return formData.marketingSpend && formData.location;
     }
     return true;
