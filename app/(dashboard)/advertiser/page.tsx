@@ -132,17 +132,17 @@ export default function AdvertiserPage() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-white">Why Choose Us</h2>
             <div className="grid gap-6 lg:grid-cols-3 ">
               <Card className="flex flex-col items-center text-center p-6">
-                <Globe className="h-12 w-12 mb-4 text-primary text-emerald-600" />
+                <Globe className="h-12 w-12 mb-4 text-primary " color="rgb(5 150 105)" />
                 <h3 className="text-xl font-bold mb-2 text-emerald-600">Global Reach</h3>
                 <p className="text-gray-500 dark:text-gray-400">Access a diverse audience of over two billion users across the globe.</p>
               </Card>
               <Card className="flex flex-col items-center text-center p-6">
-                <Target className="h-12 w-12 mb-4 text-primary text-emerald-600" />
+                <Target color="rgb(5 150 105)" className="h-12 w-12 mb-4 text-primary"  />
                 <h3 className="text-xl font-bold mb-2 text-emerald-600">Precision Targeting</h3>
                 <p className="text-gray-500 dark:text-gray-400">Reach the right audience with our advanced targeting capabilities.</p>
               </Card>
               <Card className="flex flex-col items-center text-center p-6">
-                <TrendingUp className="h-12 w-12 mb-4 text-primary text-emerald-600" />
+                <TrendingUp className="h-12 w-12 mb-4 text-primary" color="rgb(5 150 105)" />
                 <h3 className="text-xl font-bold mb-2 text-emerald-600">Performance Tracking</h3>
                 <p className="text-gray-500 dark:text-gray-400">Monitor and optimize your campaigns with real-time analytics.</p>
               </Card>
