@@ -15,15 +15,15 @@ export default function Home() {
   const CetoCard = [
     {
       title: "abc",
-      url: "/card-1.jpg"
+      url: "/bg-1.jpg"
     },
     {
       title: "abc",
-      url: "/card-2.jpg"
+      url: "/bg-2.jpg"
     },
     {
       title: "abc",
-      url: "/card-3.jpg"
+      url: "/bg-3.jpg"
     }
   ]
 
@@ -37,11 +37,11 @@ export default function Home() {
           <CategoryCard key={index} title={item.title} url={item.url}/>
         ))}
       </div>
-      <ServeClients/>
+      {/* <ServeClients/> */}
       <WhoWeAre/>
       <WhatWeDo/>
       <WhyMobiSaturn/>
-      <MMPPartners/>
+      {/* <MMPPartners/> */}
       {isOpen && 
         (
           <div className="w-screen h-screen inset-0 fixed top-0 right-0 bg-black bg-opacity-75 items-center justify-center flex z-[100]"><ContactForm/></div>
@@ -50,3 +50,4 @@ export default function Home() {
     </div>
   );
 }
+ 

@@ -13,7 +13,7 @@ export const WhyMobiSaturn = () =>{
                 <p className="text-center md:w-[50rem] w-[20rem] text-gray-400 mb-8">Our verified demand sources assist advertisers to achieve an effective ROAS, we thereby work on the integration between the traffic/demand sources and the advertisers.</p>
 
                 <div className="w-full grid md:grid-cols-2 gap-y-8">
-                    <div className="flex flex-col gap-y-8 md:pt-16">
+                    <div className="flex flex-col gap-y-8 md:pt-16 w-full items-center">
 
 
                         <div className="flex gap-8 md:w-[30rem] w-[22rem] h-[7rem] items-center">
