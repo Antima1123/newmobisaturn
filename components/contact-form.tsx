@@ -109,7 +109,7 @@ export default function ContactForm() {
         <div className="grid md:grid-cols-5">
           <div className="md:col-span-2 bg-gradient-to-br from-blue-600 to-purple-600 p-6 md:p-8 text-white">
             <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Boost Your Marketing Game</h2>
-            <p className="mb-4 text-sm md:text-base">Ready to skyrocket your brand? Fill out this form and let's create marketing magic together!</p>
+            <p className="mb-4 text-sm md:text-base">Ready to skyrocket your brand? Fill out this form and let&apos;s create marketing magic together!</p>
             <div className="space-y-2 hidden md:block">
               {[1, 2, 3].map((i) => (
                 <div key={i} className="flex items-center">
@@ -131,7 +131,7 @@ export default function ContactForm() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <h3 className="text-xl md:text-2xl font-semibold mb-4">Let's Get Started</h3>
+                  <h3 className="text-xl md:text-2xl font-semibold mb-4">Let&apos;s Get Started</h3>
                   <div className="space-y-4">
                     <div>
                       <Label htmlFor="name">Your Name</Label>
@@ -279,7 +279,7 @@ export default function ContactForm() {
                   <h3 className="text-xl md:text-2xl font-semibold mb-4">Final Thoughts</h3>
                   <div className="space-y-4">
                     <div>
-                      <Label htmlFor="interests">Anything else you'd like us to know?</Label>
+                      <Label htmlFor="interests">Anything else you&apos;d like us to know?</Label>
                       <Textarea 
                         id="interests" 
                         name="interests" 
