@@ -220,7 +220,7 @@ export default function Component() {
                   </p>
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-2xl font-bold">Don't miss news and tips</h3>
+                  <h3 className="text-2xl font-bold">Don&apos;t miss news and tips</h3>
                   <p className="text-gray-500">
                     Our blog will help you find how to provide, save, analyze and tips
                   </p>
