@@ -83,18 +83,6 @@ export default function EnhancedMarketingBlog() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-100">
-      <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-gray-900">Marketing Insights</h1>
-          <nav>
-            <ul className="flex space-x-4">
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">Home</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">About</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-gray-900">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
 
       <main className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <motion.div 
