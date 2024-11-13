@@ -134,7 +134,7 @@ const Header = () =>{
                         </DropdownMenuContent>
                     </DropdownMenu>
 
-                    <Link href="/blog" className="items-center hover:text-emerald-600 transition-colors">
+                    <Link href="/blogs" className="items-center hover:text-emerald-600 transition-colors">
                         Blog
                     </Link>
 
@@ -142,8 +142,6 @@ const Header = () =>{
                         About Us
                     </Link>
                 </div>
-                
-                   
                    <motion.div
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}

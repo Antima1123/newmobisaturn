@@ -137,7 +137,7 @@ export default function ContactForm() {
             <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Boost Your Marketing Game</h2>
             <p className="mb-4 text-sm md:text-base">Ready to skyrocket your brand? Fill out this form and let&apos;s create marketing magic together!</p>
             <div className="space-y-2 hidden md:block">
-              {[1, 2, 3].map((i) => (
+              {[1].map((i) => (
                 <div key={i} className="flex items-center">
                   <div className={`w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center ${step >= i ? 'bg-white text-emerald-600' : 'bg-emerald-300 text-white'} mr-3`}>
                     {i}
@@ -205,6 +205,10 @@ export default function ContactForm() {
                       <Label htmlFor="company">Company Name</Label>
                       <Input placeholder='Company name' id="company" name="company" value={formData.company} onChange={handleInputChange} required />
                     </div>
+                    <div>
+                      <Label htmlFor="company">Skype Id</Label>
+                      <Input placeholder='Skype (optional)' id="interests" name="interests" value={formData.interests} onChange={handleInputChange} required />
+                    </div>
                   </div>
                 </motion.div>
               )}
@@ -259,8 +263,9 @@ export default function ContactForm() {
                   </div>
                 </motion.div>
               )}
-              <div className="flex flex-col sm:flex-row justify-between mt-6 space-y-4 sm:space-y-0">
-                {step > 1 && (
+              <div className="flex flex-col sm:flex-row justify-end mt-6 space-y-4 sm:space-y-0">
+                {/* jb to je */}
+                {/* {step > 1 && (
                   <Button type="button" onClick={prevStep} variant="outline" className="w-full sm:w-auto">
                     <ArrowLeft className="mr-2 h-4 w-4" /> Back
                   </Button>
@@ -269,11 +274,11 @@ export default function ContactForm() {
                   <Button type="button" disabled={!validateStep()} onClick={nextStep} className="w-full sm:w-auto sm:ml-auto">
                     Next <ChevronRight className="ml-2 h-4 w-4" />
                   </Button>
-                ) : (
-                  <Button type="button" onClick={handleFinalSubmit} className="bg-gradient-to-br from-emerald-600 to-purple-600 p-6">
+                ) : ( */}
+                  <Button type="button" disabled={!validateStep()} onClick={handleFinalSubmit} className="bg-gradient-to-br from-emerald-600 to-purple-600 p-6">
                     {isPending? <div className='flex items-center space-x-2'>Submitting <Loader2 className=' animate-spin transition-all ml-2'/></div>:<div className='flex items-center space-x-2'>Submit <Send className="ml-2" /></div>}
                   </Button>
-                )}
+                {/* )} */}
               </div>
             </form>
           </div>

@@ -1,16 +1,27 @@
 import { FaRegUserCircle } from "react-icons/fa";
 import { IoGameControllerOutline } from "react-icons/io5";
 import { TbTargetArrow } from "react-icons/tb";
+import { motion } from "framer-motion";
 
 const WhatWeDo = () => {
     return (
-        <div className="max-w-screen-2xl mx-auto w-full flex flex-col relative">
+        <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                whileInView={{ opacity: [0,1] }}
+        className="max-w-screen-2xl mx-auto w-full flex flex-col relative">
             <section className="w-full flex flex-col items-center gap-10 py-10">
                 <div className="w-full flex flex-col items-center gap-4 text-center">
                     <p className="text-4xl font-[700]">What we do ?</p>
                 </div>
                     {/* cards */}
-                <div className="grid md:grid-cols-3 mx-auto gap-24 mt-4 px-2 md:px-0">
+                <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                whileInView={{ opacity: [0,1] }}
+                className="grid md:grid-cols-3 mx-auto gap-24 mt-4 px-2 md:px-0">
                     <div className="flex flex-col  items-center w-72">
                     <div className="p-3 rounded-full bg-emerald-100 text-emerald-600 mb-4">
                         <FaRegUserCircle size={40}/>
@@ -49,9 +60,9 @@ const WhatWeDo = () => {
                             utilizing strategic methods to acquire and engage new gamers, fueling the growth and vitality of the gaming ecosystem               
                         </p>
                     </div>
-                </div>
+                </motion.div>
             </section>
-        </div>
+        </motion.div>
     )
 }
 

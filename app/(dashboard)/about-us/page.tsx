@@ -4,11 +4,26 @@ import ContactForm from "@/components/contact-form"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { useOpenContactUs } from "@/hook/contact-open"
-import { ChartBar, Users, Target, Rocket, Trophy, Globe2 } from "lucide-react"
-import { motion } from "framer-motion"
+import { ChartBar, Users, Target, Rocket, Trophy, Globe2, Briefcase, Utensils, ShoppingBag } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
+import { useState } from "react"
+
+
+const industries = [
+  { name: "Education", icon: <Globe2 className="w-12 h-12" />, color: "bg-blue-500", description: "Revolutionizing learning experiences through targeted digital strategies and EdTech solutions." },
+  { name: "Gaming", icon: <Trophy className="w-12 h-12" />, color: "bg-purple-500", description: "Driving user acquisition and engagement for mobile and console games across diverse genres." },
+  { name: "Finance", icon: <ChartBar className="w-12 h-12" />, color: "bg-green-500", description: "Enhancing digital banking experiences and promoting fintech solutions to tech-savvy audiences." },
+  { name: "Social Media", icon: <Users className="w-12 h-12" />, color: "bg-pink-500", description: "Boosting platform growth and user retention through data-driven community building strategies." },
+  { name: "Travel", icon: <Rocket className="w-12 h-12" />, color: "bg-yellow-500", description: "Inspiring wanderlust and driving bookings through immersive digital marketing campaigns." },
+  { name: "Business", icon: <Briefcase className="w-12 h-12" />, color: "bg-red-500", description: "Empowering B2B growth through targeted lead generation and account-based marketing strategies." },
+  { name: "Food & Beverage", icon: <Utensils className="w-12 h-12" />, color: "bg-orange-500", description: "Satisfying cravings and driving orders through mouth-watering digital content and local SEO." },
+  { name: "E-commerce", icon: <ShoppingBag className="w-12 h-12" />, color: "bg-indigo-500", description: "Maximizing online sales through conversion optimization and personalized shopping experiences." },
+]
 
 export default function AboutUs() {
     const { onOpen, isOpen } = useOpenContactUs()
+    const [selectedIndustry, setSelectedIndustry] = useState<number | null>(null)
+
   return (
     <div className="flex flex-col min-h-screen">
         {isOpen && 
@@ -99,29 +114,64 @@ export default function AboutUs() {
 
       {/* Industry Verticals */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Industries We Serve</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { name: "Education", icon: <Globe2 className="w-8 h-8" /> },
-              { name: "Gaming", icon: <Trophy className="w-8 h-8" /> },
-              { name: "Finance", icon: <ChartBar className="w-8 h-8" /> },
-              { name: "Social Media", icon: <Users className="w-8 h-8" /> },
-              { name: "Travel", icon: <Globe2 className="w-8 h-8" /> },
-              { name: "Entertainment", icon: <Trophy className="w-8 h-8" /> },
-              { name: "Lifestyle", icon: <Users className="w-8 h-8" /> },
-              { name: "Sports", icon: <Rocket className="w-8 h-8" /> },
-            ].map((vertical, index) => (
-              <Card key={index} className="p-6">
-                <CardContent className="flex flex-col items-center text-center gap-2">
-                  <div className="rounded-full bg-emerald-100 text-emerald-600 p-4">{vertical.icon}</div>
-                  <h3 className="font-semibold">{vertical.name}</h3>
+      <div className="container mx-auto px-4">
+        <h2 className="text-4xl font-bold text-center mb-12">Industries We Serve</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+          {industries.map((industry, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Button
+                variant="outline"
+                className={`w-full h-32 flex flex-col items-center justify-center gap-2 ${
+                  selectedIndustry === index ? 'ring-2 ring-offset-2 ring-emerald-500' : ''
+                }`}
+                onClick={() => setSelectedIndustry(index)}
+              >
+                <div className={`p-3 rounded-full ${industry.color}`}>
+                  {industry.icon}
+                </div>
+                <span className="font-semibold">{industry.name}</span>
+              </Button>
+            </motion.div>
+          ))}
+        </div>
+        <AnimatePresence mode="wait">
+          {selectedIndustry !== null && (
+            <motion.div
+              key={selectedIndustry}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Card className="overflow-hidden">
+                <CardContent className="p-0">
+                  <div className="grid md:grid-cols-2">
+                    <div className={`${industries[selectedIndustry].color} p-8 flex items-center justify-center`}>
+                      <motion.div
+                        initial={{ scale: 0.8, rotate: -10 }}
+                        animate={{ scale: 1, rotate: 0 }}
+                        transition={{ duration: 0.5, type: "spring" }}
+                      >
+                        {industries[selectedIndustry].icon}
+                      </motion.div>
+                    </div>
+                    <div className="p-8">
+                      <h3 className="text-2xl font-bold mb-4">{industries[selectedIndustry].name}</h3>
+                      <p className="text-gray-600 mb-6">{industries[selectedIndustry].description}</p>
+                      {/* <Button>Learn More</Button> */}
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </section>
 
       {/* Company Values */}
       <section className="py-16">

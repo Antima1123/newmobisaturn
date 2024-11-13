@@ -7,7 +7,7 @@ import React, { useEffect, useState } from 'react'
 const caro = [
   {
     id: 1,
-    img_url: "https://beatnik-5.myshopify.com/cdn/shop/files/Award-winning-mens-sustainable-glasses-and-womens-eyewear-2.jpg?v=1617271934&width=2375",
+    img_url: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3Ddigital%2Bmarketing%2Bbackground&psig=AOvVaw0-bwjBThgg_RC1obs46HT2&ust=1731574724842000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPiK2Nv42IkDFQAAAAAdAAAAABAE",
     title: "REFRAME YOUR WORLD",
     des: "with sustainable eye wear",
     link: "",

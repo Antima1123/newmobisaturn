@@ -2,18 +2,31 @@ import Image from "next/image"
 import { BiSolidMedal } from "react-icons/bi";
 import { FaEye, FaHandshake } from "react-icons/fa";
 import { RiCustomerService2Fill } from "react-icons/ri";
+import { motion } from "framer-motion";
+import ContactUsPage from "./contact-us";
+import { BlockInText } from "./block-in-text-card";
 
 
 export const WhyMobiSaturn = () =>{
     const as = `'`;
     return(
-        <div className="flex flex-col md:px-28  px-4 mt-8 py-20 w-full">
+        <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                whileInView={{ opacity: [0,1] }}
+        className="flex flex-col md:px-28  px-4 mt-8 py-20 w-full">
             <div className=" justify-center items-center flex flex-col max-w-screen-2xl mx-auto w-full ">
                 <h1 className="text-4xl font-[700] mb-4 ">Why adbytehub?</h1>
                 <p className="text-center md:w-[50rem] w-[20rem] text-gray-400 mb-8">Our verified demand sources assist advertisers to achieve an effective ROAS, we thereby work on the integration between the traffic/demand sources and the advertisers.</p>
 
                 <div className="w-full grid md:grid-cols-2 gap-y-8">
-                    <div className="flex flex-col gap-y-8 md:pt-16 w-full items-center">
+                    <motion.div 
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5 }}
+                    whileInView={{ opacity: [0,1] }}
+                    className="flex flex-col gap-y-8 md:pt-16 w-full items-center">
 
 
                         <div className="flex gap-8 md:w-[30rem] w-[22rem] h-[7rem] items-center">
@@ -56,15 +69,20 @@ export const WhyMobiSaturn = () =>{
                             </div>
                         </div>
 
-                    </div>
+                    </motion.div>
 
 
-                    <div className=" mt-4 w-full lg:justify-end flex justify-center ">
-                        <Image src='/why-mobistun.jpg' height={1000} width={1000} alt="mobisaturn" className="lg:w-[500px] w-[300px] object-contain"/>
-                    </div>
+                    <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5 }}
+                    whileInView={{ opacity: [0,1] }}
+                    className=" mt-4 w-full lg:justify-end flex justify-center ">
+                        <ContactUsPage/>
+                    </motion.div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

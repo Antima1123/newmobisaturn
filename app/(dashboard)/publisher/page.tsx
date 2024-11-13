@@ -1,68 +1,75 @@
 'use client'
 
 import ContactForm from "@/components/contact-form"
+import ContactUsPage from "@/components/contact-us"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useOpenContactUs } from "@/hook/contact-open"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowDown, Clock, CreditCard, Globe2, LayoutGrid, Mail, MessageSquare, MonitorSmartphone, Play, PlusCircle } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { useState } from "react"
+
 
 export default function Component() {
     const {onOpen,isOpen} = useOpenContactUs();
-  const advantages = [
-    {
-      icon: <Clock className="h-8 w-8" />,
-      title: "Live performance tracking",
-      description: "No setup required! Start tracking your campaign's ROI"
-    },
-    {
-      icon: <LayoutGrid className="h-8 w-8" />,
-      title: "Maximum revenue",
-      description: "Target audiences using top marketplace solutions"
-    },
-    {
-      icon: <PlusCircle className="h-8 w-8" />,
-      title: "18+ categories",
-      description: "We qualify and filter premium and mainstream categories"
-    },
-    {
-      icon: <Mail className="h-8 w-8" />,
-      title: "Direct communications",
-      description: "Regular updates with fresh updates"
-    },
-    {
-      icon: <Globe2 className="h-8 w-8" />,
-      title: "Fast scaling",
-      description: "Help more and get a full management of your panel"
-    }
-  ]
 
-  const adFormats = [
-    {
-      icon: <LayoutGrid className="h-8 w-8" />,
-      title: "Pop-under",
-      description: "Drive endless traffic when a user clicks anywhere on the page or selected element"
-    },
-    {
-      icon: <MonitorSmartphone className="h-8 w-8" />,
-      title: "Web push",
-      description: "Collect a base of subscribers on desktop, manage and send them messages"
-    },
-    {
-      icon: <Play className="h-8 w-8" />,
-      title: "In-stream video",
-      description: "Full video ads into your player or place video-roll in video-based ad format"
-    },
-    {
-      icon: <MessageSquare className="h-8 w-8" />,
-      title: "In-page",
-      description: "Banner that should be a certain part of a webpage or whole page can be covered by it"
-    }
-  ]
+    const [selectedAdvantage, setSelectedAdvantage] = useState<any>(null)
+    const [selectedAdFormat, setSelectedAdFormat] = useState<any>(null)
+
+    const advantages = [
+      {
+        icon: <Clock className="h-12 w-12" />,
+        title: "Real-Time Performance Tracking",
+        description: "Instant ROI insights with zero setup time. Watch your campaigns thrive in real-time."
+      },
+      {
+        icon: <LayoutGrid className="h-12 w-12" />,
+        title: "Revenue Maximization",
+        description: "Leverage top-tier marketplace solutions to target high-value audiences and boost your earnings."
+      },
+      {
+        icon: <PlusCircle className="h-12 w-12" />,
+        title: "Diverse Category Coverage",
+        description: "Access 18+ meticulously curated categories, spanning premium and mainstream niches."
+      },
+      {
+        icon: <Mail className="h-12 w-12" />,
+        title: "Seamless Communication",
+        description: "Stay in the loop with regular, actionable updates tailored to your needs."
+      },
+      {
+        icon: <Globe2 className="h-12 w-12" />,
+        title: "Rapid Scaling Capabilities",
+        description: "Expand your reach effortlessly with our comprehensive panel management solutions."
+      }
+    ]
+  
+    const adFormats = [
+      {
+        icon: <LayoutGrid className="h-12 w-12" />,
+        title: "Pop-under Mastery",
+        description: "Unleash a torrent of traffic with strategically placed click-triggered pop-unders."
+      },
+      {
+        icon: <MonitorSmartphone className="h-12 w-12" />,
+        title: "Web Push Wizardry",
+        description: "Build and nurture a loyal subscriber base across desktop platforms with ease."
+      },
+      {
+        icon: <Play className="h-12 w-12" />,
+        title: "Immersive In-stream Video",
+        description: "Seamlessly integrate full video ads or video-rolls into your existing player."
+      },
+      {
+        icon: <MessageSquare className="h-12 w-12" />,
+        title: "Dynamic In-page Solutions",
+        description: "Craft attention-grabbing banners that seamlessly blend with your webpage's design."
+      }
+    ]
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -103,70 +110,132 @@ export default function Component() {
           </motion.div>
         </section>
 
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
-          <div className="container px-4 md:px-6 max-w-screen-2xl mx-auto">
-            <motion.h2
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-3xl font-bold tracking-tighter text-center mb-12"
-            >
-              Our advantages
-            </motion.h2>
+        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+      <section className="max-w-7xl mx-auto mb-24">
+        <motion.h2 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-4xl font-extrabold text-center text-gray-900 mb-12"
+        >
+          Our Unparalleled Advantages
+        </motion.h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {advantages.map((advantage, index) => (
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="grid gap-6 md:grid-cols-3 lg:grid-cols-5"
+              key={index}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              {advantages.map((advantage, index) => (
-                <motion.div
-                  key={index}
-                  whileHover={{ scale: 1.05 }}
-                  className="flex flex-col items-center text-center space-y-2"
-                >
-                  <div className="p-3 rounded-full bg-emerald-100 text-emerald-600">
+              <Card 
+                className="h-full cursor-pointer transition-all duration-300 hover:shadow-xl"
+                onClick={() => setSelectedAdvantage(advantage)}
+              >
+                <CardContent className="flex flex-col items-center p-6 text-center h-full">
+                  <div className="mb-4 p-3 rounded-full bg-gradient-to-r from-emerald-400 to-blue-500 text-white">
                     {advantage.icon}
                   </div>
-                  <h3 className="font-semibold">{advantage.title}</h3>
-                  <p className="text-sm text-gray-500">{advantage.description}</p>
-                </motion.div>
-              ))}
+                  <h3 className="text-xl font-semibold mb-2">{advantage.title}</h3>
+                  <p className="text-gray-600">{advantage.description}</p>
+                </CardContent>
+              </Card>
             </motion.div>
-          </div>
-        </section>
+          ))}
+        </div>
+      </section>
 
-        <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6 max-w-screen-2xl mx-auto">
+      <section className="max-w-7xl mx-auto">
+        <motion.h2 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-4xl font-extrabold text-center text-gray-900 mb-12"
+        >
+          Cutting-Edge Ad Formats
+        </motion.h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {adFormats.map((format, index) => (
             <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: [0,1] }}
-              transition={{ duration: 0.8 }}
-              className="space-y-12"
+              key={index}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="text-center space-y-4">
-                <h2 className="text-3xl font-bold tracking-tighter">Ad formats</h2>
-                <p className="text-gray-500">Choose the most effective ad format for your website</p>
-              </div>
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-                {adFormats.map((format, index) => (
-                  <motion.div
-                    key={index}
-                    whileHover={{ scale: 1.05 }}
-                    className="relative group overflow-hidden rounded-lg border p-6 hover:shadow-lg transition-shadow"
-                  >
-                    <div className="flex flex-col space-y-4">
-                      <div className="p-3 rounded-full bg-emerald-100 text-emerald-600 w-fit">
-                        {format.icon}
-                      </div>
-                      <h3 className="font-semibold">{format.title}</h3>
-                      <p className="text-sm text-gray-500">{format.description}</p>
+              <Card 
+                className="h-full cursor-pointer transition-all duration-300 hover:shadow-xl"
+                onClick={() => setSelectedAdFormat(format)}
+              >
+                <CardContent className="flex flex-col items-center p-6 text-center h-full">
+                  <div className="mb-4 p-3 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 text-white">
+                    {format.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{format.title}</h3>
+                  <p className="text-gray-600">{format.description}</p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      <AnimatePresence>
+        {(selectedAdvantage || selectedAdFormat) && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
+            onClick={() => {
+              setSelectedAdvantage(null)
+              setSelectedAdFormat(null)
+            }}
+          >
+            <motion.div
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.9 }}
+              className="bg-white rounded-lg p-8 max-w-md w-full"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {selectedAdvantage && (
+                <>
+                  <div className="flex justify-center mb-6">
+                    <div className="p-4 rounded-full bg-gradient-to-r from-emerald-400 to-blue-500 text-white">
+                      {selectedAdvantage.icon}
                     </div>
-                  </motion.div>
-                ))}
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-center">{selectedAdvantage.title}</h3>
+                  <p className="text-gray-600 mb-6 text-center">{selectedAdvantage.description}</p>
+                </>
+              )}
+              {selectedAdFormat && (
+                <>
+                  <div className="flex justify-center mb-6">
+                    <div className="p-4 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 text-white">
+                      {selectedAdFormat.icon}
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-center">{selectedAdFormat.title}</h3>
+                  <p className="text-gray-600 mb-6 text-center">{selectedAdFormat.description}</p>
+                </>
+              )}
+              <div className="flex justify-center">
+                <Button 
+                  onClick={() => {
+                    setSelectedAdvantage(null)
+                    setSelectedAdFormat(null)
+                  }}
+                  className="bg-gradient-to-r from-emerald-400 to-blue-500 text-white"
+                >
+                  Close
+                </Button>
               </div>
             </motion.div>
-          </div>
-        </section>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
 
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
           <div className="container px-4 md:px-6 max-w-screen-2xl mx-auto">
@@ -200,7 +269,15 @@ export default function Component() {
 
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 max-w-screen-2xl mx-auto">
-            <div className="grid gap-12 md:grid-cols-2">
+            <div className="grid gap-12 md:grid-cols-2 items-center justify-between">
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className=" justify-center flex w-full"
+              >
+                <ContactUsPage/>
+              </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -225,13 +302,6 @@ export default function Component() {
                     Our blog will help you find how to provide, save, analyze and tips
                   </p>
                 </div>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                className=" justify-center flex w-full"
-              >
               </motion.div>
             </div>
           </div>
