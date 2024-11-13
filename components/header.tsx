@@ -11,14 +11,23 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { ChevronDown } from "lucide-react"
+import { useRouter } from 'next/navigation';
 
 const Header = () =>{
     const [active, setActive] = useState(false);
     const {onOpen, isOpen} = useOpenContactUs();
     const [service,setService] = useState(false)
 
+    const router = useRouter();
+
     const handleClick = () =>{
         setActive(!active)
+    }
+
+    const handleroute = (link: string) => {
+        router.push(link)
+        setActive(false)
+        setService(false)
     }
 
     return(
@@ -62,9 +71,9 @@ const Header = () =>{
                         className=" text-black flex w-screen shadow-lg absolute z-[80] left-0 top-16 bg-[#fff] px-10 py-6 "
                         >
                         <nav className="font-[600] gap-y-6 flex flex-col">
-                            <Link href="/">
+                            <button onClick={()=>handleroute("/")} className='text-start'>
                                 Home
-                            </Link>
+                            </button>
 
                             <div onClick={() => setService(!service)} className='flex items-center'>
                                 <p>Services</p>
@@ -73,21 +82,21 @@ const Header = () =>{
 
                             {service && (
                                 <div className='flex flex-col gap-2'>
-                                    <Link href={"/publisher"} className=''>
-                                        <button className='ml-2 text-md font-[500]'>Publisher</button>
-                                    </Link>
-                                    <Link href={"/advertiser"} className=''>
-                                        <button className='ml-2 text-md font-[500]'>Advertiser</button>
-                                    </Link>
+                                    <button onClick={()=>handleroute("/publisher")}>
+                                        <button className='ml-2 text-md font-[500] text-start' >Publisher</button>
+                                    </button>
+                                    <button onClick={()=>handleroute("/advertiser")} className=''>
+                                        <button className='ml-2 text-md font-[500] text-start'>Advertiser</button>
+                                    </button>
                                 </div>
                             )}
-                            <Link href="/about-us" >
+                            <button onClick={()=>handleroute("/blogs")} className='text-start'>
                                Blogs
-                            </Link>
+                            </button>
 
-                            <Link href="/about-us" >
+                            <button onClick={()=>handleroute("/about-us")} className='text-start' >
                                 About Us
-                            </Link>
+                            </button>
                             <motion.div
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
