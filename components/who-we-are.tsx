@@ -77,7 +77,7 @@ export default function WhatWeAre() {
             Elevate Your <span className="text-primary">Marketing</span> Strategy
           </h1>
           <p className="mt-4 text-xl text-muted-foreground">
-            Harness the power of data-driven insights and cutting-edge technology to transform your brand's performance.
+            Harness the power of data-driven insights and cutting-edge technology to transform your brand&apos;s performance.
           </p>
         </motion.div>
 

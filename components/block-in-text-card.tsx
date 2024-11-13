@@ -8,7 +8,7 @@ export const BlockInText = () => {
         tag="/ Support"
         text={
           <>
-            <strong>Have questions?</strong> We'd love to help! Contact support
+            <strong>Have questions?</strong> We&apos;d love to help! Contact support
             for any issue you may face.
           </>
         }
