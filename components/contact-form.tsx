@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -25,6 +25,7 @@ interface FormData {
 }
 
 export default function ContactForm() {
+  const [mount,setMount] = useState(false)
   const [step, setStep] = useState(1)
   const {isOpen, onClose} = useOpenContactUs();
   const mutation = useCreateContact();
@@ -43,6 +44,10 @@ export default function ContactForm() {
     location: '',
     interests: '',
     std: ''
+  })
+
+  useEffect(() => {
+    setMount(true)
   })
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -120,6 +125,10 @@ export default function ContactForm() {
 
   const nextStep = () => setStep(step + 1)
   const prevStep = () => setStep(step - 1)
+
+  if (!mount){
+    return null
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4">

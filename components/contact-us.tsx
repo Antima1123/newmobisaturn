@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -29,6 +29,7 @@ export default function ContactUsPage() {
   const {isOpen, onClose} = useOpenContactUs();
   const mutation = useCreateContact();
   const [isPending,setIsPending] = useState(false)
+  const [mount,setMount] = useState(false)
 
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredCodes, setFilteredCodes] = useState(stdCodes);
@@ -120,6 +121,13 @@ export default function ContactUsPage() {
 
   const nextStep = () => setStep(step + 1)
   const prevStep = () => setStep(step - 1)
+
+  useEffect(() => {
+      setMount(true)
+    })
+  if (!mount){
+      return null
+    }
 
   return (
     <div className=" flex items-center justify-center p-4">
