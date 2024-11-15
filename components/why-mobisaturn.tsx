@@ -11,10 +11,6 @@ export const WhyMobiSaturn = () =>{
     const as = `'`;
     return(
         <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                whileInView={{ opacity: [0,1] }}
         className="flex flex-col md:px-28  px-4 mt-8 py-20 w-full">
             <div className=" justify-center items-center flex flex-col max-w-screen-2xl mx-auto w-full ">
                 <h1 className="text-4xl font-[700] mb-4 ">Why adbytehub?</h1>
@@ -22,10 +18,9 @@ export const WhyMobiSaturn = () =>{
 
                 <div className="w-full grid md:grid-cols-2 gap-y-8">
                     <motion.div 
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5 }}
-                    whileInView={{ opacity: [0,1] }}
+                    initial={{ opacity: 0, x: -300 }}
+                    transition={{ duration: 0.5, ease: "easeIn" }}
+                    whileInView={{ opacity: [0,1], x:0 }}
                     className="flex flex-col gap-y-8 md:pt-16 w-full items-center">
 
 
@@ -73,10 +68,9 @@ export const WhyMobiSaturn = () =>{
 
 
                     <motion.div
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5 }}
-                    whileInView={{ opacity: [0,1] }}
+                    initial={{ opacity: 0, x: 300 }}
+                    transition={{ duration: 0.5, ease: "easeIn" }}
+                    whileInView={{ opacity: [0,1], x:0 }}
                     className=" mt-4 w-full lg:justify-end flex justify-center ">
                         <ContactUsPage/>
                     </motion.div>

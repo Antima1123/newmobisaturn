@@ -81,7 +81,11 @@ export default function WhatWeAre() {
           </p>
         </motion.div>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <motion.div
+         initial={{ scale: 0.9 }}
+         transition={{ duration: 1, ease: "easeInOut", opacity: 0 }}
+         whileInView={{ scale: 1, opacity: [0,1] }}
+        className="grid gap-8 md:grid-cols-3">
           {services.map((service, index) => (
             <motion.div
               key={index}
@@ -90,7 +94,7 @@ export default function WhatWeAre() {
               viewport={{ once: true }}
               variants={{
                 initial: { opacity: 0, y: 20 },
-                animate: { opacity: 1, y: 0, transition: { delay: index * 0.2 } }
+                animate: { opacity: 1, y: 0 }
               }}
             >
               <Card className="group relative overflow-hidden">
@@ -115,7 +119,7 @@ export default function WhatWeAre() {
               </Card>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* <motion.div
           initial="initial"
