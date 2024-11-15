@@ -67,13 +67,17 @@ export const WhyMobiSaturn = () =>{
                     </motion.div>
 
 
-                    <motion.div
-                    initial={{ opacity: 0, x: 300 }}
-                    transition={{ duration: 0.5, ease: "easeIn" }}
-                    whileInView={{ opacity: [0,1], x:0 }}
-                    className=" mt-4 w-full lg:justify-end flex justify-center ">
-                        <ContactUsPage/>
-                    </motion.div>
+                    <div className="overflow-hidden">
+                        <motion.div
+                            initial={{ opacity: 0, x: 300 }}
+                            transition={{ duration: 0.5, ease: "easeIn" }}
+                            whileInView={{ opacity: [0, 1], x: 0 }}
+                            className="mt-4 w-full lg:justify-end flex justify-center"
+                        >
+                            <ContactUsPage />
+                        </motion.div>
+                    </div>
+
                 </div>
             </div>
         </motion.div>

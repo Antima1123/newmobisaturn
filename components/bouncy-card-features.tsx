@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 export const BouncyCardsFeatures = () => {
   const router = useRouter()
   return (
+    <div className="overflow-hidden">
     <motion.section 
       initial={{ x: -500, opacity: 0 }}
       whileInView={{ x: 0, opacity: [0,1] }}
@@ -61,6 +62,7 @@ export const BouncyCardsFeatures = () => {
         </BounceCard>
       </div>
     </motion.section>
+    </div>
   );
 };
 
