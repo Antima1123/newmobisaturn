@@ -124,9 +124,9 @@ const Header = () =>{
                         Home
                     </Link>
                     
-                    <Link href="/territories" className='items-center hover:text-emerald-600 transition-colors' >
+                    {/* <Link href="/territories" className='items-center hover:text-emerald-600 transition-colors' >
                         Territories
-                    </Link>
+                    </Link> */}
 
                     <DropdownMenu>
                         <DropdownMenuTrigger className="flex items-center hover:text-emerald-600 transition-colors">
