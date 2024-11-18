@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import { useOpenContactUs } from "@/hook/contact-open"
 import Image from "next/image"
 
 interface MarketingCardProps {
@@ -20,6 +21,8 @@ export default function Cardunique({
     imageUrl,
     imageOnRight
 } : MarketingCardProps) {
+
+  const {onOpen} = useOpenContactUs();
   return (
     <Card className="overflow-hidden shadow-lg max-w-4xl py-6 px-8">
       <div className={`flex flex-col gap-6 ${imageOnRight ? "md:flex-row" : "md:flex-row-reverse"}`}>
@@ -33,7 +36,7 @@ export default function Cardunique({
               </li>
             ))}
           </ul>
-          <Button size="lg" className="w-full md:w-auto bg-gradient-to-br from-emerald-600 to-purple-600 p-6">
+          <Button onClick={() => onOpen()} size="lg" className="w-full md:w-auto bg-gradient-to-br from-emerald-600 to-purple-600 p-6">
             {buttonText}
           </Button>
         </div>

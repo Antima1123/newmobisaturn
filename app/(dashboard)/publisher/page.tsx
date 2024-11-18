@@ -9,8 +9,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { useOpenContactUs } from "@/hook/contact-open"
 import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowDown, Clock, CreditCard, Globe2, LayoutGrid, Mail, MessageSquare, MonitorSmartphone, Play, PlusCircle } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
+import { MdSupportAgent } from "react-icons/md";
 import { useState } from "react"
 
 
@@ -37,9 +36,9 @@ export default function Component() {
         description: "Access 18+ meticulously curated categories, spanning premium and mainstream niches."
       },
       {
-        icon: <Mail className="h-12 w-12" />,
-        title: "Seamless Communication",
-        description: "Stay in the loop with regular, actionable updates tailored to your needs."
+        icon: <MdSupportAgent className="h-12 w-12" />,
+        title: "Live Support ",
+        description: "No stupid tickets and waiting - your personal manager is 100% responsible for your experience."
       },
       {
         icon: <Globe2 className="h-12 w-12" />,
@@ -145,7 +144,7 @@ export default function Component() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto">
+      {/* <section className="max-w-7xl mx-auto">
         <motion.h2 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -177,7 +176,7 @@ export default function Component() {
             </motion.div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       <AnimatePresence>
         {(selectedAdvantage || selectedAdFormat) && (
@@ -236,36 +235,6 @@ export default function Component() {
         )}
       </AnimatePresence>
     </div>
-
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
-          <div className="container px-4 md:px-6 max-w-screen-2xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              className="space-y-12"
-            >
-              <div className="text-center space-y-4">
-                <h2 className="text-3xl font-bold tracking-tighter">Payment methods</h2>
-                <p className="text-gray-500">Multiple secure payment options available</p>
-              </div>
-              <div className="flex justify-center items-center gap-14 flex-wrap">
-                <motion.div whileHover={{ scale: 1.1 }} className="grayscale hover:grayscale-0">
-                  <Image src="/atm-card.png" alt="Payment Method" width={80} height={40} className="object-contain" />
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.1 }} className="grayscale hover:grayscale-0">
-                  <Image src="/cashless-payment.png" alt="Payment Method" width={80} height={40} className="object-contain" />
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.1 }} className="grayscale hover:grayscale-0">
-                  <Image src="/provider.png" alt="Payment Method" width={80} height={40} className="object-contain" />
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.1 }} className="grayscale hover:grayscale-0">
-                  <Image src="/scan.png" alt="Payment Method" width={80} height={40} className="object-contain" />
-                </motion.div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
 
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 max-w-screen-2xl mx-auto">

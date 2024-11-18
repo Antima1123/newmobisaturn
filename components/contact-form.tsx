@@ -108,7 +108,7 @@ export default function ContactForm() {
 
   const validateStep = () => {
     if (step === 1) {
-      return formData.name && formData.phone && formData.email && formData.company && formData.std;
+      return formData.name && formData.email && formData.company && formData.interests;
     } else if (step === 2) {
       return formData.marketingSpend && formData.location;
     }
@@ -203,7 +203,7 @@ export default function ContactForm() {
                           )}
                         </SelectContent>
                       </Select>
-                      <Input placeholder='Phone number' id="phone" name="phone" value={formData.phone} onChange={handleInputChange} required />
+                      <Input placeholder='Phone number (optional)' id="phone" name="phone" value={formData.phone} onChange={handleInputChange} required />
                       </div>
                     </div>
                     <div>
@@ -216,7 +216,7 @@ export default function ContactForm() {
                     </div>
                     <div>
                       <Label htmlFor="company">Skype Id</Label>
-                      <Input placeholder='Skype (optional)' id="interests" name="interests" value={formData.interests} onChange={handleInputChange} required />
+                      <Input placeholder='Skype' id="interests" name="interests" value={formData.interests} onChange={handleInputChange} required />
                     </div>
                   </div>
                 </motion.div>
