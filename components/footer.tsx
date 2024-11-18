@@ -3,7 +3,7 @@ import { Facebook, Linkedin, Mail, MapPin, Phone, Twitter, Youtube } from "lucid
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-emerald-600 to-purple-600 text-gray-300 py-16">
+    <footer className="bg-black text-gray-300 py-16">
       <div className="container px-4 mx-auto max-w-screen-xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
           {/* Company Info Section */}
