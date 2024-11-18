@@ -11,6 +11,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowDown, Clock, CreditCard, Globe2, LayoutGrid, Mail, MessageSquare, MonitorSmartphone, Play, PlusCircle } from "lucide-react"
 import { MdSupportAgent } from "react-icons/md";
 import { useState } from "react"
+import { TbClockDollar } from "react-icons/tb"
 
 
 export default function Component() {
@@ -31,9 +32,9 @@ export default function Component() {
         description: "Leverage top-tier marketplace solutions to target high-value audiences and boost your earnings."
       },
       {
-        icon: <PlusCircle className="h-12 w-12" />,
-        title: "Diverse Category Coverage",
-        description: "Access 18+ meticulously curated categories, spanning premium and mainstream niches."
+        icon: <TbClockDollar className="h-12 w-12" />,
+        title: "Automated payouts",
+        description: "Timely, accurate, and hassle-free payment processing for your earning."
       },
       {
         icon: <MdSupportAgent className="h-12 w-12" />,

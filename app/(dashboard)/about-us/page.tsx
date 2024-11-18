@@ -57,7 +57,7 @@ export default function AboutUs() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gray-50">
+      {/* <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
@@ -75,7 +75,7 @@ export default function AboutUs() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Marketing Specialties */}
       <section className="py-16">
