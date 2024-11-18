@@ -10,7 +10,7 @@ import { useState } from "react"
 
 
 const industries = [
-  { name: "Education", icon: <Globe2 className="w-12 h-12" />, color: "bg-blue-500", description: "Revolutionizing learning experiences through targeted digital strategies and EdTech solutions." },
+  { name: "Education", icon: <Globe2 className="w-12 h-12 " />, color: "bg-blue-500", description: "Revolutionizing learning experiences through targeted digital strategies and EdTech solutions." },
   { name: "Gaming", icon: <Trophy className="w-12 h-12" />, color: "bg-purple-500", description: "Driving user acquisition and engagement for mobile and console games across diverse genres." },
   { name: "Finance", icon: <ChartBar className="w-12 h-12" />, color: "bg-green-500", description: "Enhancing digital banking experiences and promoting fintech solutions to tech-savvy audiences." },
   { name: "Social Media", icon: <Users className="w-12 h-12" />, color: "bg-pink-500", description: "Boosting platform growth and user retention through data-driven community building strategies." },
@@ -113,7 +113,7 @@ export default function AboutUs() {
       </section>
 
       {/* Industry Verticals */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 max-w-screen-2xl mx-auto">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">Industries We Serve</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
@@ -125,12 +125,12 @@ export default function AboutUs() {
               >
                 <Button
                   variant="outline"
-                  className={`w-full h-32 flex flex-col items-center justify-center gap-2 ${
+                  className={`w-[20rem] h-32 flex flex-col items-center justify-center gap-2 ${
                     selectedIndustry === index ? 'ring-2 ring-offset-2 ring-emerald-500' : ''
                   }`}
                   onClick={() => setSelectedIndustry(index)}
                 >
-                  <div className={`p-3 rounded-full ${industry.color}`}>
+                  <div className={`p-6 rounded-full text-white ${industry.color}`}>
                     {industry.icon}
                   </div>
                   <span className="font-semibold">{industry.name}</span>
@@ -163,6 +163,7 @@ export default function AboutUs() {
                   initial={{ scale: 0.8, rotate: -10 }}
                   animate={{ scale: 1, rotate: 0 }}
                   transition={{ duration: 0.5, type: "spring" }}
+                  className="text-white "
                 >
                   {industries[selectedIndustry].icon}
                 </motion.div>
