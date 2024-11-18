@@ -116,7 +116,7 @@ export default function AboutUs() {
       <section className="py-16 bg-gray-50 ">
         <div className="container px-8 max-w-screen-2xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12">Industries We Serve</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+          <div className="grid md:grid-cols-2  lg:grid-cols-4 gap-4 mb-12">
             {industries.map((industry, index) => (
               <motion.div
                 key={index}
