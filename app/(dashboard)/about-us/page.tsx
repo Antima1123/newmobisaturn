@@ -19,7 +19,7 @@ const industries = [
   { name: "Food & Beverage", icon: <Utensils className="w-12 h-12" />, color: "bg-orange-500", description: "Satisfying cravings and driving orders through mouth-watering digital content and local SEO." },
   { name: "E-commerce", icon: <ShoppingBag className="w-12 h-12" />, color: "bg-indigo-500", description: "Maximizing online sales through conversion optimization and personalized shopping experiences." },
 ]
-
+ 
 export default function AboutUs() {
     const { onOpen, isOpen } = useOpenContactUs()
     const [selectedIndustry, setSelectedIndustry] = useState<number | null>(null)
@@ -114,64 +114,68 @@ export default function AboutUs() {
 
       {/* Industry Verticals */}
       <section className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">Industries We Serve</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-          {industries.map((industry, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Button
-                variant="outline"
-                className={`w-full h-32 flex flex-col items-center justify-center gap-2 ${
-                  selectedIndustry === index ? 'ring-2 ring-offset-2 ring-emerald-500' : ''
-                }`}
-                onClick={() => setSelectedIndustry(index)}
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-12">Industries We Serve</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            {industries.map((industry, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                <div className={`p-3 rounded-full ${industry.color}`}>
-                  {industry.icon}
-                </div>
-                <span className="font-semibold">{industry.name}</span>
-              </Button>
-            </motion.div>
-          ))}
-        </div>
-        <AnimatePresence mode="wait">
-          {selectedIndustry !== null && (
-            <motion.div
-              key={selectedIndustry}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Card className="overflow-hidden">
-                <CardContent className="p-0">
-                  <div className="grid md:grid-cols-2">
-                    <div className={`${industries[selectedIndustry].color} p-8 flex items-center justify-center`}>
-                      <motion.div
-                        initial={{ scale: 0.8, rotate: -10 }}
-                        animate={{ scale: 1, rotate: 0 }}
-                        transition={{ duration: 0.5, type: "spring" }}
-                      >
-                        {industries[selectedIndustry].icon}
-                      </motion.div>
-                    </div>
-                    <div className="p-8">
-                      <h3 className="text-2xl font-bold mb-4">{industries[selectedIndustry].name}</h3>
-                      <p className="text-gray-600 mb-6">{industries[selectedIndustry].description}</p>
-                      {/* <Button>Learn More</Button> */}
-                    </div>
+                <Button
+                  variant="outline"
+                  className={`w-full h-32 flex flex-col items-center justify-center gap-2 ${
+                    selectedIndustry === index ? 'ring-2 ring-offset-2 ring-emerald-500' : ''
+                  }`}
+                  onClick={() => setSelectedIndustry(index)}
+                >
+                  <div className={`p-3 rounded-full ${industry.color}`}>
+                    {industry.icon}
                   </div>
-                </CardContent>
-              </Card>
+                  <span className="font-semibold">{industry.name}</span>
+                </Button>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pop-up Modal for Selected Industry */}
+      <AnimatePresence>
+        {selectedIndustry !== null && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
+            onClick={() => setSelectedIndustry(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.9, y: 50 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.9, y: 50 }}
+              className="bg-white rounded-lg overflow-hidden shadow-xl max-w-md w-full"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className={`${industries[selectedIndustry].color} p-8 flex items-center justify-center`}>
+                <motion.div
+                  initial={{ scale: 0.8, rotate: -10 }}
+                  animate={{ scale: 1, rotate: 0 }}
+                  transition={{ duration: 0.5, type: "spring" }}
+                >
+                  {industries[selectedIndustry].icon}
+                </motion.div>
+              </div>
+              <div className="p-8">
+                <h3 className="text-2xl font-bold mb-4">{industries[selectedIndustry].name}</h3>
+                <p className="text-gray-600 mb-6">{industries[selectedIndustry].description}</p>
+                <Button onClick={() => setSelectedIndustry(null)} className="w-full">Close</Button>
+              </div>
             </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-    </section>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Company Values */}
       <section className="py-16">

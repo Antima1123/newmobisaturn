@@ -19,7 +19,7 @@ export default function Component() {
 
     const [selectedAdvantage, setSelectedAdvantage] = useState<any>(null)
     const [selectedAdFormat, setSelectedAdFormat] = useState<any>(null)
-
+ 
     const advantages = [
       {
         icon: <Clock className="h-12 w-12" />,
