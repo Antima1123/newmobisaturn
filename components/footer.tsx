@@ -8,10 +8,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
           {/* Company Info Section */}
           <div className="space-y-6">
-            <h2 className="text-3xl font-bold text-white">Mediafinity</h2>
+            <h2 className="text-3xl font-bold text-white">adbytehub</h2>
             <div className="w-24 h-1 bg-teal-500" />
             <p className="text-gray-400 max-w-lg">
-              We are a Digital Advertising Agency based out of Gurgaon, Haryana India. We are a
+              We are a Digital Advertising Agency based out of New Delhi, India. We are a
               360-Degree service provider of Digital Advertising for Brands across the globe and
               various Industry verticals. We are an integration of Advertising and technology, aiming
               to innovate advertising bit by bit.
@@ -29,10 +29,10 @@ export default function Footer() {
                 <Linkedin className="h-6 w-6" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
-              <Link href="#" className="hover:text-red-600 transition-colors">
+              {/* <Link href="#" className="hover:text-red-600 transition-colors">
                 <Youtube className="h-6 w-6" />
                 <span className="sr-only">YouTube</span>
-              </Link>
+              </Link> */}
             </div>
           </div>
 
@@ -89,7 +89,7 @@ export default function Footer() {
               <Phone className="h-6 w-6 text-yellow-500" />
             </div>
             <div>
-              <p className="font-semibold text-white">+91 8586878049</p>
+              <p className="font-semibold text-white">+91 9599100235</p>
               <p className="text-sm text-gray-400">Mon-Fri 9am-6pm</p>
             </div>
           </div>
@@ -98,7 +98,7 @@ export default function Footer() {
               <Mail className="h-6 w-6 text-red-500" />
             </div>
             <div>
-              <p className="font-semibold text-white">Sales@themediafinity.co</p>
+              <p className="font-semibold text-white">info@adbytehub.com</p>
               <p className="text-sm text-gray-400">online support</p>
             </div>
           </div>
@@ -107,8 +107,8 @@ export default function Footer() {
               <MapPin className="h-6 w-6 text-green-500" />
             </div>
             <div>
-              <p className="font-semibold text-white">Ground Floor, AIHP Signature Tower,418 & 419,</p>
-              <p className="text-sm text-gray-400">Phase IV Udyog Vihar, Gurugram, Haryana-122016</p>
+              <p className="font-semibold text-white"> RZ 202 Gali No 13 Sadh Nagar part II ,</p>
+              <p className="text-sm text-gray-400">Palam colony New Delhi 110045</p>
             </div>
           </div>
         </div>

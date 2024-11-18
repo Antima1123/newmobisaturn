@@ -83,7 +83,7 @@ export default function WhatWeAre() {
 
         <motion.div
          initial={{ scale: 0.9 }}
-         transition={{ duration: 1, ease: "easeInOut", opacity: 0 }}
+         transition={{ duration: 0.5, ease: "easeInOut", opacity: 0 }}
          whileInView={{ scale: 1, opacity: [0,1] }}
         className="grid gap-8 md:grid-cols-3">
           {services.map((service, index) => (

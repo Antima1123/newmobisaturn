@@ -7,10 +7,11 @@ const WhatWeDo = () => {
     return (
         <div className="overflow-hidden">
             <motion.div
-                initial={{ opacity: 0, x: 500 }}
+                initial={{ opacity: 0, x: 300 }}
                 transition={{ duration: 0.5, ease: "easeIn" }}
                 whileInView={{ opacity: [0,1], x:0 }}
-            className="max-w-screen-2xl mx-auto w-full flex flex-col relative">
+                className="max-w-screen-2xl mx-auto w-full flex flex-col relative"
+            >
                 <section className="w-full flex flex-col items-center gap-10 py-10">
                     <div className="w-full flex flex-col items-center gap-4 text-center">
                         <p className="text-4xl font-[700]">What we do ?</p>

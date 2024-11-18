@@ -7,9 +7,9 @@ export const BouncyCardsFeatures = () => {
   return (
     <div className="overflow-hidden">
     <motion.section 
-      initial={{ x: -500, opacity: 0 }}
-      whileInView={{ x: 0, opacity: [0,1] }}
-      transition={{ ease: "easeIn", duration: 0.5 }}
+      initial={{ scale: 0.9 }}
+      transition={{ duration: 0.5, ease: "easeInOut", opacity: 0 }}
+      whileInView={{ scale: 1, opacity: [0,1] }}
       className="mx-auto max-w-7xl px-4 py-12 text-slate-800">
       <div className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end md:px-8">
         <h2 className="max-w-lg text-4xl font-bold md:text-5xl">
