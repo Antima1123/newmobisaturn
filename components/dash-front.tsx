@@ -25,7 +25,7 @@ const DashFront = () =>{
                     className="lg:w-[32rem] w-full lg:text-start  lg:items-start gap-8 flex flex-col font-[600]">
                         <h1 className="text-xl text-emerald-600 ">A Trusted Performance Marketing Agency</h1>
                         <h1 className="text-4xl font-[600]">We&apos;re A premier performance marketing company</h1>
-                        <p className="text-[#b9b5c9] text-md w-full lg:w-[90%]">Our mobile marketing team runs a high-quality campaign with optimal performance and minimal fraud.</p>
+                        <p className="text-[#b9b5c9] text-md w-full lg:w-[90%]">Drive your brand's growth with our performance marketing team, delivering high-performance campaigns optimized for success and safeguarded against fraud.</p>
                         <motion.div
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
