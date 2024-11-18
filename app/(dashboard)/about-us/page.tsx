@@ -10,14 +10,14 @@ import { useState } from "react"
 
 
 const industries = [
-  { name: "Education", icon: <Globe2 className="w-12 h-12 " />, color: "bg-blue-500", description: "Revolutionizing learning experiences through targeted digital strategies and EdTech solutions." },
-  { name: "Gaming", icon: <Trophy className="w-12 h-12" />, color: "bg-purple-500", description: "Driving user acquisition and engagement for mobile and console games across diverse genres." },
-  { name: "Finance", icon: <ChartBar className="w-12 h-12" />, color: "bg-green-500", description: "Enhancing digital banking experiences and promoting fintech solutions to tech-savvy audiences." },
-  { name: "Social Media", icon: <Users className="w-12 h-12" />, color: "bg-pink-500", description: "Boosting platform growth and user retention through data-driven community building strategies." },
-  { name: "Travel", icon: <Rocket className="w-12 h-12" />, color: "bg-yellow-500", description: "Inspiring wanderlust and driving bookings through immersive digital marketing campaigns." },
-  { name: "Business", icon: <Briefcase className="w-12 h-12" />, color: "bg-red-500", description: "Empowering B2B growth through targeted lead generation and account-based marketing strategies." },
-  { name: "Food & Beverage", icon: <Utensils className="w-12 h-12" />, color: "bg-orange-500", description: "Satisfying cravings and driving orders through mouth-watering digital content and local SEO." },
-  { name: "E-commerce", icon: <ShoppingBag className="w-12 h-12" />, color: "bg-indigo-500", description: "Maximizing online sales through conversion optimization and personalized shopping experiences." },
+  { name: "Education", icon: <Globe2 className="w-8 h-8 "/>, color: "bg-blue-500", description: "Revolutionizing learning experiences through targeted digital strategies and EdTech solutions." },
+  { name: "Gaming", icon: <Trophy className="w-8 h-8" />, color: "bg-purple-500", description: "Driving user acquisition and engagement for mobile and console games across diverse genres." },
+  { name: "Finance", icon: <ChartBar className="w-8 h-8" />, color: "bg-green-500", description: "Enhancing digital banking experiences and promoting fintech solutions to tech-savvy audiences." },
+  { name: "Social Media", icon: <Users className="w-8 h-8" />, color: "bg-pink-500", description: "Boosting platform growth and user retention through data-driven community building strategies." },
+  { name: "Travel", icon: <Rocket className="w-8 h-8" />, color: "bg-yellow-500", description: "Inspiring wanderlust and driving bookings through immersive digital marketing campaigns." },
+  { name: "Business", icon: <Briefcase className="w-8 h-8" />, color: "bg-red-500", description: "Empowering B2B growth through targeted lead generation and account-based marketing strategies." },
+  { name: "Food & Beverage", icon: <Utensils className="w-8 h-8" />, color: "bg-orange-500", description: "Satisfying cravings and driving orders through mouth-watering digital content and local SEO." },
+  { name: "E-commerce", icon: <ShoppingBag className="w-8 h-8" />, color: "bg-indigo-500", description: "Maximizing online sales through conversion optimization and personalized shopping experiences." },
 ]
  
 export default function AboutUs() {
@@ -113,8 +113,8 @@ export default function AboutUs() {
       </section>
 
       {/* Industry Verticals */}
-      <section className="py-16 bg-gray-50 max-w-screen-2xl mx-auto">
-        <div className="container mx-auto px-4">
+      <section className="py-16 bg-gray-50 ">
+        <div className="container px-8 max-w-screen-2xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12">Industries We Serve</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
             {industries.map((industry, index) => (
@@ -124,13 +124,13 @@ export default function AboutUs() {
                 whileTap={{ scale: 0.95 }}
               >
                 <Button
-                  variant="outline"
+                variant={"outline"}
                   className={`w-[20rem] h-32 flex flex-col items-center justify-center gap-2 ${
                     selectedIndustry === index ? 'ring-2 ring-offset-2 ring-emerald-500' : ''
                   }`}
                   onClick={() => setSelectedIndustry(index)}
                 >
-                  <div className={`p-6 rounded-full text-white ${industry.color}`}>
+                  <div className={`p-4 rounded-full text-white ${industry.color}`}>
                     {industry.icon}
                   </div>
                   <span className="font-semibold">{industry.name}</span>
