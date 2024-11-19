@@ -11,7 +11,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { ChevronDown } from "lucide-react"
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 const Header = () =>{
     const [active, setActive] = useState(false);
@@ -19,6 +19,7 @@ const Header = () =>{
     const [service,setService] = useState(false)
 
     const router = useRouter();
+    const path = usePathname();
 
     const handleClick = () =>{
         setActive(!active)
@@ -135,12 +136,20 @@ const Header = () =>{
                         </DropdownMenuTrigger>
                         <DropdownMenuContent className='z-[110]'>
                             <DropdownMenuItem>
-                            <Link href="/publisher" className="w-full hover:text-emerald-600">
+                            <Link href="/publisher" className={`w-full ${path == "/publisher" && "text-emerald-600"} hover:text-emerald-600 flex`}>
+                               {
+                                path == "/publisher" &&
+                                <div className='h-5 flex w-[2px] rounded-lg bg-emerald-600 mr-2'/>
+                               }
                                 Publisher
                             </Link>
                             </DropdownMenuItem>
                             <DropdownMenuItem>
-                            <Link href="/advertiser" className="w-full hover:text-emerald-600">
+                            <Link href="/advertiser" className={`w-full ${path == "/advertiser" && "text-emerald-600"} hover:text-emerald-600 flex`}>
+                            {
+                                path == "/advertiser" &&
+                                <div className='h-5 flex w-[2px] rounded-lg bg-emerald-600 mr-2'/>
+                               }
                                 Advertiser
                             </Link>
                             </DropdownMenuItem>
