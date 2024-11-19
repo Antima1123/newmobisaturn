@@ -60,7 +60,7 @@ export default function PayOut() {
               <span className="text-gray-900"> schedule</span>
             </h1>
             <p className="text-gray-600 text-lg">
-              Clickadu will pay the Publisher's revenue on a weekly,
+              Clickadu will pay the Publisher&apos;s revenue on a weekly,
               twice a month, or monthly basis by agreement of the
               parties. Min Payout starts from $50!
             </p>
@@ -103,7 +103,7 @@ export default function PayOut() {
                           transition={{ duration: 0.2 }}
                           className="text-sm text-gray-600"
                         >
-                          Net 7: Clickadu's team pays weekly on Tuesdays when a publisher reaches
+                          Net 7: Clickadu&apos;s team pays weekly on Tuesdays when a publisher reaches
                           the minimum payment amount.
                         </motion.p>
                       )}
