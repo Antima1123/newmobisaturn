@@ -30,8 +30,8 @@ export default function PaymentCarousel() {
   ]
 
   return (
-    <div className="w-full py-20 bg-gradient-to-br  p-4 flex items-center justify-center">
-      <Card className="w-full max-w-4xl bg-white/80 backdrop-blur-sm p-8">
+    <div className="w-full py-24 bg-gradient-to-br p-4 flex items-center justify-center">
+      <Card className="w-full max-w-4xl bg-white/80 backdrop-blur-sm p-8 bg-gradient-to-br from-emerald-100 to-purple-200">
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="w-full md:w-1/3">
             <h2 className="text-4xl font-bold">
@@ -55,12 +55,12 @@ export default function PaymentCarousel() {
                 {paymentMethods.map((method, index) => (
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                     <div className="p-1">
-                      <Card className="px-4 border-0 shadow-none">
+                      <Card className="px-4 border-0 shadow-none bg-transparent">
                         <div className="aspect-[3/1] flex items-center justify-center  rounded-lg">
                           <img
                             src={method.logo}
                             alt={`${method.name} logo`}
-                            className="h-12 w-auto object-contain grayscale hover:grayscale-0"
+                            className="h-12 w-auto object-contain md:grayscale hover:grayscale-0"
                           />
                         </div>
                       </Card>
@@ -68,10 +68,10 @@ export default function PaymentCarousel() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <div className="absolute -left-10 top-1/2 -translate-y-1/2">
+              <div className="absolute md:-left-10 md:top-1/2 left-1/2 mt-2 md:mt-0 -translate-y-1/2">
                 <CarouselPrevious className="h-8 w-8 border-gray-200 bg-white/80 backdrop-blur-sm" />
               </div>
-              <div className="absolute -left-12 top-1/2 -translate-y-1/2">
+              <div className="absolute md:-left-12 md:top-1/2 left-1/2 mt-2 md:mt-0 -translate-y-1/2">
                 <CarouselNext className="h-8 w-8 border-gray-200 bg-white/80 backdrop-blur-sm" />
               </div>  
             </Carousel>
