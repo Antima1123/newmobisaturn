@@ -12,6 +12,7 @@ import ContactForm from "@/components/contact-form"
 import { AnimatePresence, motion } from "framer-motion"
 import { useState } from "react"
 import PaymentCarousel from "@/components/payment-carousel"
+import PayOut from "@/components/payout"
 
 
 const adFormats = [
@@ -328,6 +329,7 @@ export default function AdvertiserPage() {
           </div>
         </section> */}
         <PaymentCarousel/>
+        <PayOut/>
 
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="max-w-screen-2xl mx-auto container px-4 md:px-6">

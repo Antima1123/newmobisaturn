@@ -30,7 +30,7 @@ export default function PaymentCarousel() {
   ]
 
   return (
-    <div className="w-full py-20 bg-gradient-to-br from-green-50 via-white to-rose-50 p-4 flex items-center justify-center">
+    <div className="w-full py-20 bg-gradient-to-br  p-4 flex items-center justify-center">
       <Card className="w-full max-w-4xl bg-white/80 backdrop-blur-sm p-8">
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="w-full md:w-1/3">
