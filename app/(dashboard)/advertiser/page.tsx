@@ -11,6 +11,7 @@ import { useOpenContactUs } from "@/hook/contact-open"
 import ContactForm from "@/components/contact-form"
 import { AnimatePresence, motion } from "framer-motion"
 import { useState } from "react"
+import PaymentCarousel from "@/components/payment-carousel"
 
 
 const adFormats = [
@@ -297,7 +298,7 @@ export default function AdvertiserPage() {
           </div>
         </section> */}
 
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
+        {/* <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
           <div className="container px-4 md:px-6 max-w-screen-2xl mx-auto">
             <motion.div
               initial={{ opacity: 0 }}
@@ -325,7 +326,8 @@ export default function AdvertiserPage() {
               </div>
             </motion.div>
           </div>
-        </section>
+        </section> */}
+        <PaymentCarousel/>
 
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="max-w-screen-2xl mx-auto container px-4 md:px-6">
