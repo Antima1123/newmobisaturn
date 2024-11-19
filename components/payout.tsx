@@ -4,10 +4,12 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { useOpenContactUs } from "@/hook/contact-open"
 
 export default function PayOut() {
   const [selectedOption, setSelectedOption] = useState("weekly")
   const [isAutoSwitching, setIsAutoSwitching] = useState(true)
+  const {onOpen,isOpen} = useOpenContactUs();
 
   useEffect(() => {
     let interval: NodeJS.Timeout
@@ -68,11 +70,7 @@ export default function PayOut() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <Button
-                className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 text-lg rounded-full"
-              >
-                Earn with Clickadu
-              </Button>
+              <Button size="lg" className="bg-gradient-to-br from-emerald-600 to-purple-600 p-6" onClick={()=> onOpen()}>Get Started</Button>
             </motion.div>
           </motion.div>
 
