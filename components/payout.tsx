@@ -45,7 +45,7 @@ export default function PayOut() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white p-8 flex items-center justify-center">
+    <div className="py-32 bg-gradient-to-br from-blue-50 to-white p-8 flex items-center justify-center">
       <motion.div
         variants={container}
         initial="hidden"
