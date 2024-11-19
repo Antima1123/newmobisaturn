@@ -137,9 +137,6 @@ export default function ContactUsPage() {
         transition={{ duration: 0.5 }}
         className="relative bg-white rounded-lg shadow-xl overflow-hidden w-full max-w-4xl"
       >
-        <div className='absolute top-4 right-4 cursor-pointer' onClick={() => onClose()}>
-          <X/>
-        </div>
         <div className="grid md:grid-cols-5">
           <div className="md:col-span-2 bg-gradient-to-br from-emerald-600 to-purple-600 p-6 md:p-8 text-white">
             <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Boost Your Marketing Game</h2>
