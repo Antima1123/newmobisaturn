@@ -136,18 +136,18 @@ const Header = () =>{
                         </DropdownMenuTrigger>
                         <DropdownMenuContent className='z-[110]'>
                             <DropdownMenuItem>
-                            <Link href="/publisher" className={`w-full ${path == "/publisher" && "text-emerald-600"} hover:text-emerald-600 flex`}>
-                               {
-                                path == "/publisher" &&
+                            <DropdownMenuItem>
+                            <Link href="/advertiser" className={`w-full ${path == "/advertiser" && "text-emerald-600"} hover:text-emerald-600 flex`}>
+                            {
+                                path == "/advertiser" &&
                                 <div className='h-5 flex w-[2px] rounded-lg bg-emerald-600 mr-2'/>
                                }
                                 Advertiser
                             </Link>
                             </DropdownMenuItem>
-                            <DropdownMenuItem>
-                            <Link href="/advertiser" className={`w-full ${path == "/advertiser" && "text-emerald-600"} hover:text-emerald-600 flex`}>
-                            {
-                                path == "/advertiser" &&
+                            <Link href="/publisher" className={`w-full ${path == "/publisher" && "text-emerald-600"} hover:text-emerald-600 flex`}>
+                               {
+                                path == "/publisher" &&
                                 <div className='h-5 flex w-[2px] rounded-lg bg-emerald-600 mr-2'/>
                                }
                                Publisher
