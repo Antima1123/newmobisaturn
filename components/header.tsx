@@ -141,7 +141,7 @@ const Header = () =>{
                                 path == "/publisher" &&
                                 <div className='h-5 flex w-[2px] rounded-lg bg-emerald-600 mr-2'/>
                                }
-                                Publisher
+                                Advertiser
                             </Link>
                             </DropdownMenuItem>
                             <DropdownMenuItem>
@@ -150,7 +150,7 @@ const Header = () =>{
                                 path == "/advertiser" &&
                                 <div className='h-5 flex w-[2px] rounded-lg bg-emerald-600 mr-2'/>
                                }
-                                Advertiser
+                               Publisher
                             </Link>
                             </DropdownMenuItem>
                         </DropdownMenuContent>

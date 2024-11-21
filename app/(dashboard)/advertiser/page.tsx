@@ -103,19 +103,19 @@ const uniqueCard = [
       },
 
       {
-        title : "Advertising Agencies and Brands",
+        title : "App Growth Marketers and Agencies",
         points : [
           {
             icon: "🌐",
-            text: "Find your audiences across two billion smartphone users globally.",
+            text: "Acquire high-quality users in a cost-effective manner, ensuring your user base grows sustainably.",
           },
           {
             icon: "📱",
-            text: "Drive active engagement with smart ad experiences.",
+            text: "Drive lifetime value through re-engagement.",
           },
           {
             icon: "📈",
-            text: "Foster responsible growth through sustainability, supply path optimization, and transparency.",
+            text: "Fortify app growth strategies for a privacy-first feature.",
           },
         ],
         buttonText : "Grow Your Brand",
