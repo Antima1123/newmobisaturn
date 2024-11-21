@@ -107,15 +107,15 @@ const uniqueCard = [
         points : [
           {
             icon: "🌐",
-            text: "Acquire high-quality users in a cost-effective manner, ensuring your user base grows sustainably.",
+            text: "Acquire high-quality users cost-effectively while scaling sustainably.",
           },
           {
             icon: "📱",
-            text: "Drive lifetime value through re-engagement.",
+            text: "Boost customer lifetime value with strategies for meaningful re-engagement.",
           },
           {
             icon: "📈",
-            text: "Fortify app growth strategies for a privacy-first feature.",
+            text: "Strengthen app growth with privacy-first, future-ready strategies.",
           },
         ],
         buttonText : "Grow Your Brand",
