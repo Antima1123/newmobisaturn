@@ -11,10 +11,7 @@ export default function Footer() {
             <h2 className="text-3xl font-bold text-white">adbytehub</h2>
             <div className="w-24 h-1 bg-teal-500" />
             <p className="text-white max-w-lg">
-              We are a Digital Advertising Agency based out of New Delhi, India. We are a
-              360-Degree service provider of Digital Advertising for Brands across the globe and
-              various Industry verticals. We are an integration of Advertising and technology, aiming
-              to innovate advertising bit by bit.
+              We are a New Delhi-based Digital Advertising Agency, offering comprehensive 360-degree digital advertising solutions to brands worldwide across diverse industry verticals. By blending the art of advertising with cutting-edge technology, we strive to drive innovation and redefine the future of advertising, one step at a time.
             </p>
             <div className="flex space-x-4">
               <Link href="#" className="hover:text-blue-500 transition-colors">
