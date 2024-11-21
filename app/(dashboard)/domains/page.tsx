@@ -159,7 +159,7 @@ export default function Component() {
       <section className="py-16">
         <div className="container px-4 md:px-8 max-w-screen-2xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-emerald-600">Ready to Transform Your Industry?</h2>
-          <p className="text-xl text-gray-700 mb-8">Let's discuss how we can help you achieve your goals.</p>
+          <p className="text-xl text-gray-700 mb-8">Let&apos;s discuss how we can help you achieve your goals.</p>
           <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white">
             Get Started
           </Button>
