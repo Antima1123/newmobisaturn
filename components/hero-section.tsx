@@ -32,7 +32,7 @@ export function HeroSection() {
       </header> */}
 
       {/* Hero Content */}
-      <main className="relative z-10 mx-auto max-w-7xl px-6 py-20">
+      <main className="relative z-10 mx-auto max-w-7xl md:px-6 px-2 py-20">
         <div className="grid gap-12 lg:grid-cols-2">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
