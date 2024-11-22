@@ -5,6 +5,7 @@ import Carousel from "@/components/Carousel";
 import { CategoryCard } from "@/components/cat-card";
 import ContactForm from "@/components/contact-form";
 import DashFront from "@/components/dash-front";
+import { HeroSection } from "@/components/hero-section";
 import { MMPPartners } from "@/components/mmp-partners";
 import { ServeClients } from "@/components/serve-clients";
 import  WhatWeDo  from "@/components/what-we-do";
@@ -34,7 +35,8 @@ export default function Home() {
   return (
     <motion.div className=" relative">
       {/* <Carousel/> */}
-      <DashFront/>
+      {/* <DashFront/> */}
+      <HeroSection/>
       {/* <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: [0,1] }}
