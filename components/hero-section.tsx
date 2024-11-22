@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { AnimatedBackground } from "./animated-background"
 import { useOpenContactUs } from "@/hook/contact-open"
 import Image from "next/image"
+import { Cover } from "./ui/cover"
 
 export function HeroSection() {
 
@@ -42,7 +43,7 @@ export function HeroSection() {
             <h1 className="text-6xl font-bold tracking-tight">
                 We&apos;re A premier{""}<br/>
               <span className="bg-gradient-to-r from-emerald-600 to-purple-600 bg-clip-text text-transparent">
-                performance
+               <Cover>performance</Cover> 
               </span>
               <br />
               marketing company
