@@ -1,8 +1,22 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 
 export function AnimatedBackground() {
+  const [windowSize, setWindowSize] = useState({ width: 0, height: 0 })
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({ width: window.innerWidth, height: window.innerHeight })
+    }
+    
+    handleResize()
+    window.addEventListener('resize', handleResize)
+    
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
   return (
     <div className="absolute inset-0 overflow-hidden">
       {/* Top right curved line */}
@@ -39,12 +53,12 @@ export function AnimatedBackground() {
           key={i}
           className="absolute h-1 w-1 rounded-full bg-primary/30"
           initial={{
-            x: Math.random() * window.innerWidth,
-            y: Math.random() * window.innerHeight,
+            x: Math.random() * (windowSize.width || 1000),
+            y: Math.random() * (windowSize.height || 1000),
           }}
           animate={{
-            x: Math.random() * window.innerWidth,
-            y: Math.random() * window.innerHeight,
+            x: Math.random() * (windowSize.width || 1000),
+            y: Math.random() * (windowSize.height || 1000),
           }}
           transition={{
             duration: 10 + Math.random() * 20,
