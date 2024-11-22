@@ -42,7 +42,7 @@ export function HeroSection() {
           >
             <h1 className="text-6xl font-bold tracking-tight">
                 We&apos;re A premier{""}<br/>
-            <Cover className="group">
+            <Cover>
               <span className="bg-gradient-to-r from-emerald-600 to-purple-600 bg-clip-text text-transparent group-hover:text-white">
                performance
               </span>
