@@ -83,11 +83,11 @@ const Header = () =>{
 
                             {service && (
                                 <div className='flex flex-col gap-2'>
-                                    <button onClick={()=>handleroute("/publisher")}>
-                                        <button className='ml-2 text-md font-[500] text-start' >Publisher</button>
-                                    </button>
                                     <button onClick={()=>handleroute("/advertiser")} className=''>
                                         <button className='ml-2 text-md font-[500] text-start'>Advertiser</button>
+                                    </button>
+                                    <button onClick={()=>handleroute("/publisher")}>
+                                        <button className='ml-2 text-md font-[500] text-start' >Publisher</button>
                                     </button>
                                 </div>
                             )}
