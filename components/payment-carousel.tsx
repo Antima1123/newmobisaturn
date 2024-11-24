@@ -8,6 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
 
 export default function PaymentCarousel() {
   const paymentMethods = [
@@ -49,6 +50,7 @@ export default function PaymentCarousel() {
                 align: "start",
                 loop: true,
               }}
+              plugins={[Autoplay({delay: 2000})] as any}
               className="w-full"
             >
               <CarouselContent>
@@ -68,10 +70,10 @@ export default function PaymentCarousel() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <div className="absolute md:-left-10 md:top-1/2 left-1/2 mt-2 md:mt-0 -translate-y-1/2">
+              <div className="absolute hidden md:flex md:-left-10 md:top-1/2 left-1/2 mt-2 md:mt-0 -translate-y-1/2">
                 <CarouselPrevious className="h-8 w-8 border-gray-200 bg-white/80 backdrop-blur-sm" />
               </div>
-              <div className="absolute md:-left-12 md:top-1/2 left-1/2 mt-2 md:mt-0 -translate-y-1/2">
+              <div className="absolute  hidden md:flex md:-left-12 md:top-1/2 left-1/2 mt-2 md:mt-0 -translate-y-1/2">
                 <CarouselNext className="h-8 w-8 border-gray-200 bg-white/80 backdrop-blur-sm" />
               </div>  
             </Carousel>
