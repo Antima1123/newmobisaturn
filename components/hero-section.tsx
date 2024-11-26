@@ -54,7 +54,7 @@ export function HeroSection() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="relative ml-24 -mt-8"
+            className="relative ml-48 -mt-12"
           >
             <Image
                 src={"/bg-final.png"}
