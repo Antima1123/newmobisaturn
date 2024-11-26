@@ -11,7 +11,7 @@ export function HeroSection() {
 
     const {onOpen} = useOpenContactUs()
   return (
-    <div className="relative min-h-screen overflow-hidden bg-background">
+    <div className="relative min-h-[calc(100vh-100px)] overflow-hidden bg-background">
       <AnimatedBackground />
       
       {/* Navigation */}

@@ -65,7 +65,7 @@ export default function WhatWeAre() {
   ]
 
   return (
-    <section className="w-full bg-gradient-to-b from-background to-background/80 py-12 md:py-24 max-w-screen-2xl mx-auto">
+    <section className="w-full bg-gradient-to-b from-background to-background/80 pb-12 -mt-24 md:py-24 max-w-screen-2xl mx-auto">
       <div className="container px-4 md:px-6">
         <motion.div
           initial="initial"
