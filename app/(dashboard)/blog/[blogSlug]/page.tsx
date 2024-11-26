@@ -51,7 +51,7 @@ export default function BlogPost() {
             <Share2 size={26} onClick={()=>onOpen()} className=" cursor-pointer"/>
             {isOpen && 
                 <div className="w-screen h-screen inset-0 fixed bg-black bg-opacity-75 items-center justify-center flex z-[100]">
-                    <Share/>
+                    <Share url={`${process.env.NEXT_PUBLIC_APP_TYPE!}blog/${post?.slug}`}/>
                 </div>  
             }
           </div>
