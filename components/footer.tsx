@@ -1,135 +1,132 @@
 import Link from "next/link"
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Send, Twitter } from 'lucide-react'
-import { Input } from "@/components/ui/input"
+import { Facebook, Linkedin, Mail, MapPin, Phone, Twitter, Youtube } from "lucide-react"
 
 export default function Footer() {
   return (
-    <footer className="relative bg-gradient-to-br from-purple-700 to-purple-700 text-white">
-      {/* Wave-like top border */}
+    <footer className="relative bg-black text-gray-300 py-16">
       <div className="absolute -top-[3.5rem] left-0 right-0 overflow-hidden">
-        <svg
-          className="relative block w-full h-[60px]"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-            className="fill-[#7e22ce]"
-          ></path>
-        </svg>
-      </div>
-
-      <div className="container px-4 mx-auto max-w-7xl pt-24 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Address Section */}
+              <svg
+                className="relative block w-full h-[60px]"
+                viewBox="0 0 1200 120"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                  className="fill-[#000000]"
+                ></path>
+              </svg>
+           </div>
+      <div className="container px-4 mx-auto max-w-screen-xl">
+        <div className="grid  grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
+          {/* Company Info Section */}
           <div className="space-y-6">
-            <h2 className="text-2xl font-bold tracking-wide">ADDRESS</h2>
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <MapPin className="h-5 w-5 flex-shrink-0" />
-                <p>RZ 202 Gali No 13 Sadh Nagar part II Palam colony New Delhi 110045</p>
-              </div>
-              <div className="flex items-center gap-3">
-                <Phone className="h-5 w-5 flex-shrink-0" />
-                <p>+91 7409890416</p>
-              </div>
-              <div className="flex items-center gap-3">
-                <Mail className="h-5 w-5 flex-shrink-0" />
-                <p>info@adbytehub.com</p>
-              </div>
-            </div>
-            <div className="flex gap-4">
-              <Link href="#" className="hover:text-purple-200 transition-colors">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </Link>
-              <Link href="#" className="hover:text-purple-200 transition-colors">
-                <Facebook className="h-5 w-5" />
+            <h2 className="text-3xl font-bold text-white">adbytehub</h2>
+            <div className="w-24 h-1 bg-teal-500" />
+            <p className="text-white max-w-lg">
+              We are a New Delhi-based Digital Advertising Agency, offering comprehensive 360-degree digital advertising solutions to brands worldwide across diverse industry verticals. By blending the art of advertising with cutting-edge technology, we strive to drive innovation and redefine the future of advertising, one step at a time.
+            </p>
+            <div className="flex space-x-4">
+              <Link href="#" className="hover:text-blue-500 transition-colors">
+                <Facebook className="h-6 w-6" />
                 <span className="sr-only">Facebook</span>
               </Link>
-              <Link href="#" className="hover:text-purple-200 transition-colors">
-                <Instagram className="h-5 w-5" />
-                <span className="sr-only">Instagram</span>
+              <Link href="#" className="hover:text-blue-400 transition-colors">
+                <Twitter className="h-6 w-6" />
+                <span className="sr-only">Twitter</span>
               </Link>
-              <Link href="#" className="hover:text-purple-200 transition-colors">
-                <Linkedin className="h-5 w-5" />
+              <Link href="#" className="hover:text-blue-600 transition-colors">
+                <Linkedin className="h-6 w-6" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
+              {/* <Link href="#" className="hover:text-red-600 transition-colors">
+                <Youtube className="h-6 w-6" />
+                <span className="sr-only">YouTube</span>
+              </Link> */}
+            </div>
+            <div className="flex flex-col gap-2">
+              <p className="text-[18px] font-semibold">Coperate Office</p>
+              <iframe className="w-[200px] h-[200px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.314485898228!2d77.0847514!3d28.5001845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aacfcae61fb55c7%3A0xcd83e335f6d7218b!2sKibu%20-%20Cowork.%20Ideate.%20Innovate!5e0!3m2!1sen!2sin!4v1731953925680!5m2!1sen!2sin" width="600" height="450" loading="lazy"></iframe>
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Services Section */}
           <div className="space-y-6">
-            <h2 className="text-2xl font-bold tracking-wide">QUICK LINK</h2>
-            <div className="space-y-3">
-              <Link href="#" className="block hover:text-purple-200 transition-colors">
-                Digital Campaign Planning
-              </Link>
-              <Link href="#" className="block hover:text-purple-200 transition-colors">
-                Digital Strategy Review
-              </Link>
-              <Link href="#" className="block hover:text-purple-200 transition-colors">
-                Re-targeting & Remarketing
-              </Link>
-              <Link href="#" className="block hover:text-purple-200 transition-colors">
-                Performance and Branding
-              </Link>
-              <Link href="#" className="block hover:text-purple-200 transition-colors">
-                Mobile Optimisation
-              </Link>
-            </div>
-          </div>
-
-          {/* Gallery */}
-          <div className="space-y-6">
-            <h2 className="text-2xl font-bold tracking-wide">GALLERY</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              {[...Array(6)].map((_, i) => (
-                <div key={i} className="aspect-square bg-purple-800/50 rounded-lg overflow-hidden">
-                  <img
-                    src={`/placeholder.svg?height=100&width=100`}
-                    alt={`Gallery image ${i + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Newsletter */}
-          <div className="space-y-6">
-            <h2 className="text-2xl font-bold tracking-wide">NEWSLETTER</h2>
-            <p className="text-purple-100">
-              Stay updated with our latest news and updates. Subscribe to our newsletter.
-            </p>
-            <div className="relative">
-              <Input
-                type="email"
-                placeholder="Your Email"
-                className="w-full bg-white/10 border-white/20 text-white placeholder:text-white/60"
-              />
-              <button className="absolute right-2 top-1/2 -translate-y-1/2 text-purple-200 hover:text-white transition-colors">
-                <Send className="h-5 w-5" />
-                <span className="sr-only">Subscribe</span>
-              </button>
+            <h2 className="text-3xl font-bold text-white">Services Provided</h2>
+            <div className="w-24 h-1 bg-teal-500" />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="space-y-4">
+                <Link href="#" className="block hover:text-teal-500 transition-colors">
+                  Digital Campaign Planning
+                </Link>
+                <Link href="#" className="block hover:text-teal-500 transition-colors">
+                  Digital Strategy Review
+                </Link>
+                <Link href="#" className="block hover:text-teal-500 transition-colors">
+                  Re-targeting & Remarketing
+                </Link>
+                <Link href="#" className="block hover:text-teal-500 transition-colors">
+                  Performance and Branding
+                </Link>
+                <Link href="#" className="block hover:text-teal-500 transition-colors">
+                  Mobile Optimisation
+                </Link>
+                <Link href="#" className="block hover:text-teal-500 transition-colors">
+                  Display conversions
+                </Link>
+                <Link href="#" className="block hover:text-teal-500 transition-colors">
+                  Customer Engagement
+                </Link>
+              </div>
+              <div className="space-y-4">
+                <Link href="#" className="block hover:text-teal-500 transition-colors">
+                  Whatsapp Communication
+                </Link>
+                <Link href="#" className="block hover:text-teal-500 transition-colors">
+                  SMS communication
+                </Link>
+                <Link href="#" className="block hover:text-teal-500 transition-colors">
+                  Email Communication
+                </Link>
+                <Link href="#" className="block hover:text-teal-500 transition-colors">
+                  Social Media Marketing
+                </Link>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-purple-100">
-            © 2024 adbytehub. All Rights Reserved.
-          </p>
-          <div className="flex gap-6 text-sm text-purple-100">
-            <Link href="#" className="hover:text-white transition-colors">Home</Link>
-            <Link href="#" className="hover:text-white transition-colors">Cookies</Link>
-            <Link href="#" className="hover:text-white transition-colors">Help</Link>
-            <Link href="#" className="hover:text-white transition-colors">FAQs</Link>
+        {/* Contact Information */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 pt-16 border-t border-gray-800">
+          <div className="flex items-center space-x-4">
+            <div className="flex-shrink-0 p-4 bg-black rounded-full border-2 border-yellow-500">
+              <Phone className="h-6 w-6 text-yellow-500" />
+            </div>
+            <div>
+              <p className="font-semibold text-white"> +91 7409890416 </p>
+              <p className="text-sm text-gray-400">Available 24x7</p>
+            </div>
+          </div>
+          <div className="flex items-center space-x-4">
+            <div className="flex-shrink-0 p-4 bg-black rounded-full border-2 border-red-500">
+              <Mail className="h-6 w-6 text-red-500" />
+            </div>
+            <div>
+              <p className="font-semibold text-white">info@adbytehub.com</p>
+              <p className="text-sm text-gray-400">online support</p>
+            </div>
+          </div>
+          <div className="flex items-center space-x-4">
+            <div className="flex-shrink-0 p-4 bg-black rounded-full border-2 border-green-500">
+              <MapPin className="h-6 w-6 text-green-500" />
+            </div>
+            <div className="flex w-full flex-col gap-2">
+              <p className="font-semibold text-white">Head Office</p>
+              <p className="text-sm text-gray-400"> RZ 202 Gali No 13 Sadh Nagar part II Palam colony New Delhi 110045</p>
+              {/* <div className=" text-white flex-wrap"> RZ 202 Gali No 13 Sadh Nagar part II Palam colony New Delhi 110045</div> */}
+            </div>
           </div>
         </div>
       </div>
     </footer>
   )
 }
-
