@@ -16,10 +16,10 @@ export default function BlogPost() {
   const content = post?.content!.replace(/[`'"]/g, "").trim();
   const {onOpen, isOpen} = useOpenContactUs()
 
-  if(!post){
+  if(blogQuery.isLoading){
     return (
       <div className=" min-h-screen w-full items-center justify-center flex">
-        <h2>Invalid blog URL</h2>
+        <h2>Please wait</h2>
       </div>
     )
   }
@@ -38,7 +38,7 @@ export default function BlogPost() {
 
         <div className="flex items-center gap-4">
           <Avatar className="h-10 w-10">
-            <AvatarImage src={`data:image/png;base64,${post?.authorAvatar}`} alt={post?.authorName} />
+            <AvatarImage src={post?.authorAvatar!} alt={post?.authorName} />
             <AvatarFallback>{post?.authorName}</AvatarFallback>
           </Avatar>
           <div className="space-y-1">
@@ -59,7 +59,7 @@ export default function BlogPost() {
 
         <div className="relative aspect-[2/1] overflow-hidden rounded-lg">
           <Image
-            src={`data:image/png;base64,${post?.coverimage}`}
+            src={post?.coverimage!}
             alt="Blog post cover image"
             fill
             className="object-cover"
