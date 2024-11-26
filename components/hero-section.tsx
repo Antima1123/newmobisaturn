@@ -54,13 +54,14 @@ export function HeroSection() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="relative ml-48 -mt-12"
+            className="relative md:ml-28 md:-mt-12 w-full items-center justify-center flex"
           >
             <Image
                 src={"/bg-final.png"}
                 alt="adbytehub"
-                height={380}
-                width={380}
+                height={1000}
+                width={1000}
+                className=" md:w-[25rem] w-[20rem]"
             />
           </motion.div>
         </div>
