@@ -3,28 +3,16 @@ import { Facebook, Linkedin, Mail, MapPin, Phone, Twitter, Youtube } from "lucid
 
 export default function Footer() {
   return (
-    <footer className="relative bg-black text-gray-300 py-16">
-      <div className="absolute -top-[3.5rem] left-0 right-0 overflow-hidden">
-              <svg
-                className="relative block w-full h-[60px]"
-                viewBox="0 0 1200 120"
-                preserveAspectRatio="none"
-              >
-                <path
-                  d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-                  className="fill-[#000000]"
-                ></path>
-              </svg>
-           </div>
+    <footer className=" bg-black text-gray-300 py-16">
       <div className="container px-4 mx-auto max-w-screen-xl">
-        <div className="grid  grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
+        <div className="grid  grid-cols-1 md:grid-cols-3 gap-12 lg:gap-24">
           {/* Company Info Section */}
           <div className="space-y-6">
             <h2 className="text-3xl font-bold text-white">adbytehub</h2>
             <div className="w-24 h-1 bg-teal-500" />
-            <p className="text-white max-w-lg">
+            {/* <p className="text-white max-w-lg">
               We are a New Delhi-based Digital Advertising Agency, offering comprehensive 360-degree digital advertising solutions to brands worldwide across diverse industry verticals. By blending the art of advertising with cutting-edge technology, we strive to drive innovation and redefine the future of advertising, one step at a time.
-            </p>
+            </p> */}
             <div className="flex space-x-4">
               <Link href="#" className="hover:text-blue-500 transition-colors">
                 <Facebook className="h-6 w-6" />
@@ -43,57 +31,59 @@ export default function Footer() {
                 <span className="sr-only">YouTube</span>
               </Link> */}
             </div>
-            <div className="flex flex-col gap-2">
+            {/* <div className="flex flex-col gap-2">
               <p className="text-[18px] font-semibold">Coperate Office</p>
               <iframe className="w-[200px] h-[200px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.314485898228!2d77.0847514!3d28.5001845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aacfcae61fb55c7%3A0xcd83e335f6d7218b!2sKibu%20-%20Cowork.%20Ideate.%20Innovate!5e0!3m2!1sen!2sin!4v1731953925680!5m2!1sen!2sin" width="600" height="450" loading="lazy"></iframe>
-            </div>
+            </div> */}
           </div>
 
           {/* Services Section */}
-          <div className="space-y-6">
-            <h2 className="text-3xl font-bold text-white">Services Provided</h2>
+          <div className="space-y-6 ">
+            <h2 className="text-3xl font-bold text-white ">Quick Links</h2>
             <div className="w-24 h-1 bg-teal-500" />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="flex flex-col gap-4">
               <div className="space-y-4">
-                <Link href="#" className="block hover:text-teal-500 transition-colors">
-                  Digital Campaign Planning
+                <Link href="/" className="block hover:text-teal-500 transition-colors underline">
+                  Home
                 </Link>
-                <Link href="#" className="block hover:text-teal-500 transition-colors">
-                  Digital Strategy Review
+                <Link href="/about-us" className="block hover:text-teal-500 transition-colors underline">
+                  About-us
                 </Link>
-                <Link href="#" className="block hover:text-teal-500 transition-colors">
-                  Re-targeting & Remarketing
+                <Link href="/advertiser" className="block hover:text-teal-500 transition-colors underline">
+                  Advertiser
                 </Link>
-                <Link href="#" className="block hover:text-teal-500 transition-colors">
-                  Performance and Branding
+                <Link href="/publisher" className="block hover:text-teal-500 transition-colors underline">
+                  Publisher
                 </Link>
-                <Link href="#" className="block hover:text-teal-500 transition-colors">
-                  Mobile Optimisation
-                </Link>
-                <Link href="#" className="block hover:text-teal-500 transition-colors">
-                  Display conversions
-                </Link>
-                <Link href="#" className="block hover:text-teal-500 transition-colors">
-                  Customer Engagement
+                <Link href="/blogs" className="block hover:text-teal-500 transition-colors underline">
+                  Blog
                 </Link>
               </div>
-              <div className="space-y-4">
-                <Link href="#" className="block hover:text-teal-500 transition-colors">
-                  Whatsapp Communication
-                </Link>
-                <Link href="#" className="block hover:text-teal-500 transition-colors">
-                  SMS communication
-                </Link>
-                <Link href="#" className="block hover:text-teal-500 transition-colors">
-                  Email Communication
-                </Link>
-                <Link href="#" className="block hover:text-teal-500 transition-colors">
-                  Social Media Marketing
-                </Link>
-              </div>
-            </div>
+            </div>  
           </div>
+          <div>
+          <div className="space-y-6 ">
+            <h2 className="text-3xl font-bold text-white ">business Hours</h2>
+            <div className="w-24 h-1 bg-teal-500" />
+            <div className="flex flex-col gap-4">
+              <div>
+                <h1 className="font-[600] text-gray-400">Monday-Friday</h1>
+                <p className="text-lg">09:00 am - 17:30 pm</p>
+              </div>
+              <div>
+                <h1 className="font-[600] text-gray-400">Saturday</h1>
+                <p className="text-lg">09:00 am - 14:00 pm</p>
+              </div>
+              <div>
+                <h1 className="font-[600] text-gray-400">Sunday</h1>
+                <p className="text-lg">Closed</p>
+              </div>
+            </div>  
+          </div>
+          </div>
+          
         </div>
+       
 
         {/* Contact Information */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 pt-16 border-t border-gray-800">
