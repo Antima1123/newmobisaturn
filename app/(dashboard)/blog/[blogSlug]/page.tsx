@@ -7,89 +7,47 @@ import { useOpenContactUs } from "@/hook/contact-open"
 import { useGetBlogById } from "@/features/api/use-get-blogs-byId"
 import { useParams } from "next/navigation"
 
-interface Author {
-  name: string
-  avatar: string
-  role: string
-}
 
-interface BlogPost {
-  title: string
-  subtitle: string
-  content: string
-  author: Author
-  publishedDate: string
-  coverImage: string
-}
 
 export default function BlogPost() {
   const params = useParams();
   const blogQuery = useGetBlogById(params)
-  const blogData = blogQuery.data
+  const post = blogQuery.data
+  const content = post?.content!.replace(/[`'"]/g, "").trim();
+  const {onOpen, isOpen} = useOpenContactUs()
 
-  const post: BlogPost = {
-    title: "Playing with Patterns: A Guide to Modern Design",
-    subtitle: "Creating visual harmony through repetition and rhythm",
-    content: `
-      <p>Design patterns are fundamental elements that can transform ordinary spaces into extraordinary experiences. 
-      They provide structure, create visual interest, and guide the viewer's eye through a composition.</p>
-      
-      <h2>Benefits of Design Patterns</h2>
-      <p>When used effectively, patterns can:</p>
-      <ul>
-        <li>Create rhythm and movement</li>
-        <li>Establish hierarchy and order</li>
-        <li>Add depth and dimension to designs</li>
-        <li>Evoke specific emotions or moods</li>
-      </ul>
-      
-      <h2>Finding the Right Balance</h2>
-      <p>The key to successful pattern implementation lies in understanding balance and scale. Too much pattern can 
-      overwhelm, while too little might not achieve the desired impact. Finding that sweet spot requires practice, 
-      observation, and a keen eye for detail.</p>
-
-      <h1>Advanced Pattern Techniques</h1>
-      <p>As you become more comfortable with basic patterns, you can explore advanced techniques such as:</p>
-      <ul>
-        <li>Pattern mixing</li>
-        <li>Scale variation</li>
-        <li>Color theory in patterns</li>
-      </ul>
-    `,
-    author: {
-      name: "Sarah Anderson",
-      avatar: "/placeholder.svg",
-      role: "Senior Design Director"
-    },
-    publishedDate: "November 15, 2023",
-    coverImage: "/placeholder.svg?height=600&width=1200"
+  if(!post){
+    return (
+      <div className=" min-h-screen w-full items-center justify-center flex">
+        <h2>Invalid blog URL</h2>
+      </div>
+    )
   }
 
-  const {onOpen, onClose, isOpen} = useOpenContactUs()
   return (
     <article className="max-w-3xl mx-auto px-4 py-8">
       <header className="space-y-8 mb-12">
         <div className="space-y-2">
           <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
-            {post.title}
+            {post?.title}
           </h1>
           <p className="text-xl text-muted-foreground">
-            {post.subtitle}
+            {post?.subtitle}
           </p>
         </div>
 
         <div className="flex items-center gap-4">
           <Avatar className="h-10 w-10">
-            <AvatarImage src={post.author.avatar} alt={post.author.name} />
-            <AvatarFallback>{post.author.name[0]}</AvatarFallback>
+            <AvatarImage src={`data:image/png;base64,${post?.authorAvatar}`} alt={post?.authorName} />
+            <AvatarFallback>{post?.authorName}</AvatarFallback>
           </Avatar>
           <div className="space-y-1">
-            <div className="font-medium">{post.author.name}</div>
-            <div className="text-sm text-muted-foreground">{post.author.role}</div>
+            <div className="font-medium">{post?.authorName}</div>
+            <div className="text-sm text-muted-foreground">{post?.authorRole}</div>
           </div>
           <div className="gap-4 ml-auto flex items-center text-sm text-muted-foreground">
             <CalendarIcon className="mr-1 h-4 w-4" />
-            {post.publishedDate}
+            {post?.publishdate}
             <Share2 size={26} onClick={()=>onOpen()} className=" cursor-pointer"/>
             {isOpen && 
                 <div className="w-screen h-screen inset-0 fixed bg-black bg-opacity-75 items-center justify-center flex z-[100]">
@@ -101,7 +59,7 @@ export default function BlogPost() {
 
         <div className="relative aspect-[2/1] overflow-hidden rounded-lg">
           <Image
-            src={post.coverImage}
+            src={`data:image/png;base64,${post?.coverimage}`}
             alt="Blog post cover image"
             fill
             className="object-cover"
@@ -112,7 +70,7 @@ export default function BlogPost() {
 
       <div 
         className="prose prose-gray max-w-none dark:prose-invert"
-        dangerouslySetInnerHTML={{ __html: post.content }}
+        dangerouslySetInnerHTML={{ __html: content! }}
       />
 
       <div className="mt-12 pt-6 border-t">

@@ -21,9 +21,11 @@ export const blogTable = pgTable("blog-table", {
     title: text("title").notNull(),
     subtitle:  text("sub_title").notNull(),
     content:  text("content").notNull(),
-    author:  text("author").notNull(),
-    publishdate:  date("publish_date").notNull(),
+    publishdate:  text("publish_date"),
     coverimage:  text("cover_image").notNull(),
+    authorName:  text("author").notNull(),
+    authorAvatar: text("author_avatar"),
+    authorRole: text("author_role").notNull()
 })
 
 export const insertblogTable = createInsertSchema(blogTable)

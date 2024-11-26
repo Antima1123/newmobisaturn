@@ -17,16 +17,17 @@ const app = new Hono()
             title: blogTable.title,
             subtitle:  blogTable.subtitle,
             content:  blogTable.content,
-            author:  blogTable.author,
+            authorRole:  blogTable.authorRole,
             publishdate:  blogTable.publishdate,
             coverimage:  blogTable.coverimage,
+            authorName: blogTable.authorName,
+            authorAvatar: blogTable.authorAvatar
         })
         .from(blogTable)
         .where(eq(
             blogTable.slug, blogSlug
         ))
 
-        console.log(data)
         return c.json({ data })
     }
  )

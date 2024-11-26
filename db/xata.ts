@@ -23,6 +23,22 @@ const tables = [
         comment: "",
       },
       {
+        name: "author_avatar",
+        type: "text",
+        notNull: false,
+        unique: false,
+        defaultValue: null,
+        comment: "",
+      },
+      {
+        name: "author_role",
+        type: "text",
+        notNull: true,
+        unique: false,
+        defaultValue: null,
+        comment: "",
+      },
+      {
         name: "content",
         type: "text",
         notNull: true,
@@ -49,7 +65,7 @@ const tables = [
       {
         name: "publish_date",
         type: "text",
-        notNull: true,
+        notNull: false,
         unique: false,
         defaultValue: null,
         comment: "",
