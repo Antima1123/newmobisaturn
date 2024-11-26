@@ -105,7 +105,7 @@ export default function PayOut() {
                           transition={{ duration: 0.2 }}
                           className="text-sm text-gray-600"
                         >
-                          Net 7: Clickadu&apos;s team pays weekly on Tuesdays when a publisher reaches
+                          Net 7: adbytehub&apos;s team pays weekly on Tuesdays when a publisher reaches
                           the minimum payment amount.
                         </motion.p>
                       {/* )} */}
