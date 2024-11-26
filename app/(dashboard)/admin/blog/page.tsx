@@ -35,14 +35,14 @@ const PostPage = () => {
     }
     return(
         <div className="flex items-center justify-center py-16">
-            <div className="flex w-[45rem] h-[30rem]  shadow-md border rounded-2xl  ">
+            <div className="flex w-[20rem] md:w-[45rem] h-[30rem]  shadow-md border rounded-2xl  ">
                 
                 <form onSubmit={handlesubmit} className="px-8 mt-8 gap-y-4 flex flex-col w-full">
                     <div className="flex justify-between items-center ">
                         <Label id="title">Title:</Label>
                         <input
                             name="title"
-                            className="outline-none w-[30rem] border px-2 py-1"
+                            className="outline-none w-[12rem] md:w-[30rem] border px-2 py-1"
                             value={inputVal.title}
                             onChange={handleInput}
                         />
@@ -52,7 +52,7 @@ const PostPage = () => {
                         <Label id="subtitle">Sub-Title:</Label>
                         <input
                             name="subtitle"
-                            className="outline-none w-[30rem] border px-2 py-1"
+                            className="outline-none w-[12rem] md:w-[30rem] border px-2 py-1"
                             value={inputVal.subtitle}
                             onChange={handleInput}
                         />
@@ -62,7 +62,7 @@ const PostPage = () => {
                         <Label id="content">Content:</Label>
                         <textarea
                             name="content"
-                            className="outline-none w-[30rem] border px-2 py-1"
+                            className="outline-none w-[12rem] md:w-[30rem] border px-2 py-1"
                             value={inputVal.content}
                             onChange={handleInput}
                         >
@@ -73,7 +73,7 @@ const PostPage = () => {
                         <Label id="author">Author:</Label>
                         <input
                             name="author"
-                            className="outline-none w-[30rem] border px-2 py-1"
+                            className="outline-none w-[12rem] md:w-[30rem] border px-2 py-1"
                             value={inputVal.author}
                             onChange={handleInput}
                         />
@@ -83,7 +83,7 @@ const PostPage = () => {
                         <Label id="publisheddate">Published-Date:</Label>
                         <input
                             name="publiseddate"
-                            className="outline-none w-[30rem] border px-2 py-1"
+                            className="outline-none w-[12rem] md:w-[30rem] border px-2 py-1"
                             value={inputVal.publiseddate}
                             onChange={handleInput}
                         />
@@ -93,7 +93,7 @@ const PostPage = () => {
                         <Label id="coverimage">cover-Image:</Label>
                         <input
                             name="coverimage"
-                            className="outline-none w-[30rem] border px-2 py-1"
+                            className="outline-none w-[12rem] md:w-[30rem] border px-2 py-1"
                             value={inputVal.coverimage}
                             onChange={handleInput}
                         />
@@ -103,12 +103,12 @@ const PostPage = () => {
                         <Label id="coverimage">Slug:</Label>
                         <input
                             name="slug"
-                            className="outline-none w-[30rem] border px-2 py-1"
+                            className="outline-none w-[12rem] md:w-[30rem] border px-2 py-1"
                             value={inputVal.slug}
                             onChange={handleInput}
                         />
                     </div>
-                    <Button type="submit">submit</Button>
+                    <Button type="submit" size="sm" className="w-[8rem] right-0">submit</Button>
 
                 </form>
             </div>

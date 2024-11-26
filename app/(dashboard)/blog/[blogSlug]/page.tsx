@@ -1,6 +1,11 @@
+"use client"
 import Image from "next/image"
-import { CalendarIcon } from 'lucide-react'
+import { CalendarIcon, Share2 } from 'lucide-react'
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Share } from "@/components/share"
+import { useOpenContactUs } from "@/hook/contact-open"
+import { useGetBlogById } from "@/features/api/use-get-blogs-byId"
+import { useParams } from "next/navigation"
 
 interface Author {
   name: string
@@ -18,6 +23,10 @@ interface BlogPost {
 }
 
 export default function BlogPost() {
+  const params = useParams();
+  const blogQuery = useGetBlogById(params)
+  const blogData = blogQuery.data
+
   const post: BlogPost = {
     title: "Playing with Patterns: A Guide to Modern Design",
     subtitle: "Creating visual harmony through repetition and rhythm",
@@ -56,6 +65,7 @@ export default function BlogPost() {
     coverImage: "/placeholder.svg?height=600&width=1200"
   }
 
+  const {onOpen, onClose, isOpen} = useOpenContactUs()
   return (
     <article className="max-w-3xl mx-auto px-4 py-8">
       <header className="space-y-8 mb-12">
@@ -77,9 +87,15 @@ export default function BlogPost() {
             <div className="font-medium">{post.author.name}</div>
             <div className="text-sm text-muted-foreground">{post.author.role}</div>
           </div>
-          <div className="ml-auto flex items-center text-sm text-muted-foreground">
+          <div className="gap-4 ml-auto flex items-center text-sm text-muted-foreground">
             <CalendarIcon className="mr-1 h-4 w-4" />
             {post.publishedDate}
+            <Share2 size={26} onClick={()=>onOpen()} className=" cursor-pointer"/>
+            {isOpen && 
+                <div className="w-screen h-screen inset-0 fixed bg-black bg-opacity-75 items-center justify-center flex z-[100]">
+                    <Share/>
+                </div>  
+            }
           </div>
         </div>
 
