@@ -2,19 +2,22 @@
 
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Search, Tag, Clock, User } from 'lucide-react'
+import { Search, Tag, Clock, User, Share2 } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { getAllBlogs } from '@/features/api/use-get-all-blogs'
 import { useRouter } from 'next/navigation'
+import { useOpenContactUs } from '@/hook/contact-open'
+import { Share } from '@/components/share'
 export default function BlogPage() {
   const [searchTerm, setSearchTerm] = useState("")
 
   const queryBlog = getAllBlogs();
   const blogPosts = queryBlog.data || []
-  const router = useRouter()
+  const router = useRouter();
+  const {onOpen, isOpen} = useOpenContactUs();
 
   const handleClick = (route: any) =>{
     router.push(`/blog/${route}`)
@@ -77,17 +80,23 @@ export default function BlogPage() {
                       <Tag size={12} className="mr-1" /> {post.authorRole}
                     </Badge>
                   </CardContent>
-                  <CardFooter className="bg-gray-50 p-4 flex justify-end items-center">
+                  <CardFooter className="bg-gray-50 p-4 flex justify-between items-center">
+                  <Share2 size={26} onClick={()=>onOpen()} className=" cursor-pointer"/>
                     <Button
                       variant="ghost"
                       size="sm"
                       className="text-indigo-600 hover:text-indigo-800"
                       onClick={() => handleClick(post.slug)}
-                    >
+                      >
                       Read More
                     </Button>
                   </CardFooter>
                 </Card>
+                {isOpen && 
+                    <div className="w-screen h-screen inset-0 fixed bg-black bg-opacity-75 items-center justify-center flex z-[100]">
+                        <Share url={`${process.env.NEXT_PUBLIC_APP_TYPE!}blog/${post?.slug}`}/>
+                    </div>  
+                }
               </motion.div>
             ))}
           </div>
