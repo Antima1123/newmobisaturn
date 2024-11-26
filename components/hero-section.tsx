@@ -11,26 +11,8 @@ export function HeroSection() {
 
     const {onOpen} = useOpenContactUs()
   return (
-    <div className="relative min-h-screen overflow-hidden bg-background">
+    <div className="relative min-h-screen overflow-hidden bg-background justify-center flex h-full items-center">
       <AnimatedBackground />
-      
-      {/* Navigation */}
-      {/* <header className="relative z-10 flex items-center justify-between p-6">
-        <div className="flex items-center gap-8">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="h-8 w-8 rounded-lg bg-primary" />
-          </motion.div>
-        </div>
-        <div className="flex items-center gap-4">
-          <Button variant="ghost">Sign In</Button>
-          <Button>Get started</Button>
-        </div>
-      </header> */}
-
       {/* Hero Content */}
       <main className="relative z-10 mx-auto max-w-7xl md:px-6 px-2 py-20">
         <div className="grid gap-12 lg:grid-cols-2">
@@ -66,20 +48,13 @@ export function HeroSection() {
                    </Button>
               </motion.div>
             </div>
-            {/* <div className="flex items-center gap-4 text-sm text-muted-foreground">
-              <span>No need for tools like</span>
-              <div className="flex gap-4">
-                <span className="line-through opacity-50">Tool One</span>
-                <span className="line-through opacity-50">Tool Two</span>
-              </div>
-            </div> */}
           </motion.div>
           
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="relative"
+            className="relative ml-24 -mt-8"
           >
             <Image
                 src={"/bg-final.png"}
@@ -91,6 +66,4 @@ export function HeroSection() {
         </div>
       </main>
     </div>
-  )
-}
-
+  )}
