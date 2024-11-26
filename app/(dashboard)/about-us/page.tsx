@@ -10,14 +10,14 @@ import { useState } from "react"
 
 
 const industries = [
-  { name: "Education", icon: <Globe2 className="w-8 h-8 "/>, color: "bg-blue-500", description: "Revolutionizing learning experiences through targeted digital strategies and EdTech solutions." },
-  { name: "Gaming", icon: <Trophy className="w-8 h-8" />, color: "bg-purple-500", description: "Driving user acquisition and engagement for mobile and console games across diverse genres." },
-  { name: "Finance", icon: <ChartBar className="w-8 h-8" />, color: "bg-green-500", description: "Enhancing digital banking experiences and promoting fintech solutions to tech-savvy audiences." },
-  { name: "Social Media", icon: <Users className="w-8 h-8" />, color: "bg-pink-500", description: "Boosting platform growth and user retention through data-driven community building strategies." },
-  { name: "Travel", icon: <Rocket className="w-8 h-8" />, color: "bg-yellow-500", description: "Inspiring wanderlust and driving bookings through immersive digital marketing campaigns." },
-  { name: "Business", icon: <Briefcase className="w-8 h-8" />, color: "bg-red-500", description: "Empowering B2B growth through targeted lead generation and account-based marketing strategies." },
-  { name: "Food & Beverage", icon: <Utensils className="w-8 h-8" />, color: "bg-orange-500", description: "Satisfying cravings and driving orders through mouth-watering digital content and local SEO." },
-  { name: "E-commerce", icon: <ShoppingBag className="w-8 h-8" />, color: "bg-indigo-500", description: "Maximizing online sales through conversion optimization and personalized shopping experiences." },
+  { name: "Digital Campaign Planning", icon: <Globe2 className="w-8 h-8 "/>, color: "bg-blue-500", description: "Revolutionizing learning experiences through targeted digital strategies and EdTech solutions." },
+  { name: "Digital Strategy Review", icon: <Trophy className="w-8 h-8" />, color: "bg-purple-500", description: "Driving user acquisition and engagement for mobile and console games across diverse genres." },
+  { name: "Performance and Branding", icon: <ChartBar className="w-8 h-8" />, color: "bg-green-500", description: "Enhancing digital banking experiences and promoting fintech solutions to tech-savvy audiences." },
+  { name: "Re-targeting & Remarketing", icon: <Users className="w-8 h-8" />, color: "bg-pink-500", description: "Boosting platform growth and user retention through data-driven community building strategies." },
+  { name: "Mobile Optimisation", icon: <Rocket className="w-8 h-8" />, color: "bg-yellow-500", description: "Inspiring wanderlust and driving bookings through immersive digital marketing campaigns." },
+  { name: "Display conversions", icon: <Briefcase className="w-8 h-8" />, color: "bg-red-500", description: "Empowering B2B growth through targeted lead generation and account-based marketing strategies." },
+  { name: "Customer Engagement", icon: <Utensils className="w-8 h-8" />, color: "bg-orange-500", description: "Satisfying cravings and driving orders through mouth-watering digital content and local SEO." },
+  { name: "Whatsapp Communication", icon: <ShoppingBag className="w-8 h-8" />, color: "bg-indigo-500", description: "Maximizing online sales through conversion optimization and personalized shopping experiences." },
 ]
  
 export default function AboutUs() {
