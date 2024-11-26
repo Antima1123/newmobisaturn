@@ -63,7 +63,7 @@ export default function Footer() {
           </div>
           <div>
           <div className="space-y-6 ">
-            <h2 className="text-3xl font-bold text-white ">business Hours</h2>
+            <h2 className="text-3xl font-bold text-white ">Business Hours</h2>
             <div className="w-24 h-1 bg-teal-500" />
             <div className="flex flex-col gap-4">
               <div>
