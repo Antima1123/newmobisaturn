@@ -82,10 +82,10 @@ export function HeroSection() {
             className="relative"
           >
             <Image
-                src={"/bg.png"}
+                src={"/bg-final.png"}
                 alt="adbytehub"
-                height={1000}
-                width={1000}
+                height={420}
+                width={420}
             />
           </motion.div>
         </div>

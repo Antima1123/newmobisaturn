@@ -4,11 +4,9 @@ import ContactForm from "@/components/contact-form"
 import ContactUsPage from "@/components/contact-us"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 import { useOpenContactUs } from "@/hook/contact-open"
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowDown, Clock, CreditCard, Globe2, LayoutGrid, Mail, MessageSquare, MonitorSmartphone, Play, PlusCircle } from "lucide-react"
+import {   Clock, CreditCard, Globe2, LayoutGrid, Mail, MessageSquare, MonitorSmartphone, Play, PlusCircle } from "lucide-react"
 import { MdSupportAgent } from "react-icons/md";
 import { useState } from "react"
 import { TbClockDollar } from "react-icons/tb"
