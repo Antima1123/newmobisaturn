@@ -32,4 +32,25 @@ const app = new Hono()
     }
  )
 
- export default app
+ .get('/',
+    async (c) => {
+        const data = await db
+        .select({
+            id: blogTable.id,
+            slug: blogTable.slug,
+            title: blogTable.title,
+            subtitle:  blogTable.subtitle,
+            content:  blogTable.content,
+            authorRole:  blogTable.authorRole,
+            publishdate:  blogTable.publishdate,
+            coverimage:  blogTable.coverimage,
+            authorName: blogTable.authorName,
+            authorAvatar: blogTable.authorAvatar
+        })
+        .from(blogTable)
+
+        return c.json({data})
+    }
+)
+
+export default app
