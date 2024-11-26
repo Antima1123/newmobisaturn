@@ -12,6 +12,7 @@ import { ArrowDown, Clock, CreditCard, Globe2, LayoutGrid, Mail, MessageSquare, 
 import { MdSupportAgent } from "react-icons/md";
 import { useState } from "react"
 import { TbClockDollar } from "react-icons/tb"
+import PayOut from "@/components/payout"
 
 
 export default function Component() {
@@ -236,6 +237,7 @@ export default function Component() {
         )}
       </AnimatePresence>
     </div>
+    <PayOut/>
 
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 max-w-screen-2xl mx-auto">
