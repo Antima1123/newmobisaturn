@@ -10,14 +10,14 @@ import { useState } from "react"
 
 
 const industries = [
-  { name: "Digital Campaign Planning", icon: <Globe2 className="w-8 h-8 "/>, color: "bg-blue-500", description: "Revolutionizing learning experiences through targeted digital strategies and EdTech solutions." },
-  { name: "Digital Strategy Review", icon: <Trophy className="w-8 h-8" />, color: "bg-purple-500", description: "Driving user acquisition and engagement for mobile and console games across diverse genres." },
-  { name: "Performance and Branding", icon: <ChartBar className="w-8 h-8" />, color: "bg-green-500", description: "Enhancing digital banking experiences and promoting fintech solutions to tech-savvy audiences." },
-  { name: "Re-targeting & Remarketing", icon: <Users className="w-8 h-8" />, color: "bg-pink-500", description: "Boosting platform growth and user retention through data-driven community building strategies." },
-  { name: "Mobile Optimisation", icon: <Rocket className="w-8 h-8" />, color: "bg-yellow-500", description: "Inspiring wanderlust and driving bookings through immersive digital marketing campaigns." },
-  { name: "Display conversions", icon: <Briefcase className="w-8 h-8" />, color: "bg-red-500", description: "Empowering B2B growth through targeted lead generation and account-based marketing strategies." },
-  { name: "Customer Engagement", icon: <Utensils className="w-8 h-8" />, color: "bg-orange-500", description: "Satisfying cravings and driving orders through mouth-watering digital content and local SEO." },
-  { name: "Whatsapp Communication", icon: <ShoppingBag className="w-8 h-8" />, color: "bg-indigo-500", description: "Maximizing online sales through conversion optimization and personalized shopping experiences." },
+  { name: "Digital Campaign Planning", icon: <Globe2 className="w-8 h-8 "/>, color: "bg-blue-500", description: "Design and execute tailored digital campaigns to engage your audience and grow your brand's online presence effectively." },
+  { name: "Digital Strategy Review", icon: <Trophy className="w-8 h-8" />, color: "bg-purple-500", description: "Analyze and refine your digital strategy to ensure optimal performance and business growth." },
+  { name: "Performance and Branding", icon: <ChartBar className="w-8 h-8" />, color: "bg-green-500", description: "Boost your brand identity while driving measurable performance and growth." },
+  { name: "Re-targeting & Remarketing", icon: <Users className="w-8 h-8" />, color: "bg-pink-500", description: "Reconnect with your audience to enhance engagement and drive conversions effectively." },
+  { name: "Mobile Optimisation", icon: <Rocket className="w-8 h-8" />, color: "bg-yellow-500", description: "Enhance user experience with fast, seamless, and mobile-friendly designs." },
+  { name: "Display conversions", icon: <Briefcase className="w-8 h-8" />, color: "bg-red-500", description: "Boost engagement and achieve measurable results with optimized, high-performing display ads." },
+  { name: "Customer Engagement", icon: <Utensils className="w-8 h-8" />, color: "bg-orange-500", description: "Foster meaningful connections to build loyalty and drive long-term success." },
+  { name: "Whatsapp Communication", icon: <ShoppingBag className="w-8 h-8" />, color: "bg-indigo-500", description: "Enhance customer interaction with seamless, real-time communication through WhatsApp." },
 ]
  
 export default function AboutUs() {
