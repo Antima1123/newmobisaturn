@@ -9,9 +9,9 @@ import { RiGovernmentFill } from "react-icons/ri";
 
 const HoverDevCards = () => {
   return (
-    <div className="p-4">
+    <div className="p-4 max-w-screen-2xl mx-auto">
       <p className="text-xl font-semibold mb-2">Industries served</p>
-      <div className="grid gap-4 grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-4 grid-cols-1 lg:grid-cols-3">
         <Card
           title="Banking and Financial Services"
           subtitle="Manage profile"

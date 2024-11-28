@@ -8,6 +8,8 @@ import { ChartBar, Users, Target, Rocket, Trophy, Globe2, Briefcase, Utensils, S
 import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
 import { CombinedSection } from "./components/services"
+import { ServicesAll } from "@/components/aboutus-services"
+import HoverDevCards from "@/components/hover-cards"
 
 
 // const industries = [
@@ -156,11 +158,13 @@ export default function AboutUs() {
               </motion.div>
             ))}
           </div> */}
-          {/* <ServicesAll/>
+          {/* 
+      <ServicesAll/>
           <HoverDevCards/> */}
+      <HoverDevCards/> 
         </div>
       </section>
-      <CombinedSection/>
+      {/* <CombinedSection/> */}
 
       {/* Pop-up Modal for Selected Industry */}
       {/* <AnimatePresence>
