@@ -12,8 +12,6 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { ChevronDown } from "lucide-react"
 import { usePathname, useRouter } from 'next/navigation';
-import Image from 'next/image';
-import { LogoMain } from './logo';
 
 const Header = () =>{
     const [active, setActive] = useState(false);
@@ -38,7 +36,8 @@ const Header = () =>{
             <div className=" z-[90] flex lg:hidden justify-between items-center py-4 px-4 bg-white ">
                 {/* Mobile */}
                 <div className="text-2xl font-[600] text-emerald-600 flex">
-                    <LogoMain/>
+                    {/* <Image src="/logo.png" height={240} width={240} alt="logo"/> */}
+                    <p className="text-black">adbyte</p><p>hub</p>
                 </div>
 
                 {
@@ -123,10 +122,8 @@ const Header = () =>{
              {/* large screen  */}
             <div className="lg:flex hidden py-4 justify-between items-center px-24 border border-b shadow-md z-[90] bg-white">
                 <div className="text-2xl font-[600] text-emerald-600 flex">
-                    <div>
-                        <LogoMain/>
-                    </div>
-                    {/* <p className="text-black">adbyte</p><p>hub</p> */}
+                    {/* <Image src="/logo.png" height={240} width={240} alt="logo"/> */}
+                    <p className="text-black">adbyte</p><p>hub</p>
                 </div>
 
                 <div className="gap-x-16 flex">

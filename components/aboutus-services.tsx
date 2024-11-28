@@ -12,6 +12,7 @@ export const ServicesAll = () => {
   return (
     <div className="bg-neutral-50 px-4 py-12">
       <div className="mx-auto max-w-7xl">
+      <h2 className="text-3xl font-bold mb-6">Services</h2>
         <ClipPathLinks />
       </div>
     </div>
