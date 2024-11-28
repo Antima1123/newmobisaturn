@@ -44,6 +44,20 @@ export default function RootLayout({
         <meta property="og:site_name" content="Adbytehub" />
         <meta property="og:locale" content="en_US" />
 
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16797553549"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-16797553549');
+            `,
+          }}
+        ></script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
