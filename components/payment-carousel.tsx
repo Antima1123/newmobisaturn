@@ -1,85 +1,86 @@
 'use client'
 
-import { Card } from "@/components/ui/card"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
-import Autoplay from "embla-carousel-autoplay"
+import { useState } from 'react'
+import { motion } from 'framer-motion'
+import { Button } from "@/components/ui/button"
+import { CreditCard, ShoppingCartIcon as Paypal, Bitcoin, Banknote } from 'lucide-react'
+import { useOpenContactUs } from '@/hook/contact-open'
+import Image from 'next/image'
 
-export default function PaymentCarousel() {
-  const paymentMethods = [
-    {
-      name: "PayPal",
-      logo: "/payment/paypal.png"
-    },
-    {
-      name: "Wire Transfer",
-      logo: "/payment/wire-transfer.png"
-    },
-    {
-      name: "Credit card",
-      logo: "/payment/visa.png"
-    },
-    {
-      name: "Payoneer",
-      logo: "/payment/payoneer.svg"
-    }
-  ]
+const paymentMethods = [
+  { name: 'Payoneer', icon: "/payment/payoneer.svg" },
+  { name: 'PayPal', icon: "/payment/paypal.png" },
+  { name: 'Credit Card', icon: "/payment/visa.png" },
+  { name: 'Wire Transfer', icon: "/payment/wire-transfer.png" },
+]
+
+export default function GetStartedSection() {
+  const [hoveredMethod, setHoveredMethod] = useState<string | null>(null)
+  const {onOpen} = useOpenContactUs()
 
   return (
-    <div className="w-full py-24 bg-gradient-to-br p-4 flex items-center justify-center">
-      <Card className="w-full max-w-4xl bg-white/80 backdrop-blur-sm p-8 bg-gradient-to-br from-emerald-100 to-purple-200">
-        <div className="flex flex-col md:flex-row items-center gap-8">
-          <div className="w-full md:w-1/3">
-            <h2 className="text-4xl font-bold">
-              <span className="bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent">
-                Payment
-              </span>
-              <br />
-              <span className="text-gray-800">methods</span>
-            </h2>
-          </div>
+    <section className="bg-gradient-to-br from-emerald-600 to-purple-600 py-20">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
+          <p className="text-xl text-emerald-100">Join thousands of successful advertisers and start growing your business today.</p>
+        </motion.div>
 
-          <div className="relative w-full md:w-2/3">
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="flex flex-wrap justify-center gap-4 mb-12"
+        >
+          {paymentMethods.map((method) => (
+            <motion.div
+              key={method.name}
+              whileHover={{ scale: 1.05 }}
+              onHoverStart={() => setHoveredMethod(method.name)}
+              onHoverEnd={() => setHoveredMethod(null)}
+              className=" p-4 group rounded-lg shadow-md bg-white flex flex-col items-center transition-all duration-300 ease-in-out"
+              style={{
+                width: '150px',
+                height: '150px',
+                justifyContent: 'center',
               }}
-              plugins={[Autoplay({delay: 2000})] as any}
-              className="w-full"
             >
-              <CarouselContent>
-                {paymentMethods.map((method, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                    <div className="p-1">
-                      <Card className="px-4 border-0 shadow-none bg-transparent">
-                        <div className="aspect-[3/1] flex items-center justify-center  rounded-lg">
-                          <img
-                            src={method.logo}
-                            alt={`${method.name} logo`}
-                            className="h-12 w-auto object-contain md:grayscale hover:grayscale-0"
-                          />
-                        </div>
-                      </Card>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <div className="absolute hidden md:flex md:-left-10 md:top-1/2 left-1/2 mt-2 md:mt-0 -translate-y-1/2">
-                <CarouselPrevious className="h-8 w-8 border-gray-200 bg-white/80 backdrop-blur-sm" />
-              </div>
-              <div className="absolute  hidden md:flex md:-left-12 md:top-1/2 left-1/2 mt-2 md:mt-0 -translate-y-1/2">
-                <CarouselNext className="h-8 w-8 border-gray-200 bg-white/80 backdrop-blur-sm" />
-              </div>  
-            </Carousel>
-          </div>
-        </div>
-      </Card>
-    </div>
+              {/* <method.icon
+                size={36}
+                className={`mb-3 transition-colors duration-300 ${
+                  hoveredMethod === method.name ? 'text-emerald-500' : 'text-gray-600'
+                }`}
+              /> */}
+              <Image
+                src={method.icon}
+                alt='methods'
+                height={100}
+                width={100}
+                className=' aspect-auto object-contain group-hover:grayscale-0 '
+              />
+              <h3 className="text-sm font-semibold text-gray-800">{method.name}</h3>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.6 }}
+          className="text-center"
+        >
+          <Button 
+            onClick={() => onOpen()}
+            size="lg" className="bg-white text-emerald-600 hover:bg-white/90">
+              Contact us
+          </Button>
+        </motion.div>
+      </div>
+    </section>
   )
 }

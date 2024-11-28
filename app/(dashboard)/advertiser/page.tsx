@@ -9,8 +9,43 @@ import ContactForm from "@/components/contact-form"
 import { AnimatePresence, motion } from "framer-motion"
 import { useState } from "react"
 import PaymentCarousel from "@/components/payment-carousel"
+import GetStartedSection from "@/components/payment-carousel"
 
-
+const LearMore = [
+  {
+    title: `1. Leverage Data Analytics:`,
+    descriptiom: `Use data from social media platforms, search engines, and websites to understand consumer behavior and interests. This will help tailor your advertising to a specific audience, ensuring it resonates with them.
+                  Tools like Google Analytics, Facebook Insights, and other advertising platforms provide detailed demographic information to help create targeted ads.`
+  },
+  {
+    title: `2. Segmentation and Personalization:`,
+    descriptiom: `Segment your audience based on factors such as age, location, gender, interests, behaviors, and buying patterns.
+Personalize your ads to cater to these segments. For example, personalized product recommendations or localized promotions can increase engagement and conversions.`
+  },
+  {
+    title: `3. Platform Selection:`,
+    descriptiom: `Social Media Advertising: Platforms like Facebook, Instagram, LinkedIn, and TikTok offer highly customizable ad targeting. You can reach users based on their activity, interests, and online behavior.${<div><br/><br/></div>}Search Engine Ads (Google Ads): Display your ads to users actively searching for relevant keywords, increasing the likelihood of conversions.
+Programmatic Advertising: This automated process uses algorithms to buy ad space in real-time, optimizing where and when your ad appears, ensuring maximum exposure to your target audience.`
+  },
+  {
+    title: `4. Retargeting:`,
+    descriptiom: `Retargeting allows you to re-engage users who have interacted with your brand but did not convert. By displaying tailored ads to these users, you increase the chances of turning them into customers.`
+  },
+  {
+    title: `5. A/B Testing:`,
+    descriptiom: `Constantly test and optimize your ads. A/B testing different variations of your ad copy, design, and call to action helps determine which version is most effective in driving engagement and conversions.`
+  },
+  {
+    title: `6. Global Reach with Local Focus:`,
+    descriptiom: `With the ability to connect with billions of users worldwide, you can target specific regions or countries based on language preferences, regional trends, and purchasing power.
+Localized advertising can make your brand more relatable, which is key when expanding into new markets.`
+  },
+  {
+    title: `7. Measure, Adjust, and Scale:`,
+    descriptiom: `Continuously measure the performance of your campaigns. Use key metrics like click-through rate (CTR), conversion rate, and return on investment (ROI) to gauge success.
+Based on the data, adjust your strategy for greater impact and scalability. Whether you’re adjusting budgets or changing targeting parameters, continual optimization is crucial.`
+  },
+]
 const adFormats = [
   {
     icon: <LayoutGrid className="h-12 w-12" />,
@@ -40,15 +75,15 @@ const uniqueCard = [
       points : [
         {
           icon: "🌐",
-          text: "Find your audiences across two billion smartphone users globally.",
+          text: " Reach a global audience of over two billion smartphone users.",
         },
         {
           icon: "📱",
-          text: "Drive active engagement with smart ad experiences.",
+          text: "Boost engagement with innovative and interactive ad experiences.",
         },
         {
           icon: "📈",
-          text: "Foster responsible growth through sustainability, supply path optimization, and transparency.",
+          text: "Promote sustainable growth with optimized supply paths and full transparency.",
         },
       ],
       buttonText : "Grow Your Brand",
@@ -82,15 +117,15 @@ const uniqueCard = [
         points : [
           {
             icon: "🌐",
-            text: "Monetize your mobile game effortlessly with our lightweight SDK.",
+            text: "Effortlessly monetize your mobile game with our lightweight SDK.",
           },
           {
             icon: "📱",
-            text: "Entertain and reward players with superior ad experiences that fit your game.",
+            text: " Deliver engaging and rewarding ad experiences tailored to your gameplay.",
           },
           {
             icon: "📈",
-            text: "Level up your revenue with privacy-first addressability, consent management, & more.",
+            text: "Boost your revenue with privacy-focused solutions, consent management, and more.",
           },
         ],
         buttonText : "Grow Your Brand",
@@ -103,15 +138,15 @@ const uniqueCard = [
         points : [
           {
             icon: "🌐",
-            text: "Acquire high-quality users cost-effectively while scaling sustainably.",
+            text: "Attract high-quality users affordably while ensuring sustainable growth.",
           },
           {
             icon: "📱",
-            text: "Boost customer lifetime value with strategies for meaningful re-engagement.",
+            text: "Increase customer lifetime value through effective re-engagement strategies.",
           },
           {
             icon: "📈",
-            text: "Strengthen app growth with privacy-first, future-ready strategies.",
+            text: "Drive app growth with privacy-focused, future-ready solutions.",
           },
         ],
         buttonText : "Grow Your Brand",
@@ -124,6 +159,7 @@ export default function AdvertiserPage() {
 
     const {onOpen,isOpen} = useOpenContactUs();
     const [selectedAdFormat, setSelectedAdFormat] = useState<any>(null)
+    const [learnMore,setLearMore] = useState<boolean>(false);
 
   return (
     <div className="flex flex-col min-h-screen items-center">
@@ -141,18 +177,50 @@ export default function AdvertiserPage() {
                   Reach Your Perfect Audience
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                  Unlock the power of targeted advertising. Connect with billions of users worldwide and drive your brand&apos;s growth.
-                </p>
+                Tap into the power of targeted advertising to engage with billions of users worldwide and accelerate your brand’s growth                </p>
               </div>
               <div className="space-x-4">
                 <Button size="lg" className="bg-gradient-to-br from-emerald-600 to-purple-600 p-6" onClick={()=> onOpen()}>Get Started</Button>
-                <Button variant="outline" size="lg">
+                <Button variant="outline" size="lg" onClick={() => setLearMore(true)}>
                   Learn More
                 </Button>
               </div>
             </div>
           </div>
         </section>
+
+        <AnimatePresence>
+        {learnMore && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 mt-16 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
+            onClick={() => setLearMore(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.9, y: 50 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.9, y: 50 }}
+              className="bg-gradient-to-br from-emerald-600 to-purple-600 rounded-lg overflow-hidden shadow-xl max-w-7xl w-full"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="p-8 flex flex-col gap-6">
+                {/* main content */}
+                <div className=" py-8 overflow-y-auto overflow-hidden max-h-[32rem]">
+                  {LearMore.map((learn,index)=> (
+                    <div className="flex flex-col gap-3 mb-6">
+                      <h1 className="text-[22px] font-[600] text-white">{learn.title}</h1>
+                      <p className="text-gray-100">{learn.descriptiom}</p>
+                    </div>
+                  ))}
+                </div>
+                <Button onClick={() => setLearMore(false)} className="w-full bg-white text-black">Close</Button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
         <section className="w-screen py-12 md:py-24 lg:py-32 bg-gradient-to-br from-emerald-600 to-purple-600 p-6">
           <div className="container px-4 md:px-6 max-w-screen-2xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-white">Why Choose Us</h2>
@@ -324,9 +392,9 @@ export default function AdvertiserPage() {
             </motion.div>
           </div>
         </section> */}
-        <PaymentCarousel/>
+        <GetStartedSection/>
 
-        <section className="w-full py-12 md:py-24 lg:py-32">
+        {/* <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="max-w-screen-2xl mx-auto container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
@@ -350,7 +418,7 @@ export default function AdvertiserPage() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
     </div>
   )

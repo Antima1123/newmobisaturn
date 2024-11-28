@@ -89,11 +89,8 @@ export default function Component() {
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
                 Made for publishers
               </h1>
-              <p className="mx-auto max-w-[700px] text-lg">
-                by publishers
-              </p>
               <p className="mx-auto max-w-[700px] text-white/80">
-                Revenue solution for hot market. Fully customizable ad campaigns. One app. All ad formats.
+                Build a Sustainable Passive Income Stream with the Right Partnerships and Ongoing Optimization
               </p>
               <motion.div
                 whileHover={{ scale: 1.05 }}

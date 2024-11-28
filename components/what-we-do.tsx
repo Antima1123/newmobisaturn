@@ -28,8 +28,7 @@ const WhatWeDo = () => {
                             </div>
 
                             <p className="text-center mt-6 text-[17px]">
-                                employing tailored approaches to attract and engage new users, driving the expansion of the customer base for long-term growth and success                       
-                            </p>
+                            Using customized strategies to attract and engage new users, fostering the growth of a loyal customer base for sustained success.                            </p>
                         </div>
 
                         <div className="flex flex-col items-center w-72">
@@ -41,8 +40,7 @@ const WhatWeDo = () => {
                             </div>
 
                             <p className="text-center mt-6 text-[17px]">
-                            We help brands in maximizing conversions by strategically reaching out to potential customers who have previously shown interest.                      
-                            </p>
+                            We assist brands in boosting conversions by strategically targeting potential customers who have already demonstrated interest.                            </p>
                         </div>
 
                         <div className="flex flex-col items-center w-72">
@@ -52,10 +50,8 @@ const WhatWeDo = () => {
                             <div className="text-xl font-[600] text-center text-emerald-600">
                                 Gaming    
                             </div>
-
                             <p className="text-center mt-6 text-[17px]">
-                                utilizing strategic methods to acquire and engage new gamers, fueling the growth and vitality of the gaming ecosystem               
-                            </p>
+                            Leveraging Strategic Approaches to Attract, Engage, and Retain Players, Driving Growth and Sustaining the Vitality of the Gaming Ecosystem                            </p>
                         </div>
                     </motion.div>
                 </section>

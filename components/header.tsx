@@ -12,6 +12,8 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { ChevronDown } from "lucide-react"
 import { usePathname, useRouter } from 'next/navigation';
+import Image from 'next/image';
+import { LogoMain } from './logo';
 
 const Header = () =>{
     const [active, setActive] = useState(false);
@@ -36,8 +38,7 @@ const Header = () =>{
             <div className=" z-[90] flex lg:hidden justify-between items-center py-4 px-4 bg-white ">
                 {/* Mobile */}
                 <div className="text-2xl font-[600] text-emerald-600 flex">
-                    {/* <Image src="/logo.png" height={240} width={240} alt="logo"/> */}
-                    <p className="text-black">adbyte</p><p>hub</p>
+                    <LogoMain/>
                 </div>
 
                 {
@@ -76,12 +77,12 @@ const Header = () =>{
                                 Home
                             </button>
 
-                            <div onClick={() => setService(!service)} className='flex items-center'>
+                            {/* <div onClick={() => setService(!service)} className='flex items-center'>
                                 <p>Services</p>
                                 <ChevronDown className={`${service? " rotate-180 ease-in-out transition-all":"ease-in-out transition-all"}`}/>
-                            </div>
+                            </div> */}
 
-                            {service && (
+                            {/* {service && (
                                 <div className='flex flex-col gap-2'>
                                     <button onClick={()=>handleroute("/advertiser")} className=''>
                                         <button className='ml-2 text-md font-[500] text-start'>Advertiser</button>
@@ -90,7 +91,13 @@ const Header = () =>{
                                         <button className='ml-2 text-md font-[500] text-start' >Publisher</button>
                                     </button>
                                 </div>
-                            )}
+                            )} */}
+                            <button onClick={()=>handleroute("/advertiser")} className='text-start'>
+                            Advertiser
+                            </button>
+                            <button onClick={()=>handleroute("/publisher")} className='text-start'>
+                            Publisher
+                            </button>
                             <button onClick={()=>handleroute("/blogs")} className='text-start'>
                                Blogs
                             </button>
@@ -116,8 +123,10 @@ const Header = () =>{
              {/* large screen  */}
             <div className="lg:flex hidden py-4 justify-between items-center px-24 border border-b shadow-md z-[90] bg-white">
                 <div className="text-2xl font-[600] text-emerald-600 flex">
-                    {/* <Image src="/logo.png" height={240} width={240} alt="logo"/> */}
-                    <p className="text-black">adbyte</p><p>hub</p>
+                    <div>
+                        <LogoMain/>
+                    </div>
+                    {/* <p className="text-black">adbyte</p><p>hub</p> */}
                 </div>
 
                 <div className="gap-x-16 flex">
@@ -129,7 +138,7 @@ const Header = () =>{
                         Territories
                     </Link> */}
 
-                    <DropdownMenu>
+                    {/* <DropdownMenu>
                         <DropdownMenuTrigger className="flex items-center hover:text-emerald-600 transition-colors">
                             Services
                             <ChevronDown className="ml-1 h-4 w-4" />
@@ -154,7 +163,13 @@ const Header = () =>{
                             </Link>
                             </DropdownMenuItem>
                         </DropdownMenuContent>
-                    </DropdownMenu>
+                    </DropdownMenu> */}
+                    <Link href="/advertiser" className="items-center hover:text-emerald-600 transition-colors">
+                        Advertiser
+                    </Link>
+                    <Link href="/publisher" className="items-center hover:text-emerald-600 transition-colors">
+                        Publisher
+                    </Link>
 
                     <Link href="/blogs" className="items-center hover:text-emerald-600 transition-colors">
                         Blog

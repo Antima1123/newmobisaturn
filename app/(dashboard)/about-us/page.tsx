@@ -7,23 +7,39 @@ import { useOpenContactUs } from "@/hook/contact-open"
 import { ChartBar, Users, Target, Rocket, Trophy, Globe2, Briefcase, Utensils, ShoppingBag } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
+import HoverDevCards from "@/components/hover-cards"
+import { ServicesAll } from "@/components/aboutus-services"
 
 
-const industries = [
-  { name: "Digital Campaign Planning", icon: <Globe2 className="w-8 h-8 "/>, color: "bg-blue-500", description: "Design and execute tailored digital campaigns to engage your audience and grow your brand's online presence effectively." },
-  { name: "Digital Strategy Review", icon: <Trophy className="w-8 h-8" />, color: "bg-purple-500", description: "Analyze and refine your digital strategy to ensure optimal performance and business growth." },
-  { name: "Performance and Branding", icon: <ChartBar className="w-8 h-8" />, color: "bg-green-500", description: "Boost your brand identity while driving measurable performance and growth." },
-  { name: "Re-targeting & Remarketing", icon: <Users className="w-8 h-8" />, color: "bg-pink-500", description: "Reconnect with your audience to enhance engagement and drive conversions effectively." },
-  { name: "Mobile Optimisation", icon: <Rocket className="w-8 h-8" />, color: "bg-yellow-500", description: "Enhance user experience with fast, seamless, and mobile-friendly designs." },
-  { name: "Display conversions", icon: <Briefcase className="w-8 h-8" />, color: "bg-red-500", description: "Boost engagement and achieve measurable results with optimized, high-performing display ads." },
-  { name: "Customer Engagement", icon: <Utensils className="w-8 h-8" />, color: "bg-orange-500", description: "Foster meaningful connections to build loyalty and drive long-term success." },
-  { name: "Whatsapp Communication", icon: <ShoppingBag className="w-8 h-8" />, color: "bg-indigo-500", description: "Enhance customer interaction with seamless, real-time communication through WhatsApp." },
-]
+// const industries = [
+//   { name: "Digital Campaign Planning", icon: <Globe2 className="w-8 h-8 "/>, color: "bg-blue-500", description: "Design and execute tailored digital campaigns to engage your audience and grow your brand's online presence effectively." },
+//   { name: "Digital Strategy Review", icon: <Trophy className="w-8 h-8" />, color: "bg-purple-500", description: "Analyze and refine your digital strategy to ensure optimal performance and business growth." },
+//   { name: "Performance and Branding", icon: <ChartBar className="w-8 h-8" />, color: "bg-green-500", description: "Boost your brand identity while driving measurable performance and growth." },
+//   { name: "Re-targeting & Remarketing", icon: <Users className="w-8 h-8" />, color: "bg-pink-500", description: "Reconnect with your audience to enhance engagement and drive conversions effectively." },
+//   { name: "Mobile Optimisation", icon: <Rocket className="w-8 h-8" />, color: "bg-yellow-500", description: "Enhance user experience with fast, seamless, and mobile-friendly designs." },
+//   { name: "Display conversions", icon: <Briefcase className="w-8 h-8" />, color: "bg-red-500", description: "Boost engagement and achieve measurable results with optimized, high-performing display ads." },
+//   { name: "Customer Engagement", icon: <Utensils className="w-8 h-8" />, color: "bg-orange-500", description: "Foster meaningful connections to build loyalty and drive long-term success." },
+//   { name: "Whatsapp Communication", icon: <ShoppingBag className="w-8 h-8" />, color: "bg-indigo-500", description: "Enhance customer interaction with seamless, real-time communication through WhatsApp." },
+// ]
  
 export default function AboutUs() {
     const { onOpen, isOpen } = useOpenContactUs()
     const [selectedIndustry, setSelectedIndustry] = useState<number | null>(null)
+    const [isExpand,setIsExpand] = useState(false);
 
+    const text = `At AdByteHum, we specialize in performance marketing that drives measurable growth for brands across various verticals. By combining data-driven targeting with innovative, results-focused strategies, we help you achieve exceptional outcomes through user acquisition and market expansion.
+
+
+      Our verified demand sources empower advertisers to optimize their Return on Ad Spend (ROAS). We seamlessly integrate traffic sources with your marketing goals, ensuring every campaign is crafted to deliver maximum impact.
+
+
+      What truly sets us apart is our unique blend of technology, creativity, and strategic insights. We don't just run ads – we amplify your brand's story through tailored campaigns that connect with your audience and drive engagement. Whether you're looking to optimize existing channels or unlock new opportunities, AdByteHum creates scalable, sustainable growth for your brand.
+
+
+      Transform your marketing strategy with AdByteHum and experience the perfect fusion of creativity and data to accelerate your success.`;
+
+      const paragraph = text.split('\n').filter((para) => para.trim() !== '');
+ 
   return (
     <div className="flex flex-col min-h-screen">
         {isOpen && 
@@ -35,13 +51,16 @@ export default function AboutUs() {
       <section className="relative bg-gradient-to-br from-emerald-600 to-purple-600 p-6 py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Driving Growth Through Data-Driven Marketing
+            <h1 className="text-3xl md:text-4xl font-bold mb-6">
+            Fueling Growth with Data-Driven Marketing & Creative Excellence
             </h1>
-            <p className="text-lg md:text-xl mb-8">
-              We&apos;re a performance marketing agency specializing in user acquisition and data-driven targeting, helping brands
-              achieve exceptional growth across multiple verticals.
-            </p>
+            <div className={` relative mb-8 items-center justify-center ${isExpand ? "" : " line-clamp-3"}`}>
+              {paragraph.map((para, index) => (
+              <p key={index} onClick={() => setIsExpand(!isExpand)} className=" cursor-pointer text-md md:text-lg text-start mb-4">
+                {para}
+              </p>
+              ))}
+            </div>
             <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -115,7 +134,7 @@ export default function AboutUs() {
       {/* Industry Verticals */}
       <section className="py-16 bg-gray-50 ">
         <div className="container px-8 max-w-screen-2xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12">Industries We Serve</h2>
+          {/* <h2 className="text-4xl font-bold text-center mb-12">Industries We Serve</h2>
           <div className="grid md:grid-cols-2  lg:grid-cols-4 gap-4 mb-12">
             {industries.map((industry, index) => (
               <motion.div
@@ -137,12 +156,14 @@ export default function AboutUs() {
                 </Button>
               </motion.div>
             ))}
-          </div>
+          </div> */}
+          <ServicesAll/>
+          <HoverDevCards/>
         </div>
       </section>
 
       {/* Pop-up Modal for Selected Industry */}
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {selectedIndustry !== null && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -176,7 +197,7 @@ export default function AboutUs() {
             </motion.div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
 
       {/* Company Values */}
       <section className="py-16">

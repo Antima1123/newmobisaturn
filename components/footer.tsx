@@ -5,8 +5,8 @@ import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa"
 export default function Footer() {
   return (
     <footer className=" bg-black text-gray-300 py-6">
-      <div className="container px-4 mx-auto max-w-screen-xl">
-        <div className="grid  grid-cols-1 md:grid-cols-3 gap-12 lg:gap-24">
+      <div className="container px-4 mx-auto max-w-screen-2xl">
+        <div className="grid  grid-cols-1 md:grid-cols-4 gap-12 lg:gap-24">
           {/* Company Info Section */}
           <div className="space-y-6">
             <h2 className="text-3xl font-bold text-white">adbytehub</h2>
@@ -57,7 +57,7 @@ export default function Footer() {
 
           {/* Services Section */}
           <div className="space-y-6 ">
-            <h2 className="text-3xl font-bold text-white ">Quick Links</h2>
+            <h2 className="text-3xl font-bold text-white ">Company</h2>
             <div className="w-24 h-1 bg-white" />
             <div className="flex flex-col gap-4">
               <div className="space-y-4">
@@ -98,6 +98,31 @@ export default function Footer() {
               </div>
             </div>  
           </div>
+          </div>
+          <div className="space-y-6 ">
+            <h2 className="text-3xl font-bold text-white ">Quick Links</h2>
+            <div className="w-24 h-1 bg-white" />
+            <div className="flex flex-col gap-4">
+              <div className="space-y-4">
+                <div>
+                    <h1 className="font-[600] text-gray-500">Careers</h1>
+                    {/* <p className="text-md font-[600] cursor-pointer">Copyrigh@2024</p> */}
+                </div>
+                <div>
+                    <h1 className="font-[600] text-gray-500">Terms of service</h1>
+                    {/* <p className="text-md font-[600] cursor-pointer">Copyrigh@2024</p> */}
+                </div>
+                <div>
+                    <h1 className="font-[600] text-gray-500">Privacy Policy</h1>
+                    {/* <p className="text-md font-[600] cursor-pointer">Copyrigh@2024</p> */}
+                </div>
+                <div className=" h-full flex items-end">
+                  <Link href={"/privacy_policy"} className="">
+                    ©2024 adbytehub — All Rights Reserved
+                  </Link>
+                </div>
+              </div>
+            </div>  
           </div>
         </div>
       </div>

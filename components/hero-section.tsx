@@ -33,7 +33,7 @@ export function HeroSection() {
               marketing company
             </h1>
             <p className="text-xl text-muted-foreground">
-                Drive your brand&apos;s growth with our performance marketing team, delivering high-performance campaigns optimized for success and safeguarded against fraud.
+            At AdByteHub, we specialize in performance marketing that drives measurable growth for brands across various verticals. By combining data-driven targeting with innovative, results-focused strategies, we help you achieve exceptional outcomes through user acquisition and market expansion.
             </p>
             <div className="flex gap-4">
             <motion.div
