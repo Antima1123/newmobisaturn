@@ -41,7 +41,7 @@ export default function PrivacyPolicy() {
           </li>
           <li>
             <strong>Affiliate:</strong> An entity that controls, is controlled
-            by, or is under common control with a party, where "control" means
+            by, or is under common control with a party, where &quot;control&quot; means
             owning 50% or more of the shares, equity interest, or other voting
             securities.
           </li>
@@ -110,7 +110,7 @@ export default function PrivacyPolicy() {
           include:
         </p>
         <ul className="list-disc pl-6 mb-4">
-          <li>Your device's Internet Protocol (IP) address</li>
+          <li>Your device&apos;s Internet Protocol (IP) address</li>
           <li>Browser type and version</li>
           <li>Pages you visit on our website</li>
           <li>Date and time of visits</li>

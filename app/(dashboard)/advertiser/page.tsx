@@ -209,7 +209,7 @@ export default function AdvertiserPage() {
                 {/* main content */}
                 <div className=" py-8 overflow-y-auto overflow-hidden max-h-[32rem]">
                   {LearMore.map((learn,index)=> (
-                    <div className="flex flex-col gap-3 mb-6">
+                    <div className="flex flex-col gap-3 mb-6" key={index}>
                       <h1 className="text-[22px] font-[600] text-white">{learn.title}</h1>
                       <p className="text-gray-100">{learn.descriptiom}</p>
                     </div>
