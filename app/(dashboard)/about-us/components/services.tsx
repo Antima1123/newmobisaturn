@@ -34,7 +34,7 @@ export function CombinedSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <h2 className="text-2xl font-bold text-pink-600 mb-8">Services & Solutions</h2>
+                <h2 className="text-2xl font-bold text-emerald-600 mb-8">Services</h2>
                 <div className="space-y-6">
                   {services.map((service, index) => (
                     <motion.div
@@ -49,14 +49,14 @@ export function CombinedSection() {
                           initial={{ scale: 0 }}
                           animate={{ scale: 1 }}
                           transition={{ delay: index * 0.1 + 0.2 }}
-                          className="w-3 h-3 bg-pink-400 rounded-full"
+                          className="w-3 h-3 bg-emerald-600 rounded-full"
                         />
                         {index < services.length - 1 && (
                           <motion.div
                             initial={{ height: 0 }}
                             animate={{ height: '2rem' }}
                             transition={{ delay: index * 0.1 + 0.3 }}
-                            className="absolute top-3 left-1.5 w-0.5 bg-pink-200"
+                            className="absolute top-3 left-1.5 w-0.5 bg-emerald-300"
                           />
                         )}
                       </div>
