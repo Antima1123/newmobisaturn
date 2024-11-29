@@ -7,8 +7,7 @@ import { useOpenContactUs } from "@/hook/contact-open"
 import { ChartBar, Users, Target, Rocket, Trophy, Globe2, Briefcase, Utensils, ShoppingBag } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
-import { CombinedSection } from "./components/services"
-import { ServicesAll } from "@/components/aboutus-services"
+import ServicesAll from "@/components/aboutus-services"
 import HoverDevCards from "@/components/hover-cards"
 
 
@@ -159,10 +158,10 @@ export default function AboutUs() {
             ))}
           </div> */}
           {/* 
+      */}
       <ServicesAll/>
-          <HoverDevCards/> */}
       <HoverDevCards/> 
-        </div>
+      </div>
       </section>
       {/* <CombinedSection/> */}
 

@@ -1,143 +1,123 @@
-import React, { MouseEvent } from "react";
-import { useAnimate } from "framer-motion";
-import { IconType } from "react-icons";
-import { FaSitemap } from "react-icons/fa";
-import { IoShareSocial } from "react-icons/io5";
-import { GiClick } from "react-icons/gi";
-import { MdOutlineDeveloperMode, MdOutlineMoreTime } from "react-icons/md";
-import { FiFigma } from "react-icons/fi";
-import { BiSolidBasket } from "react-icons/bi";
+"use client"
 
-export const ServicesAll = () => {
+import { motion } from "framer-motion"
+import { Layout, Smartphone, Globe, Layers, Box, Crown } from 'lucide-react'
+
+interface Service {
+  icon: React.ReactNode
+  title: string
+  description: string
+}
+
+const services: Service[] = [
+  {
+    icon: <Layout className="h-6 w-6" />,
+    title: "Search Engine Optimization",
+    description: "Boost your website's visibility on search engines to attract more organic traffic and improve rankings."
+  },
+  {
+    icon: <Smartphone className="h-6 w-6" />,
+    title: "Social Media Marketing",
+    description: "Engage with your audience, build your brand, and drive sales through strategic social media campaigns."
+  },
+  {
+    icon: <Globe className="h-6 w-6" />,
+    title: "Pay Per Click (PPC)",
+    description: "Generate instant traffic with targeted ads that deliver measurable results on platforms like Google and Facebook."
+  },
+  {
+    icon: <Layers className="h-6 w-6" />,
+    title: "Content Development and Marketing",
+    description: "Craft compelling content to educate, engage, and convert your audience across blogs, videos, and more.r"
+  },
+  {
+    icon: <Box className="h-6 w-6" />,
+    title: "Website Design and Development",
+    description: "Create stunning, user-friendly websites that deliver seamless experiences and reflect your brand identity."
+  },
+  {
+    icon: <Crown className="h-6 w-6" />,
+    title: "E-commerce Marketing",
+    description: "Grow your online store with tailored strategies that drive sales and enhance customer loyalty."
+  },
+]
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+}
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5
+    }
+  }
+}
+
+export default function ServicesAll() {
   return (
-    <div className="bg-neutral-50 px-4 py-12">
-      <div className="mx-auto max-w-7xl">
-      <h2 className="text-3xl font-bold mb-6">Services</h2>
-        <ClipPathLinks />
+    <section className="pb-20 px-4 bg-gray-50">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-12">
+          {/* <motion.p
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-blue-600 mb-2"
+          >
+            Our Services
+          </motion.p> */}
+          <motion.h2
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-4xl font-bold text-navy-900"
+          >
+            <h1>What We Provide?</h1>
+          </motion.h2>
+        </div>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              whileHover={{ scale: 1.02 }}
+              className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <div className="flex items-start space-x-4">
+                <div className="bg-white rounded-full p-3 shadow-md">
+                  <div className="text-blue-600">
+                    {service.icon}
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-navy-900 mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    {service.description}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
-    </div>
-  );
-};
-
-const ClipPathLinks = () => {
-  return (
-    <div className="divide-y divide-neutral-900 border border-neutral-900">
-      <div className="grid grid-cols-2 divide-x divide-neutral-900">
-        <LinkBox head={"Search Engine Optimization"} Icon={FaSitemap} href="#" />
-        <LinkBox head={"Social Media Marketing"} Icon={IoShareSocial} href="#" />
-      </div>
-      <div className="grid grid-cols-3 divide-x divide-neutral-900">
-        <LinkBox head={"Per Day Click"} Icon={GiClick} href="#" />
-        <LinkBox head={"Content Development & Marketing"} Icon={MdOutlineDeveloperMode} href="#" />
-        <LinkBox head={"Website Design & Development"} Icon={FiFigma} href="#" />
-      </div>
-      <div className="grid grid-cols-2 divide-x divide-neutral-900">
-        <LinkBox head={"Ecommerce Marketing"} Icon={BiSolidBasket} href="#" />
-        <LinkBox head={"More Services"} Icon={MdOutlineMoreTime} href="#" />
-      </div>
-    </div>
-  );
-};
-
-const NO_CLIP = "polygon(0 0, 100% 0, 100% 100%, 0% 100%)";
-const BOTTOM_RIGHT_CLIP = "polygon(0 0, 100% 0, 0 0, 0% 100%)";
-const TOP_RIGHT_CLIP = "polygon(0 0, 0 100%, 100% 100%, 0% 100%)";
-const BOTTOM_LEFT_CLIP = "polygon(100% 100%, 100% 0, 100% 100%, 0 100%)";
-const TOP_LEFT_CLIP = "polygon(0 0, 100% 0, 100% 100%, 100% 0)";
-
-type Side = "top" | "left" | "bottom" | "right";
-type KeyframeMap = {
-  [key in Side]: string[];
-};
-
-const ENTRANCE_KEYFRAMES: KeyframeMap = {
-  left: [BOTTOM_RIGHT_CLIP, NO_CLIP],
-  bottom: [BOTTOM_RIGHT_CLIP, NO_CLIP],
-  top: [BOTTOM_RIGHT_CLIP, NO_CLIP],
-  right: [TOP_LEFT_CLIP, NO_CLIP],
-};
-
-const EXIT_KEYFRAMES: KeyframeMap = {
-  left: [NO_CLIP, TOP_RIGHT_CLIP],
-  bottom: [NO_CLIP, TOP_RIGHT_CLIP],
-  top: [NO_CLIP, TOP_RIGHT_CLIP],
-  right: [NO_CLIP, BOTTOM_LEFT_CLIP],
-};
-
-const LinkBox = ({ Icon, href,head }: { Icon: IconType; href: string,head:string }) => {
-  const [scope, animate] = useAnimate();
-
-  const getNearestSide = (e: MouseEvent) => {
-    const box = (e.target as HTMLElement).getBoundingClientRect();
-
-    const proximityToLeft = {
-      proximity: Math.abs(box.left - e.clientX),
-      side: "left" as Side,
-    };
-    const proximityToRight = {
-      proximity: Math.abs(box.right - e.clientX),
-      side: "right" as Side,
-    };
-    const proximityToTop = {
-      proximity: Math.abs(box.top - e.clientY),
-      side: "top" as Side,
-    };
-    const proximityToBottom = {
-      proximity: Math.abs(box.bottom - e.clientY),
-      side: "bottom" as Side,
-    };
-
-    const sortedProximity = [
-      proximityToLeft,
-      proximityToRight,
-      proximityToTop,
-      proximityToBottom,
-    ].sort((a, b) => a.proximity - b.proximity);
-
-    return sortedProximity[0].side;
-  };
-
-  const handleMouseEnter = (e: MouseEvent) => {
-    const side = getNearestSide(e);
-
-    animate(scope.current, {
-      clipPath: ENTRANCE_KEYFRAMES[side],
-    });
-  };
-
-  const handleMouseLeave = (e: MouseEvent) => {
-    const side = getNearestSide(e);
-
-    animate(scope.current, {
-      clipPath: EXIT_KEYFRAMES[side],
-    });
-  };
-
-  return (
-    <a
-      href={href}
-      onMouseEnter={(e) => {
-        handleMouseEnter(e);
-      }}
-      onMouseLeave={(e) => {
-        handleMouseLeave(e);
-      }}
-      className="relative grid h-20 w-full place-content-center sm:h-28 md:h-36"
-    >
-        <Icon className="text-xl sm:text-3xl lg:text-4xl" />
-
-      <div
-        ref={scope}
-        style={{
-          clipPath: BOTTOM_RIGHT_CLIP,
-        }}
-        className="absolute inset-0 grid place-content-center bg-gradient-to-br from-emerald-600 to-purple-600 text-white"
-      >
-        <div className="flex items-center justify-center flex-col gap-2">
-        <Icon className="text-xl sm:text-3xl lg:text-4xl" />
-        <p>{head}</p>
-      </div>
-      </div>
-    </a>
-  );
-};
+    </section>
+  )
+}

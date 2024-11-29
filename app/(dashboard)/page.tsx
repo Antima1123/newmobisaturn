@@ -1,14 +1,9 @@
 "use client"
 import { BlockInText } from "@/components/block-in-text-card";
 import { BouncyCardsFeatures } from "@/components/bouncy-card-features";
-import Carousel from "@/components/Carousel";
-import { CategoryCard } from "@/components/cat-card";
 import ContactForm from "@/components/contact-form";
-import DashFront from "@/components/dash-front";
 import { HeroSection } from "@/components/hero-section";
-import { MMPPartners } from "@/components/mmp-partners";
-import { ServeClients } from "@/components/serve-clients";
-import  WhatWeDo  from "@/components/what-we-do";
+import FeatureSection from "@/components/why-we-are-the-best";
 import  WhoWeAre  from "@/components/who-we-are";
 import { WhyMobiSaturn } from "@/components/why-mobisaturn";
 import { useOpenContactUs } from "@/hook/contact-open";
@@ -50,7 +45,7 @@ export default function Home() {
       {/* <ServeClients/> */}
       <WhoWeAre/>
       <BouncyCardsFeatures/>
-      <WhatWeDo/>
+      <FeatureSection/>
       <WhyMobiSaturn/>
       {/* <MMPPartners/> */}
       {isOpen && 
