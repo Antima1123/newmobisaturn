@@ -60,7 +60,7 @@ export default function BlogPost() {
         <div className="relative aspect-[2/1] overflow-hidden rounded-lg">
           <Image
             src={post?.coverimage!}
-            alt="Blog post cover image"
+            alt="adbytehub"
             fill
             className="object-cover"
             priority

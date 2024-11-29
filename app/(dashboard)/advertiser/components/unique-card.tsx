@@ -41,7 +41,7 @@ export default function Cardunique({
           </Button>
         </div>
         <div className=" justify-center items-center flex">
-          <Image src={imageUrl} width={500} height={500} alt="" className=" w-[350px]"/>
+          <Image src={imageUrl} width={500} height={500} alt="adbytehub" className=" w-[350px]"/>
         </div>
       </div>
     </Card>

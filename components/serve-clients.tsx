@@ -7,7 +7,7 @@ export const ServeClients = () =>{
             <div className="grid md:grid-cols-6 md:gap-x-24 gap-y-8 ">
                 <Image
                     src="/Group-5.png"
-                    alt="Group-5"
+                    alt="adbytehub"
                     width={200}
                     height={200}
                     className="w-[8rem] object-contain"
@@ -15,21 +15,21 @@ export const ServeClients = () =>{
                  
                  <Image
                     src="/Group-6.png"
-                    alt="Group-6"
+                    alt="adbytehub"
                     width={200}
                     height={200}
                     className="w-[8rem] object-contain"
                 />
                  <Image
                     src="/Group-7.png"
-                    alt="Group-7"
+                    alt="adbytehub"
                     width={200}
                     height={200}
                     className="w-[8rem] object-contain"
                 />
                  <Image
                     src="/Group-8.png"
-                    alt="Group-8"
+                    alt="adbytehub"
                     width={200}
                     height={200}
                     className="w-[8rem] object-contain"
@@ -37,14 +37,14 @@ export const ServeClients = () =>{
                 
                 <Image
                     src="/Group-10.png"
-                    alt="Group-10"
+                    alt="adbytehub"
                     width={200}
                     height={200}
                     className="w-[8rem] object-contain"
                 />
                 <Image
                     src="/Group-11.png"
-                    alt="Group-11"
+                    alt="adbytehub"
                     width={200}
                     height={200}
                     className="w-[8rem] object-contain"

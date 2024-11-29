@@ -46,7 +46,7 @@ const DashFront = () =>{
                         transition={{ duration: 0.5 }}
                         whileInView={{ opacity: [0,1] }}
                     >
-                        <Image src='/bg.png' height={1000} width={1000} alt="pageimg" className="lg:w-[600px] w-[0px] object-contain"/>
+                        <Image src='/bg.png' height={1000} width={1000} alt="adbytehub" className="lg:w-[600px] w-[0px] object-contain"/>
                     </motion.div>
                 </div>
             </section>
