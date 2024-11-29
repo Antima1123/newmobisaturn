@@ -262,7 +262,7 @@ export default function AdvertiserPage() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <Card 
-                className="h-full cursor-pointer transition-all duration-300 hover:shadow-xl"
+                className="h-full bg-gray-100 shadow-md cursor-pointer transition-all duration-300 hover:shadow-xl"
                 onClick={() => setSelectedAdFormat(format)}
               >
                 <CardContent className="flex flex-col items-center p-6 text-center h-full">

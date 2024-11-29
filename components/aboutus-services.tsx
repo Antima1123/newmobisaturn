@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion"
 import { Layout, Smartphone, Globe, Layers, Box, Crown } from 'lucide-react'
+import { BiSolidUserVoice } from "react-icons/bi"
+import { TbDeviceMobileMessage } from "react-icons/tb"
 
 interface Service {
   icon: React.ReactNode
@@ -40,6 +42,17 @@ const services: Service[] = [
     title: "E-commerce Marketing",
     description: "Grow your online store with tailored strategies that drive sales and enhance customer loyalty."
   },
+  {
+    icon: <BiSolidUserVoice className="h-6 w-6" />,
+    title: "Mobile Marketing",
+    description: "Engage your audience on-the-go with targeted, effective mobile strategies designed to boost conversions"
+  },
+  {
+    icon: <TbDeviceMobileMessage className="h-6 w-6" />,
+    title: "Affiliates Marketing",
+    description: "we specialize in creating and managing impactful affiliate marketing programs that drive measurable results."
+  },
+
 ]
 
 const containerVariants = {

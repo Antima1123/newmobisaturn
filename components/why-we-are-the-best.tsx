@@ -12,19 +12,16 @@ export default function FeatureSection() {
       icon: <Cloud className="h-8 w-8" />,
       title: "User Acquisition",
       description: "Using customized strategies to attract and engage new users, fostering the growth of a loyal customer base for sustained success.",
-      color: "bg-white"
     },
     {
       icon: <Settings className="h-8 w-8" />,
       title: "Retargeting",
       description: "We assist brands in boosting conversions by strategically targeting potential customers who have already demonstrated interest.",
-      color: "bg-primary"
     },
     {
       icon: <IoGameController className="h-8 w-8" />,
       title: "Gaming",
       description: "Leveraging Strategic Approaches to Attract, Engage, and Retain Players, Driving Growth and Sustaining the Vitality of the Gaming Ecosystem.",
-      color: "bg-white"
     }
   ]
 
@@ -67,39 +64,31 @@ export default function FeatureSection() {
           {features.map((feature, index) => (
             <motion.div key={index} variants={cardVariants}>
               <Card 
-                className={`h-full transition-transform duration-300 hover:-translate-y-2 ${
-                  feature.color === 'bg-primary' 
-                    ? 'bg-gradient-to-r from-emerald-600 to-purple-600 text-primary-foreground' 
-                    : 'bg-white'
-                }`}
+                className="h-full shadow-md transition-all duration-300 hover:-translate-y-2 group bg-white hover:bg-gradient-to-r from-emerald-600 to-purple-600"
               >
                 <CardHeader>
                   <motion.div
                     whileHover={{ scale: 1.1 }}
-                    className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4"
+                    className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4 text-primary group-hover:bg-white/10 group-hover:text-white"
                   >
                     {feature.icon}
                   </motion.div>
-                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                  <h3 className="text-xl font-semibold mb-2 group-hover:text-white">{feature.title}</h3>
                 </CardHeader>
                 <CardContent>
-                  <p className={`${
-                    feature.color === 'bg-primary' 
-                      ? 'text-primary-foreground/90' 
-                      : 'text-muted-foreground'
-                  }`}>
+                  <p className="text-muted-foreground group-hover:text-white/90">
                     {feature.description}
                   </p>
                 </CardContent>
-                <CardFooter>
+                {/* <CardFooter>
                   <Button 
-                    variant={feature.color === 'bg-primary' ? 'secondary' : 'default'}
-                    className={`group ${feature.color === 'bg-primary' ? "" : "bg-gradient-to-r from-emerald-600 to-purple-600"}`}
+                    variant="default"
+                    className="bg-primary text-primary-foreground group-hover:bg-white group-hover:text-primary"
                   >
-                    Read More
+                    About us
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-2" />
                   </Button>
-                </CardFooter>
+                </CardFooter> */}
               </Card>
             </motion.div>
           ))}

@@ -2,50 +2,51 @@ import React from "react";
 import { IconType } from "react-icons";
 import { FaHandHoldingMedical } from "react-icons/fa";
 import { FaHandHoldingDollar, FaTruckFast } from "react-icons/fa6";
-import { FiCreditCard, FiMail, FiUser, FiUsers } from "react-icons/fi";
+import { motion } from "framer-motion"
 import { GiRadioTower } from "react-icons/gi";
 import { IoLocationOutline } from "react-icons/io5";
 import { RiGovernmentFill } from "react-icons/ri";
 
 const HoverDevCards = () => {
   return (
-    <div className="p-4 max-w-screen-2xl mx-auto">
-      <p className="text-xl font-semibold mb-2">Industries served</p>
+    <div className="p-4 max-w-6xl mx-auto">
+      <motion.h2
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-4xl font-bold text-navy-900 text-center mb-8"
+          >
+            <h1>Industries served</h1>
+          </motion.h2>
       <div className="grid gap-4 grid-cols-1 lg:grid-cols-3">
         <Card
           title="Banking and Financial Services"
           subtitle="Manage profile"
-          href="#"
           Icon={FaHandHoldingDollar}
         />
         <Card 
             title="Travel, Logistics and Hospitality" 
             subtitle="Manage email" 
-            href="#"
             Icon={IoLocationOutline} 
         />
         <Card 
             title="Retail and E-commerce" 
             subtitle="Manage team" 
-            href="#" 
             Icon={FaTruckFast} 
         />
         <Card
             title="HealthCare"
             subtitle="Manage cards"
-            href="#"
             Icon={FaHandHoldingMedical}
         />
         <Card
             title="Telecommunication, Media and Technology"
             subtitle="Manage cards"
-            href="#"
             Icon={GiRadioTower}
         />
         <Card
             title="Public Sector and Government"
             subtitle="Manage cards"
-            href="#"
             Icon={RiGovernmentFill}
         />
       </div>
@@ -57,13 +58,11 @@ interface CardType {
   title: string;
   subtitle: string;
   Icon: IconType;
-  href: string;
 }
 
-const Card = ({ title, subtitle, Icon, href }: CardType) => {
+const Card = ({ title, subtitle, Icon }: CardType) => {
   return (
     <a
-      href={href}
       className="w-full p-4 rounded border-[1px] border-slate-300 relative overflow-hidden group bg-white"
     >
       <div className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-purple-600 translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-300" />
