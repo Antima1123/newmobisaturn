@@ -36,15 +36,15 @@ export default function Footer() {
               </div>
             </div>
             <div className="flex space-x-4">
-              <Link href="#" className="hover:text-blue-500 transition-colors">
+              <Link href="https://www.facebook.com/profile.php?id=61569446252389" className="hover:text-blue-500 transition-colors">
                 <FaFacebook className="h-6 w-6" />
                 <span className="sr-only">Facebook</span>
               </Link>
-              <Link href="#" className="hover:text-blue-400 transition-colors">
+              <Link href="https://www.instagram.com/adbytehub/" className="hover:text-blue-400 transition-colors">
                 <FaInstagram className="h-6 w-6" />
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link href="#" className="hover:text-blue-600 transition-colors">
+              <Link href="https://in.linkedin.com/in/shweta-yadav-b7107633a" className="hover:text-blue-600 transition-colors">
                 <FaLinkedin className="h-6 w-6" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
