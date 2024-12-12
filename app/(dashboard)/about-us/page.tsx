@@ -27,7 +27,7 @@ export default function AboutUs() {
     const [selectedIndustry, setSelectedIndustry] = useState<number | null>(null)
     const [isExpand,setIsExpand] = useState(false);
 
-    const text = `At AdByteHum, we specialize in performance marketing that drives measurable growth for brands across various verticals. By combining data-driven targeting with innovative, results-focused strategies, we help you achieve exceptional outcomes through user acquisition and market expansion.
+    const text = `At AdByteHub, we specialize in performance marketing that drives measurable growth for brands across various verticals. By combining data-driven targeting with innovative, results-focused strategies, we help you achieve exceptional outcomes through user acquisition and market expansion.
 
 
       Our verified demand sources empower advertisers to optimize their Return on Ad Spend (ROAS). We seamlessly integrate traffic sources with your marketing goals, ensuring every campaign is crafted to deliver maximum impact.

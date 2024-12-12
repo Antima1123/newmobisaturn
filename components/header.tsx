@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { ChevronDown } from "lucide-react"
 import { usePathname, useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 const Header = () =>{
     const [active, setActive] = useState(false);
@@ -33,11 +34,11 @@ const Header = () =>{
 
     return(
         <div className=" sticky top-0 w-full bg-white z-[99]">
-            <div className=" z-[90] flex lg:hidden justify-between items-center py-4 px-4 bg-white ">
+            <div className=" z-[90] flex lg:hidden justify-between items-center px-4 bg-white ">
                 {/* Mobile */}
                 <div className="text-2xl font-[600] text-emerald-600 flex">
-                    {/* <Image src="/logo.png" height={240} width={240} alt="logo"/> */}
-                    <p className="text-black">adbyte</p><p>hub</p>
+                <Image src="/logo1.png" height={240} width={240} alt="logo" className='w-28 invert'/>
+                    {/* <p className="text-black">adbyte</p><p>hub</p> */}
                 </div>
 
                 {
@@ -120,10 +121,10 @@ const Header = () =>{
                 )}
             </div>
              {/* large screen  */}
-            <div className="lg:flex hidden py-4 justify-between items-center px-24 border border-b shadow-md z-[90] bg-white">
+            <div className="lg:flex hidden py-0 justify-between items-center px-24 border border-b shadow-md z-[90] bg-white">
                 <div className="text-2xl font-[600] text-emerald-600 flex">
-                    {/* <Image src="/logo.png" height={240} width={240} alt="logo"/> */}
-                    <p className="text-black">adbyte</p><p>hub</p>
+                    <Image src="/logo1.png" height={240} width={240} alt="logo" className='w-32 invert'/>
+                    {/* <p className="text-black">adbyte</p><p>hub</p> */}
                 </div>
 
                 <div className="gap-x-16 flex">
