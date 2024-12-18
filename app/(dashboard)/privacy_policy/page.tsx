@@ -118,6 +118,26 @@ export default function PrivacyPolicy() {
           <li>Time spent on each page</li>
           <li>Unique device identifiers and other diagnostic data</li>
         </ul>
+        <p className="mb-4 text-xl">
+          When accessing the Service through a mobile device, we may collect additional information, such as:
+        </p>
+        <ul className="list-disc pl-6 mb-4">
+          <li>Type of mobile device</li>
+          <li>Mobile device's unique ID</li>
+          <li>IP address of the mobile device</li>
+          <li>Mobile operating system</li>
+          <li>Type of mobile browser</li>
+        </ul>
+        <p className="mb-4 text-xl">
+          We may also collect information sent by your browser or mobile device when you visit our Service.
+        </p>
+        <ul className="list-disc pl-6 mb-4">
+          <li>Tracking Technologies and Cookies</li>
+          <li>We use Cookies and similar tracking technologies to monitor activity on our Service and store certain information to improve your experience. </li>
+          <li>Cookies are small pieces of data sent to your device by our website.</li>
+          <li>We use both Session Cookies (temporary, deleted when you close your browser) and Persistent Cookies (remain on your device until deleted or expired).</li>
+          <li> Cookies allow us to remember your preferences and improve your experience. You can manage cookie preferences directly through your browser settings or reject cookies if preferred, although doing so may impact some website features.</li>
+        </ul>
   
         <h3 className="text-2xl font-semibold mt-6 mb-3">Collection of Personal Data</h3>
         <p className="mb-4">
