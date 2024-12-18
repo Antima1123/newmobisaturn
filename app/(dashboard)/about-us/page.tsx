@@ -33,10 +33,10 @@ export default function AboutUs() {
       Our verified demand sources empower advertisers to optimize their Return on Ad Spend (ROAS). We seamlessly integrate traffic sources with your marketing goals, ensuring every campaign is crafted to deliver maximum impact.
 
 
-      What truly sets us apart is our unique blend of technology, creativity, and strategic insights. We don't just run ads – we amplify your brand's story through tailored campaigns that connect with your audience and drive engagement. Whether you're looking to optimize existing channels or unlock new opportunities, AdByteHum creates scalable, sustainable growth for your brand.
+      What truly sets us apart is our unique blend of technology, creativity, and strategic insights. We don't just run ads – we amplify your brand's story through tailored campaigns that connect with your audience and drive engagement. Whether you're looking to optimize existing channels or unlock new opportunities, AdByteHub creates scalable, sustainable growth for your brand.
 
 
-      Transform your marketing strategy with AdByteHum and experience the perfect fusion of creativity and data to accelerate your success.`;
+      Transform your marketing strategy with AdByteHub and experience the perfect fusion of creativity and data to accelerate your success.`;
 
       const paragraph = text.split('\n').filter((para) => para.trim() !== '');
  

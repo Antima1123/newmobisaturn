@@ -47,28 +47,6 @@ export default function Component() {
       }
     ]
   
-    const adFormats = [
-      {
-        icon: <LayoutGrid className="h-12 w-12" />,
-        title: "Pop-under Mastery",
-        description: "Unleash a torrent of traffic with strategically placed click-triggered pop-unders."
-      },
-      {
-        icon: <MonitorSmartphone className="h-12 w-12" />,
-        title: "Web Push Wizardry",
-        description: "Build and nurture a loyal subscriber base across desktop platforms with ease."
-      },
-      {
-        icon: <Play className="h-12 w-12" />,
-        title: "Immersive In-stream Video",
-        description: "Seamlessly integrate full video ads or video-rolls into your existing player."
-      },
-      {
-        icon: <MessageSquare className="h-12 w-12" />,
-        title: "Dynamic In-page Solutions",
-        description: "Craft attention-grabbing banners that seamlessly blend with your webpage's design."
-      }
-    ]
 
   return (
     <div className="flex min-h-screen flex-col">
