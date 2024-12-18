@@ -22,7 +22,7 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-col gap-8"
           >
-            <h2 className="text-6xl font-bold tracking-tight">
+            <h1 className="text-6xl font-bold tracking-tight">
                 We&apos;re A premier{""}<br/>
             <Cover>
               <span className="bg-gradient-to-r from-emerald-600 to-purple-600 bg-clip-text text-transparent group-hover:text-white">
@@ -31,7 +31,7 @@ export function HeroSection() {
             </Cover> 
               <br />
               marketing company
-            </h2>
+            </h1>
             <p className="text-xl text-muted-foreground">
             At AdByteHub, we specialize in performance marketing that drives measurable growth for brands across various verticals. By combining data-driven targeting with innovative, results-focused strategies, we help you achieve exceptional outcomes through user acquisition and market expansion.
             </p>

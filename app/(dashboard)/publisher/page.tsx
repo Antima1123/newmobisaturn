@@ -68,7 +68,7 @@ export default function Component() {
                 Made for publishers
               </h1>
               <p className="mx-auto max-w-[700px] text-white/80">
-                Build a Sustainable Passive Income Stream with the Right Partnerships and Ongoing Optimization
+                Our specialty at AdByteHub is assisting publishers in realizing their maximum income potential via effective digital marketing techniques. We provide customized solutions to increase audience engagement, improve ad effectiveness, and generate more revenue, regardless of the size of your media outlet—from small blogs to major media conglomerates. Our team of professionals collaborates closely with publishers to create tailored plans that optimize user experience, increase visibility, and expedite monetization initiatives. Allow us to assist you in turning your platform into an effective digital resource.
               </p>
               <motion.div
                 whileHover={{ scale: 1.05 }}

@@ -17,7 +17,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "adbytehub",
+  title: "AdByteHub - Premier Digital Marketing Agency for Business Growth",
   description: "Boost your website's success with our powerful tools and strategies. Elevate your online presence, attract more visitors, and drive growth with expert marketing solutions.",
 };
 

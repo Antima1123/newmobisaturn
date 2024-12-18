@@ -284,17 +284,17 @@ export default function PrivacyPolicy() {
         <ul className="list-disc pl-6">
           <li>
             Email:{" "}
-            <Link
+            <a
               href="mailto:info@adbytehub.com"
               className="text-blue-500 hover:underline"
             >
               info@adbytehub.com
-            </Link>
+            </a>
           </li>
           <li>
             Website Contact Page:{" "}
             <Link
-              href="https://www.adbytehub.com/"
+              href="/"
               className="text-blue-500 hover:underline"
             >
               Contact Us
