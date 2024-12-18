@@ -110,13 +110,13 @@ export default function Footer() {
                 </div>
                 <div>
                   <Link href={"/privacy_policy"}>
-                    <h1 className="font-[600] text-gray-500">Terms of service</h1>
+                    <h1 className="font-[600] cursor-auto hover:text-white text-gray-500">Terms of service</h1>
                   </Link>
                     {/* <p className="text-md font-[600] cursor-pointer">Copyrigh@2024</p> */}
                 </div>
                 <div>
                   <Link href={"/privacy_policy"}>
-                    <h1 className="font-[600] text-gray-500">Privacy Policy</h1>
+                    <h1 className="font-[600] cursor-auto hover:text-white text-gray-500">Privacy Policy</h1>
                   </Link>
                     {/* <p className="text-md font-[600] cursor-pointer">Copyrigh@2024</p> */}
                 </div>

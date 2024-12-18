@@ -33,7 +33,8 @@ export default function PrivacyPolicy() {
           plural.
         </p>
   
-        <h3 className="text-xl font-semibold mb-3">Definitions</h3>
+        <h3 className="text-xl font-semibold ">Definitions</h3>
+        <p className="mb-3">For the purposes of this Privacy Policy:</p>
         <ul className="list-disc pl-6 mb-4">
           <li>
             <strong>Account:</strong> A unique account created for you to access
@@ -118,7 +119,127 @@ export default function PrivacyPolicy() {
           <li>Unique device identifiers and other diagnostic data</li>
         </ul>
   
-        <h3 className="text-xl font-semibold mt-6 mb-3">Tracking Technologies and Cookies</h3>
+        <h3 className="text-2xl font-semibold mt-6 mb-3">Collection of Personal Data</h3>
+        <p className="mb-4">
+          We may collect the following types of personal data:
+          Contact details (name, email, phone number)
+          Payment information (credit card details)
+          Usage data (browsing history, interaction with our website)
+        </p>
+        <p className="mb-4">
+          Any other data you voluntarily provide to us
+          Purposes of Data Collection
+          To provide the products or services you've requested
+          To process payments for our products or services
+          We use your personal data for the following purposes:
+          To enhance and improve our services
+          To communicate with you about our services
+          To comply with legal and regulatory obligations
+        </p>
+
+
+
+        <h3 className="text-2xl font-semibold mt-6 mb-3">Legal Basis for Processing Your Personal Data</h3>
+        <p className="mb-4">
+           We process your personal data based on the following legal grounds:
+        </p>
+        <ul className="list-disc pl-6 mb-4">
+          <li>
+            <strong>Your Consent:</strong> When you provide explicit consent for us to process your data.
+          </li>
+          <li>
+            <strong>Contractual Necessity:</strong> When processing is necessary to fulfill our contract with you.
+          </li>
+          <li>
+            <strong>Legal Obligation:</strong> When processing is required to comply with legal obligations.
+          </li>
+          <li>
+            <strong>Legitimate Interests:</strong> When processing is necessary for our legitimate business interests, provided these are not overridden by your rights and freedoms.
+          </li>
+        </ul>
+
+
+        <h3 className="text-2xl font-semibold mt-6 mb-3">Data Retention</h3>
+        <p className="mb-4">
+          We retain your personal data for as long as necessary to
+          fulfill the purposes for which it was collected, including
+          to comply with legal, accounting, or reporting requirements.
+        </p>
+
+        <h3 className="text-2xl font-semibold mt-6 mb-3">Data Security</h3>
+        <p className="mb-4">
+          We implement appropriate technical and organizational
+          measures to protect your personal data, including encryption,
+          access controls, and regular backups. However, please note that
+          no method of electronic transmission or storage is 100% secure,
+          and we cannot guarantee absolute security.
+        </p>
+
+        <h3 className="text-2xl font-semibold mt-6 mb-3">Your Data Protection Rights</h3>
+        <p className="mb-4">
+          You have the following rights regarding your personal data:
+        </p>
+        <ul className="list-disc pl-6 mb-4">
+          <li>
+            <strong>Access:</strong> You can request access to your personal data
+          </li>
+          <li>
+            <strong>Rectification:</strong>You can correct any inaccuracies in your personal data.
+          </li>
+          <li>
+            <strong>Erasure:</strong>You can request that we delete your personal data.
+          </li>
+          <li>
+            <strong>Objection:</strong>You can object to the processing of your personal data.
+
+          </li>
+          <li>
+            <strong>Restriction:</strong>You can request the restriction of processing your personal data
+          </li>
+          <li>
+            <strong>Portability:</strong> You can request a copy of your data in a structured, commonly used format.
+          </li>
+          <li>
+            <strong>Withdrawal of Consent:</strong>You can withdraw your consent at any time.
+          </li>
+          <p>To exercise any of these rights, please contact us using the contact information provided below.
+          </p>
+        </ul>
+
+
+        <h3 className="text-2xl font-semibold mt-6 mb-3">Disclosure of Your Personal Data Business Transactions</h3>
+        <p className="mb-4">
+          If we are involved in a merger, acquisition, or asset sale, your data may be transferred. We will notify you of any such transfer and how it affects your personal data.
+          Law Enforcement and Legal Requirements
+          We may disclose your personal data to comply with legal obligations, protect our rights or property, prevent illegal activities, or safeguard public safety.
+        </p>
+
+        <h3 className="text-2xl font-semibold mt-6 mb-3">Children's Privacy</h3>
+        <p className="mb-4">
+          Our Service is not intended for individuals under the age of 18. 
+          We do not knowingly collect personal information from children under 18. If you are a
+          parent or guardian and believe your child has provided us with personal data, 
+          please contact us immediately so we can delete the information.
+        </p>
+
+        <h3 className="text-2xl font-semibold mt-6 mb-3">Links to Other Websites</h3>
+        <p className="mb-4">
+          Our Service may contain links to third-party websites. 
+          We are not responsible for the content, privacy policies, 
+          or practices of these third-party sites. We recommend reviewing 
+          the privacy policy of each site you visit.
+        </p>
+
+        <h3 className="text-2xl font-semibold mt-6 mb-3">Changes to This Privacy Policy</h3>
+        <p className="mb-4">
+          We may update this Privacy Policy from time to time. 
+          Any changes will be posted on this page, and we will notify
+          you of any significant changes. We encourage you to review 
+          this Privacy Policy periodically.
+        </p>
+
+
+        <h3 className="text-2xl font-semibold mt-6 mb-3">Tracking Technologies and Cookies</h3>
         <p className="mb-4">
           We use Cookies and similar tracking technologies to monitor activity on
           our Service and store certain information to improve your experience.
@@ -151,7 +272,7 @@ export default function PrivacyPolicy() {
           <li>
             Website Contact Page:{" "}
             <a
-              href="https://www.adbytehub.com/contact"
+              // href="https://www.adbytehub.com/contact"
               className="text-blue-500 hover:underline"
             >
               Contact Us
