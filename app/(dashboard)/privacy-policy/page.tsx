@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function PrivacyPolicy() {
     return (
       <div className="max-w-4xl mx-auto px-4 py-8">
@@ -16,12 +18,12 @@ export default function PrivacyPolicy() {
           personal data when you use our services. It also explains your privacy
           rights and how the law protects you. If you wish to withdraw any of
           your personal information, please contact us at{" "}
-          <a
+          <Link
             href="mailto:info@adbytehub.com"
             className="text-blue-500 hover:underline"
           >
             info@adbytehub.com
-          </a>
+          </Link>
           , specifying the details you want removed.
         </p>
   
@@ -78,12 +80,12 @@ export default function PrivacyPolicy() {
           </li>
           <li>
             <strong>Website:</strong> Refers to Adbytehub.com, accessible via{" "}
-            <a
+            <Link
               href="https://www.adbytehub.com/"
               className="text-blue-500 hover:underline"
             >
               https://www.adbytehub.com/
-            </a>
+            </Link>
             .
           </li>
           <li>
@@ -282,21 +284,21 @@ export default function PrivacyPolicy() {
         <ul className="list-disc pl-6">
           <li>
             Email:{" "}
-            <a
+            <Link
               href="mailto:info@adbytehub.com"
               className="text-blue-500 hover:underline"
             >
               info@adbytehub.com
-            </a>
+            </Link>
           </li>
           <li>
             Website Contact Page:{" "}
-            <a
+            <Link
               href="https://www.adbytehub.com/"
               className="text-blue-500 hover:underline"
             >
               Contact Us
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

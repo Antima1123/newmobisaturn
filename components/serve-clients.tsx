@@ -3,7 +3,7 @@ import Image from "next/image"
 export const ServeClients = () =>{
     return(
         <div className="flex flex-col justify-center items-center mt-8">
-            <h1 className=" mb-8 text-2xl font-[700]">Served more than 250 clients</h1>
+            <h2 className=" mb-8 text-2xl font-[700]">Served more than 250 clients</h2>
             <div className="grid md:grid-cols-6 md:gap-x-24 gap-y-8 ">
                 <Image
                     src="/Group-5.png"

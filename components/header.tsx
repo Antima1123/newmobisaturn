@@ -76,22 +76,6 @@ const Header = () =>{
                             <button onClick={()=>handleroute("/")} className='text-start'>
                                 Home
                             </button>
-
-                            {/* <div onClick={() => setService(!service)} className='flex items-center'>
-                                <p>Services</p>
-                                <ChevronDown className={`${service? " rotate-180 ease-in-out transition-all":"ease-in-out transition-all"}`}/>
-                            </div> */}
-
-                            {/* {service && (
-                                <div className='flex flex-col gap-2'>
-                                    <button onClick={()=>handleroute("/advertiser")} className=''>
-                                        <button className='ml-2 text-md font-[500] text-start'>Advertiser</button>
-                                    </button>
-                                    <button onClick={()=>handleroute("/publisher")}>
-                                        <button className='ml-2 text-md font-[500] text-start' >Publisher</button>
-                                    </button>
-                                </div>
-                            )} */}
                             <button onClick={()=>handleroute("/advertiser")} className='text-start'>
                             Advertiser
                             </button>
@@ -131,37 +115,6 @@ const Header = () =>{
                     <Link href="/" className='items-center hover:text-emerald-600 transition-colors' >
                         Home
                     </Link>
-                    
-                    {/* <Link href="/territories" className='items-center hover:text-emerald-600 transition-colors' >
-                        Territories
-                    </Link> */}
-
-                    {/* <DropdownMenu>
-                        <DropdownMenuTrigger className="flex items-center hover:text-emerald-600 transition-colors">
-                            Services
-                            <ChevronDown className="ml-1 h-4 w-4" />
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent className='z-[110]'>
-                            <DropdownMenuItem>
-                            <Link href="/advertiser" className={`w-full ${path == "/advertiser" && "text-emerald-600"} hover:text-emerald-600 flex`}>
-                            {
-                                path == "/advertiser" &&
-                                <div className='h-5 flex w-[2px] rounded-lg bg-emerald-600 mr-2'/>
-                               }
-                                Advertiser
-                            </Link>
-                            </DropdownMenuItem>
-                            <DropdownMenuItem>
-                            <Link href="/publisher" className={`w-full ${path == "/publisher" && "text-emerald-600"} hover:text-emerald-600 flex`}>
-                               {
-                                path == "/publisher" &&
-                                <div className='h-5 flex w-[2px] rounded-lg bg-emerald-600 mr-2'/>
-                               }
-                               Publisher
-                            </Link>
-                            </DropdownMenuItem>
-                        </DropdownMenuContent>
-                    </DropdownMenu> */}
                     <Link href="/advertiser" className="items-center hover:text-emerald-600 transition-colors">
                         Advertiser
                     </Link>

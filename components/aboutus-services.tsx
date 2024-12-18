@@ -81,21 +81,13 @@ export default function ServicesAll() {
     <section className="pb-20 px-4 bg-gray-50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          {/* <motion.p
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-blue-600 mb-2"
-          >
-            Our Services
-          </motion.p> */}
           <motion.h2
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-4xl font-bold text-navy-900"
           >
-            <h1>What We Provide?</h1>
+            <h2>What We Provide?</h2>
           </motion.h2>
         </div>
 

@@ -1,10 +1,8 @@
-import Image from "next/image"
 import { BiSolidMedal } from "react-icons/bi";
 import { FaEye, FaHandshake } from "react-icons/fa";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { motion } from "framer-motion";
 import ContactUsPage from "./contact-us";
-import { BlockInText } from "./block-in-text-card";
 
 
 export const WhyMobiSaturn = () =>{
@@ -13,9 +11,6 @@ export const WhyMobiSaturn = () =>{
         <motion.div 
         className="flex flex-col md:px-28  px-4 mt-8 py-20 w-full">
             <div className=" justify-center items-center flex flex-col max-w-screen-2xl mx-auto w-full ">
-                {/* <h1 className="text-4xl font-[700] mb-4 ">Why adbytehub?</h1> */}
-                {/* <p className="text-center md:w-[50rem] w-[20rem] text-gray-400 mb-8">Our verified demand sources help advertisers achieve optimal ROAS by streamlining the integration between traffic sources and advertisers.</p> */}
-
                 <div className="w-full grid md:grid-cols-2 gap-y-8">
                     <motion.div 
                     initial={{ opacity: 0, x: -300 }}
@@ -29,7 +24,7 @@ export const WhyMobiSaturn = () =>{
                                 <BiSolidMedal size={45}/>
                             </div>
                             <div>
-                                <h1 className="text-2xl font-[600]">Quality Traffic</h1>
+                                <h3 className="text-2xl font-[600]">Quality Traffic</h3>
                                 <p className="w-[13rem] md:w-[20rem] text-md">We hand select publishers and partnerships to ensure brand safety.</p>
                             </div>
                         </div>
@@ -39,7 +34,7 @@ export const WhyMobiSaturn = () =>{
                                 <FaEye size={45}/>
                             </div>
                             <div>
-                                <h1 className="text-2xl font-[600]">Transparency</h1>
+                                <h3 className="text-2xl font-[600]">Transparency</h3>
                                 <p className="w-[13rem] md:w-[20rem] text-md">We have nothing to hide. You can see where the traffic is deriving.</p>
                             </div>
                         </div>
@@ -49,7 +44,7 @@ export const WhyMobiSaturn = () =>{
                                 <RiCustomerService2Fill size={45}/>
                             </div>
                             <div>
-                                <h1 className="text-2xl font-[600]">Full Service</h1>
+                                <h3 className="text-2xl font-[600]">Full Service</h3>
                                 <p className="w-[13rem] md:w-[20rem] text-md">Account maintenance, optimization, and reporting are all covered.</p>
                             </div>
                         </div>
@@ -59,7 +54,7 @@ export const WhyMobiSaturn = () =>{
                                 <FaHandshake size={45}/>
                             </div>
                             <div>
-                                <h1 className="text-2xl font-[600]">Our Promise</h1>
+                                <h3 className="text-2xl font-[600]">Our Promise</h3>
                                 <p className="w-[13rem] md:w-[20rem] text-md">Your performance & satisfaction are our top priority.</p>
                             </div>
                         </div>

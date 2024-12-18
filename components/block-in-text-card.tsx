@@ -43,9 +43,6 @@ const BlockInTextCard = ({
         <Typewrite examples={examples} />
         <hr className="border-neutral-300" />
       </div>
-      {/* <button className="w-full rounded-full border border-neutral-950 py-2 text-sm font-medium transition-colors hover:bg-neutral-950 hover:text-neutral-100">
-        Contact Support
-      </button> */}
     </div>
   );
 };

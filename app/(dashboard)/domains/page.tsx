@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Globe2, Trophy, BarChart2, Users, Rocket, Briefcase, Utensils, ShoppingBag, CheckCircle, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs' 
 
 const industries = [
   { name: "Education", icon: <Globe2 className="w-8 h-8" />, color: "bg-emerald-500", description: "Revolutionizing learning experiences through targeted digital strategies and EdTech solutions.", benefits: ["Increased student engagement", "Improved learning outcomes", "Enhanced administrative efficiency"] },
@@ -129,32 +128,6 @@ export default function Component() {
           </div>
         </div>
       </section>
-
-      {/* <section className="py-16 bg-white">
-        <div className="container px-4 md:px-8 max-w-screen-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-purple-600">Testimonials</h2>
-          <Tabs defaultValue="education" className="w-full">
-            <TabsList className="grid w-full grid-cols-4">
-              <TabsTrigger value="education">Education</TabsTrigger>
-              <TabsTrigger value="gaming">Gaming</TabsTrigger>
-              <TabsTrigger value="finance">Finance</TabsTrigger>
-              <TabsTrigger value="social">Social Media</TabsTrigger>
-            </TabsList>
-            {['education', 'gaming', 'finance', 'social'].map((tab) => (
-              <TabsContent key={tab} value={tab}>
-                <Card>
-                  <CardContent className="p-6">
-                    <blockquote className="italic text-gray-700">
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                    </blockquote>
-                    <p className="mt-4 font-semibold text-emerald-600">- John Doe, CEO of {tab.charAt(0).toUpperCase() + tab.slice(1)} Company</p>
-                  </CardContent>
-                </Card>
-              </TabsContent>
-            ))}
-          </Tabs>
-        </div>
-      </section> */}
 
       <section className="py-16">
         <div className="container px-4 md:px-8 max-w-screen-2xl mx-auto text-center">

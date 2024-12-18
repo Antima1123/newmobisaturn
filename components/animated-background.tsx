@@ -19,7 +19,6 @@ export function AnimatedBackground() {
 
   return (
     <div className="absolute inset-0 overflow-hidden">
-      {/* Top right curved line */}
       <motion.div
         className="absolute -right-40 -top-40 h-[600px] w-[600px] rounded-full border-[2px] border-primary/20"
         animate={{
@@ -33,7 +32,6 @@ export function AnimatedBackground() {
         }}
       />
       
-      {/* Bottom left curved line */}
       <motion.div
         className="absolute -bottom-40 -left-40 h-[400px] w-[400px] rounded-full border-[2px] border-primary/20"
         animate={{

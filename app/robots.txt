@@ -1,0 +1,12 @@
+# robots.txt for AdByteHub
+
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /checkout/
+
+# Allow crawlers to access all other pages
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.adbytehub.com/sitemap.xml

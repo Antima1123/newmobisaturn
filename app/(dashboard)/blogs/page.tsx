@@ -12,6 +12,7 @@ import { useRouter } from 'next/navigation'
 import { useOpenContactUs } from '@/hook/contact-open'
 import { Share } from '@/components/share'
 export default function BlogPage() {
+  
   const [searchTerm, setSearchTerm] = useState("")
 
   const queryBlog = getAllBlogs();
@@ -36,7 +37,7 @@ export default function BlogPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-4xl font-extrabold text-center text-gray-900 mb-8">Our Blog</h2>
+          <h1 className="text-4xl font-extrabold text-center text-gray-900 mb-8">Our Blog</h1>
           
           <div className="flex justify-center mb-8">
             <div className="relative w-full max-w-md">

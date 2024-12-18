@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Button } from "@/components/ui/button"
-import { CreditCard, ShoppingCartIcon as Paypal, Bitcoin, Banknote } from 'lucide-react'
 import { useOpenContactUs } from '@/hook/contact-open'
 import Image from 'next/image'
 
@@ -50,12 +49,6 @@ export default function GetStartedSection() {
                 justifyContent: 'center',
               }}
             >
-              {/* <method.icon
-                size={36}
-                className={`mb-3 transition-colors duration-300 ${
-                  hoveredMethod === method.name ? 'text-emerald-500' : 'text-gray-600'
-                }`}
-              /> */}
               <Image
                 src={method.icon}
                 alt='methods'

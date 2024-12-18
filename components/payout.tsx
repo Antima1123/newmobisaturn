@@ -20,11 +20,11 @@ export default function PayOut() {
           <motion.div
           //  variants={item} 
            className="space-y-4 flex-1">
-            <h1 className="text-5xl font-bold">
+            <h2 className="text-5xl font-bold">
               <span className="text-sky-400">Pay</span>
               <span className="text-white">out</span>
               <span className="text-white"> schedule</span>
-            </h1>
+            </h2>
             <p className="text-white text-lg">
             AdByteHub offers flexible payment options for Publishers, 
             allowing payouts to be made weekly, twice a month, or monthly,

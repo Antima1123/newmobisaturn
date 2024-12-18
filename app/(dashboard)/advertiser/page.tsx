@@ -8,7 +8,6 @@ import { useOpenContactUs } from "@/hook/contact-open"
 import ContactForm from "@/components/contact-form"
 import { AnimatePresence, motion } from "framer-motion"
 import { useState } from "react"
-import PaymentCarousel from "@/components/payment-carousel"
 import GetStartedSection from "@/components/payment-carousel"
 
 const LearMore = [
@@ -90,28 +89,6 @@ const uniqueCard = [
       imageUrl : "/adv-6.png",
       imageOnRight : true,
     },
-    
-    // {
-    //   title : "App Growth Marketers and Agencies",
-    //   points : [
-    //     {
-    //       icon: "🌐",
-    //       text: "Acquire high quality users efficiently at scale.",
-    //     },
-    //     {
-    //       icon: "📱",
-    //       text: "Drive lifetime value through re-engagement.",
-    //     },
-    //     {
-    //       icon: "📈",
-    //       text: "Fortify app growth strategies for a privacy-first future.",
-    //     },
-    //   ],
-    //   buttonText : "Grow Your Brand",
-    //   imageUrl : "/adv-3.png",
-    //   imageOnRight : false,
-    // },
-
     {
         title : "Game Developers",
         points : [
@@ -210,7 +187,7 @@ export default function AdvertiserPage() {
                 <div className=" py-8 overflow-y-auto overflow-hidden max-h-[32rem]">
                   {LearMore.map((learn,index)=> (
                     <div className="flex flex-col gap-3 mb-6" key={index}>
-                      <h1 className="text-[22px] font-[600] text-white">{learn.title}</h1>
+                      <h2 className="text-[22px] font-[600] text-white">{learn.title}</h2>
                       <p className="text-gray-100">{learn.descriptiom}</p>
                     </div>
                   ))}
@@ -335,90 +312,7 @@ export default function AdvertiserPage() {
               ))}
           </div>
         </section>
-        {/* <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
-          <div className="max-w-screen-2xl mx-auto container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">Our Clients Say</h2>
-            <div className="grid gap-6 lg:grid-cols-2">
-              <Card className="p-6">
-                <blockquote className="text-lg mb-4">&quot;Our ROI has increased by 150% since we started using this platform. The targeting capabilities are unmatched.&quot;</blockquote>
-                <cite className="flex items-center">
-                  <Image src="/placeholder.svg?height=40&width=40" alt="Jane Doe" width={40} height={40} className="rounded-full mr-4" />
-                  <div>
-                    <div className="font-semibold">Jane Doe</div>
-                    <div className="text-sm text-gray-500">Marketing Director, Tech Co.</div>
-                  </div>
-                </cite>
-              </Card>
-              <Card className="p-6">
-                <blockquote className="text-lg mb-4">&quot;The global reach and precision targeting have helped us expand into new markets we never thought possible.&quot;</blockquote>
-                <cite className="flex items-center">
-                  <Image src="/placeholder.svg?height=40&width=40" alt="John Smith" width={40} height={40} className="rounded-full mr-4" />
-                  <div>
-                    <div className="font-semibold">John Smith</div>
-                    <div className="text-sm text-gray-500">CEO, Global Brands Inc.</div>
-                  </div>
-                </cite>
-              </Card>
-            </div>
-          </div>
-        </section> */}
-
-        {/* <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
-          <div className="container px-4 md:px-6 max-w-screen-2xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              className="space-y-12"
-            >
-              <div className="text-center space-y-4">
-                <h2 className="text-3xl font-bold tracking-tighter">Payment methods</h2>
-                <p className="text-gray-500">Multiple secure payment options available</p>
-              </div>
-              <div className="flex justify-center items-center gap-14 flex-wrap">
-                <motion.div whileHover={{ scale: 1.1 }} className="grayscale hover:grayscale-0">
-                  <Image src="/atm-card.png" alt="Payment Method" width={80} height={40} className="object-contain" />
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.1 }} className="grayscale hover:grayscale-0">
-                  <Image src="/cashless-payment.png" alt="Payment Method" width={80} height={40} className="object-contain" />
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.1 }} className="grayscale hover:grayscale-0">
-                  <Image src="/provider.png" alt="Payment Method" width={80} height={40} className="object-contain" />
-                </motion.div>
-                <motion.div whileHover={{ scale: 1.1 }} className="grayscale hover:grayscale-0">
-                  <Image src="/scan.png" alt="Payment Method" width={80} height={40} className="object-contain" />
-                </motion.div>
-              </div>
-            </motion.div>
-          </div>
-        </section> */}
         <GetStartedSection/>
-
-        {/* <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="max-w-screen-2xl mx-auto container px-4 md:px-6">
-            <div className="flex flex-col items-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-emerald-600">Ready to Get Started?</h2>
-                <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-                  Join thousands of successful advertisers and start growing your business today.
-                </p>
-              </div>
-              <div className="w-full max-w-sm space-y-2">
-              <motion.div
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                >
-                    <Button 
-                            onClick={() => onOpen()}
-                            className="bg-gradient-to-br from-emerald-600 to-purple-600 p-6 text-[16px] font-[400] z-[110] "
-                    >
-                            Contact Us
-                   </Button>
-              </motion.div>
-              </div>
-            </div>
-          </div>
-        </section> */}
       </main>
     </div>
   )

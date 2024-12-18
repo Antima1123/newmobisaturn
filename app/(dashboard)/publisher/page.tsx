@@ -118,41 +118,7 @@ export default function Component() {
           ))}
         </div>
       </section>
-
-      {/* <section className="max-w-7xl mx-auto">
-        <motion.h2 
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-4xl font-extrabold text-center text-gray-900 mb-12"
-        >
-          Cutting-Edge Ad Formats
-        </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {adFormats.map((format, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <Card 
-                className="h-full cursor-pointer transition-all duration-300 hover:shadow-xl"
-                onClick={() => setSelectedAdFormat(format)}
-              >
-                <CardContent className="flex flex-col items-center p-6 text-center h-full">
-                  <div className="mb-4 p-3 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 text-white">
-                    {format.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">{format.title}</h3>
-                  <p className="text-gray-600">{format.description}</p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
-      </section> */}
-
+ 
       <AnimatePresence>
         {(selectedAdvantage || selectedAdFormat) && (
           <motion.div

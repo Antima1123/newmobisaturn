@@ -23,8 +23,8 @@ const DashFront = () =>{
                     transition={{ duration: 0.5 }}
                     whileInView={{ opacity: [0,1] }}
                     className="lg:w-[32rem] w-full lg:text-start  lg:items-start gap-8 flex flex-col font-[600]">
-                        <h1 className="text-xl text-emerald-600 ">A Trusted Performance Marketing Agency</h1>
-                        <h1 className="text-4xl font-[600]">We&apos;re A premier performance marketing company</h1>
+                        <h2 className="text-xl text-emerald-600 ">A Trusted Performance Marketing Agency</h2>
+                        <h2 className="text-4xl font-[600]">We&apos;re A premier performance marketing company</h2>
                         <p className="text-[#b9b5c9] text-md w-full lg:w-[90%]">Drive your brand&apos;s growth with our performance marketing team, delivering high-performance campaigns optimized for success and safeguarded against fraud.</p>
                         <motion.div
                                 whileHover={{ scale: 1.05 }}

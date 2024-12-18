@@ -1,9 +1,8 @@
 'use client'
 
 import { motion } from "framer-motion"
-import { ArrowRight, Cloud, Settings } from 'lucide-react'
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import { Cloud, Settings } from 'lucide-react'
+import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { IoGameController } from "react-icons/io5"
 
 export default function FeatureSection() {
@@ -80,15 +79,6 @@ export default function FeatureSection() {
                     {feature.description}
                   </p>
                 </CardContent>
-                {/* <CardFooter>
-                  <Button 
-                    variant="default"
-                    className="bg-primary text-primary-foreground group-hover:bg-white group-hover:text-primary"
-                  >
-                    About us
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-2" />
-                  </Button>
-                </CardFooter> */}
               </Card>
             </motion.div>
           ))}

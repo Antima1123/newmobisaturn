@@ -117,11 +117,6 @@ export default function ContactUsPage() {
     }
   }
 
-  // if (!isOpen) return null
-
-  const nextStep = () => setStep(step + 1)
-  const prevStep = () => setStep(step - 1)
-
   useEffect(() => {
       setMount(true)
     })

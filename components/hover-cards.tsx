@@ -16,7 +16,7 @@ const HoverDevCards = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-4xl font-bold text-navy-900 text-center mb-8"
           >
-            <h1>Industries served</h1>
+            <h2>Industries served</h2>
           </motion.h2>
       <div className="grid gap-4 grid-cols-1 lg:grid-cols-3">
         <Card

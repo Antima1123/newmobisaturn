@@ -85,15 +85,15 @@ export default function Footer() {
             <div className="w-24 h-1 bg-white" />
             <div className="flex flex-col gap-4">
               <div>
-                <h1 className="font-[600] text-gray-500">Monday-Friday</h1>
+                <h3 className="font-[600] text-gray-500">Monday-Friday</h3>
                 <p className="text-md font-[600]">09:00 am - 17:30 pm</p>
               </div>
               <div>
-                <h1 className="font-[600] text-gray-500">Saturday</h1>
+                <h3 className="font-[600] text-gray-500">Saturday</h3>
                 <p className="text-md font-[600]">09:00 am - 14:00 pm</p>
               </div>
               <div>
-                <h1 className="font-[600] text-gray-500">Sunday</h1>
+                <h3 className="font-[600] text-gray-500">Sunday</h3>
                 <p className="text-md font-[600]">Closed</p>
               </div>
             </div>  
@@ -105,23 +105,23 @@ export default function Footer() {
             <div className="flex flex-col gap-4">
               <div className="space-y-4">
                 <div>
-                    <h1 className="font-[600] hover:text-white text-gray-500">Careers</h1>
+                    <h3 className="font-[600] hover:text-white text-gray-500">Careers</h3>
                     {/* <p className="text-md font-[600] cursor-pointer">Copyrigh@2024</p> */}
                 </div>
                 <div>
-                  <Link href={"/privacy_policy"}>
-                    <h1 className="font-[600] cursor-pointer hover:text-white text-gray-500">Terms of service</h1>
+                  <Link href={"/privacy-policy"}>
+                    <h3 className="font-[600] cursor-pointer hover:text-white text-gray-500">Terms of service</h3>
                   </Link>
                     {/* <p className="text-md font-[600] cursor-pointer">Copyrigh@2024</p> */}
                 </div>
                 <div>
-                  <Link href={"/privacy_policy"}>
-                    <h1 className="font-[600] cursor-pointer hover:text-white text-gray-500">Privacy Policy</h1>
+                  <Link href={"/privacy-policy"}>
+                    <h3 className="font-[600] cursor-pointer hover:text-white text-gray-500">Privacy Policy</h3>
                   </Link>
                     {/* <p className="text-md font-[600] cursor-pointer">Copyrigh@2024</p> */}
                 </div>
                 <div className=" h-full  hover:text-white flex items-end">
-                  <Link href={"/privacy_policy"} className="">
+                  <Link href={"/privacy-policy"} className="">
                     ©2024 adbytehub — All Rights Reserved
                   </Link>
                 </div>
