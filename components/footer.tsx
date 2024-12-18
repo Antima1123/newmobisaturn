@@ -105,7 +105,7 @@ export default function Footer() {
             <div className="flex flex-col gap-4">
               <div className="space-y-4">
                 <div>
-                    <h1 className="font-[600] text-gray-500">Careers</h1>
+                    <h1 className="font-[600] hover:text-white text-gray-500">Careers</h1>
                     {/* <p className="text-md font-[600] cursor-pointer">Copyrigh@2024</p> */}
                 </div>
                 <div>
@@ -120,7 +120,7 @@ export default function Footer() {
                   </Link>
                     {/* <p className="text-md font-[600] cursor-pointer">Copyrigh@2024</p> */}
                 </div>
-                <div className=" h-full flex items-end">
+                <div className=" h-full cursor-auto hover:text-white flex items-end">
                   <Link href={"/privacy_policy"} className="">
                     ©2024 adbytehub — All Rights Reserved
                   </Link>
