@@ -123,7 +123,7 @@ export default function PrivacyPolicy() {
         </p>
         <ul className="list-disc pl-6 mb-4">
           <li>Type of mobile device</li>
-          <li>Mobile device's unique ID</li>
+          <li>Mobile device&apos;s unique ID</li>
           <li>IP address of the mobile device</li>
           <li>Mobile operating system</li>
           <li>Type of mobile browser</li>
