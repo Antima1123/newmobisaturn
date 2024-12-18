@@ -129,7 +129,7 @@ export default function PrivacyPolicy() {
         <p className="mb-4">
           Any other data you voluntarily provide to us
           Purposes of Data Collection
-          To provide the products or services you've requested
+          To provide the products or services you&apos;ve requested
           To process payments for our products or services
           We use your personal data for the following purposes:
           To enhance and improve our services
@@ -214,7 +214,7 @@ export default function PrivacyPolicy() {
           We may disclose your personal data to comply with legal obligations, protect our rights or property, prevent illegal activities, or safeguard public safety.
         </p>
 
-        <h3 className="text-2xl font-semibold mt-6 mb-3">Children's Privacy</h3>
+        <h3 className="text-2xl font-semibold mt-6 mb-3">Children&apos;s Privacy</h3>
         <p className="mb-4">
           Our Service is not intended for individuals under the age of 18. 
           We do not knowingly collect personal information from children under 18. If you are a
