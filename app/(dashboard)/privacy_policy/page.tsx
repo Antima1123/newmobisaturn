@@ -272,7 +272,7 @@ export default function PrivacyPolicy() {
           <li>
             Website Contact Page:{" "}
             <a
-              // href="https://www.adbytehub.com/contact"
+              href="https://www.adbytehub.com/"
               className="text-blue-500 hover:underline"
             >
               Contact Us
