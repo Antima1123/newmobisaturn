@@ -59,6 +59,8 @@ export default function RootLayout({
         <meta name="theme-color" content="#ffffff" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+        <meta name="google-site-verification" content="MSAyJl_qfgQcz8i_jlfR982O9FaB-l9Geq4wp2B6PoY" />
+
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-SGBJE2M8BW"
