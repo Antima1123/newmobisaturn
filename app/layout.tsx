@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
+      <Head>
       <title>Adbytehub | Digital Marketing Experts</title>
         
         <meta name="clckd" content="2e8885973edd3528c89dedfd47b45021" />
@@ -76,7 +76,7 @@ export default function RootLayout({
             `,
           }}
         ></script>
-      </head>
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

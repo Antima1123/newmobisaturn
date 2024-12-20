@@ -9,10 +9,10 @@ type props = {
 const DashboardLayout = ({children}: props) =>{
     return(
         <div className=" relative w-full h-full">
-             <ToastProvider>
-            <Header/>
-            {children}
-            <Footer/>
+            <ToastProvider>
+                <Header/>
+                {children}
+                <Footer/>
             </ToastProvider>
         </div>
     )
