@@ -76,7 +76,7 @@ export const MarketingSolutions = () => {
                             </button>
                             {expandedSection === 'expert' && (
                                 <p className="mt-4 text-gray-600 leading-relaxed">
-                                    Navigating the ever-evolving marketing landscape can be challenging, but with our expert team by your side, you&apos;ll have the insights you need. We provide ongoing support to help you overcome obstacles, implement innovative solutions, and adapt to market changes. Our goal is to empower your business with actionable advice and insights that drive results. Whether it's refining your brand message or optimizing your marketing initiatives, we're committed to your success every step of the way.
+                                    Navigating the ever-evolving marketing landscape can be challenging, but with our expert team by your side, you&apos;ll have the insights you need. We provide ongoing support to help you overcome obstacles, implement innovative solutions, and adapt to market changes. Our goal is to empower your business with actionable advice and insights that drive results. Whether it&apos;s refining your brand message or optimizing your marketing initiatives, we&apos;re committed to your success every step of the way.
                                 </p>
                             )}
                         </motion.div>
