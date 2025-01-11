@@ -54,7 +54,7 @@ export default function EmailMarketing() {
                   </div>
                   <div className="bg-gray-100 p-4 rounded-lg">
                     <div className="font-medium">LinkedIn Job Alerts</div>
-                    <div className="text-sm text-gray-500">"Real estate manager": Starbucks - r...</div>
+                    <div className="text-sm text-gray-500">&quot;Real estate manager&quot;: Starbucks - r...</div>
                   </div>
                 </div>
               </div>
@@ -97,7 +97,7 @@ export default function EmailMarketing() {
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
               Email marketing with a high return on investment (ROI) and the ability to deliver
-              personalized content directly to your customers' inboxes, email marketing is
+              personalized content directly to your customers&apos; inboxes, email marketing is
               essential for building lasting relationships and driving business growth.
             </p>
             <motion.div
