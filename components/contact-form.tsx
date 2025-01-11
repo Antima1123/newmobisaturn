@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -12,6 +12,8 @@ import { useOpenContactUs } from '@/hook/contact-open'
 import { useCreateContact } from '@/features/api/use-contact'
 import { toast } from 'sonner'
 import { stdCodes } from '@/std/std'
+import { isValidPhoneNumber } from 'libphonenumber-js';
+import { z } from 'zod';
 
 interface FormData {
   name: string
@@ -23,6 +25,17 @@ interface FormData {
   interests: string
   std: string
 }
+
+const validateEmail = (email: string) => {
+  const emailSchema = z.string().email();
+  return emailSchema.safeParse(email).success;
+};
+
+const validatePhone = (phone: string, std: string) => {
+  if (!phone) return true; // Phone is optional
+  const fullPhone = std + phone;
+  return isValidPhoneNumber(fullPhone);
+};
 
 export default function ContactForm() {
   const [mount,setMount] = useState(false)
@@ -51,12 +64,22 @@ export default function ContactForm() {
   })
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData(prevData => ({
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
       ...prevData,
-      [name]: value
-    }))
-  }
+      [name]: value,
+    }));
+  };
+
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    if (name === 'email' && !validateEmail(value)) {
+      toast.error('Please enter a valid email address');
+    }
+    if (name === 'phone' && !validatePhone(value, formData.std)) {
+      toast.error('Please enter a valid phone number');
+    }
+  };
 
   const handleSelectChange = (name: string, value: string) => {
     setFormData(prevData => ({
@@ -108,7 +131,13 @@ export default function ContactForm() {
 
   const validateStep = () => {
     if (step === 1) {
-      return formData.name && formData.email && formData.company && formData.interests;
+      return (
+        formData.name &&
+        validateEmail(formData.email) &&
+        validatePhone(formData.phone, formData.std) &&
+        formData.company &&
+        formData.interests
+      );
     } else if (step === 2) {
       return formData.marketingSpend && formData.location;
     }
@@ -203,12 +232,29 @@ export default function ContactForm() {
                           )}
                         </SelectContent>
                       </Select>
-                      <Input placeholder='Phone number (optional)' id="phone" name="phone" value={formData.phone} onChange={handleInputChange} required />
+                      <Input 
+                        placeholder='Phone number (optional)' 
+                        id="phone" 
+                        name="phone" 
+                        value={formData.phone} 
+                        onChange={handleInputChange} 
+                        onBlur={handleBlur} 
+                        required 
+                      />
                       </div>
                     </div>
                     <div>
                       <Label htmlFor="email">Email Address</Label>
-                        <Input placeholder='email@email.com' id="email" name="email" type="email" value={formData.email} onChange={handleInputChange} required />
+                        <Input 
+                          placeholder='email@email.com' 
+                          id="email" 
+                          name="email" 
+                          type="email" 
+                          value={formData.email} 
+                          onChange={handleInputChange} 
+                          onBlur={handleBlur}
+                          required 
+                        />
                     </div>
                     <div>
                       <Label htmlFor="company">Company Name</Label>
@@ -273,21 +319,9 @@ export default function ContactForm() {
                 </motion.div>
               )}
               <div className="flex flex-col sm:flex-row justify-end mt-6 space-y-4 sm:space-y-0">
-                {/* jb to je */}
-                {/* {step > 1 && (
-                  <Button type="button" onClick={prevStep} variant="outline" className="w-full sm:w-auto">
-                    <ArrowLeft className="mr-2 h-4 w-4" /> Back
-                  </Button>
-                )}
-                {step < 3 ? (
-                  <Button type="button" disabled={!validateStep()} onClick={nextStep} className="w-full sm:w-auto sm:ml-auto">
-                    Next <ChevronRight className="ml-2 h-4 w-4" />
-                  </Button>
-                ) : ( */}
                   <Button type="button" disabled={!validateStep()} onClick={handleFinalSubmit} className="bg-gradient-to-br from-emerald-600 to-purple-600 p-6">
                     {isPending? <div className='flex items-center space-x-2'>Submitting <Loader2 className=' animate-spin transition-all ml-2'/></div>:<div className='flex items-center space-x-2'>Submit <Send className="ml-2" /></div>}
                   </Button>
-                {/* )} */}
               </div>
             </form>
           </div>
@@ -296,3 +330,4 @@ export default function ContactForm() {
     </div>
   )
 }
+

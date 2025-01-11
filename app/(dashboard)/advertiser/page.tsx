@@ -107,7 +107,7 @@ const uniqueCard = [
         ],
         buttonText : "Grow Your Brand",
         imageUrl : "/adv-4.jpg",
-        imageOnRight : true,
+        imageOnRight : false,
       },
 
       {
@@ -128,7 +128,7 @@ const uniqueCard = [
         ],
         buttonText : "Grow Your Brand",
         imageUrl : "/adv-5.jpg",
-        imageOnRight : false,
+        imageOnRight : true,
       }
   ]
 

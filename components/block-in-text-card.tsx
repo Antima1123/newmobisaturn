@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export const BlockInText = () => {
   return (
-    <div className="flex w-full items-center justify-center bg-neutral-100 px-8 py-24 text-neutral-800">
+    <div className="flex w-full items-center justify-center px-8 py-24 text-neutral-800">
       <BlockInTextCard
         tag="/ Support"
         text={

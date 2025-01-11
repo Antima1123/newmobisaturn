@@ -38,9 +38,9 @@ export const BouncyCardsFeatures = () => {
           <CardTitle>Real-Time Analytics</CardTitle>
           <div className="absolute bottom-0 left-4 right-4 top-32 translate-y-8 rounded-t-2xl bg-gradient-to-br from-amber-400 to-orange-400 p-4 transition-transform duration-[250ms] group-hover:translate-y-4 group-hover:rotate-[2deg]">
             <span className="block text-center font-semibold text-orange-50">
-            Insights at Your Fingertips
+            Gain an edge in today&apos;s fast-paced world with real-time analytics that provide up-to-the-minute data for informed decision-making.
             </span>
-          </div>
+            </div>
         </BounceCard>
       </div>
       <div className="grid grid-cols-12 gap-4">

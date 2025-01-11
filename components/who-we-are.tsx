@@ -41,8 +41,8 @@ export default function WhatWeAre() {
   ]
 
   return (
-    <section className="w-full bg-gradient-to-b from-background to-background/80 pb-12 -mt-24 md:py-24 max-w-screen-2xl mx-auto">
-      <div className="container px-4 md:px-6">
+    <section className="w-full bg-gray-100 pb-12 -mt-24 md:py-24 ">
+      <div className="container px-4 md:px-6 max-w-screen-2xl py-24 pb-6 mx-auto">
         <motion.div
           initial="initial"
           animate="animate"
@@ -52,8 +52,8 @@ export default function WhatWeAre() {
           <h2 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
             Elevate Your <span className="text-primary">Marketing</span> Strategy
           </h2>
-          <p className="mt-4 text-xl text-muted-foreground">
-            Harness the power of data-driven insights and cutting-edge technology to transform your brand&apos;s performance.
+          <p className="mt-4 max-w-4xl mx-auto text-xl text-muted-foreground">
+          Unlock your brand’s potential with innovative, data-driven strategies and advanced technology. Deliver personalized campaigns, optimize performance across all channels, and build meaningful customer connections to achieve measurable growth in today’s competitive market.
           </p>
         </motion.div>
 

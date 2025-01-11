@@ -11,6 +11,7 @@ import { MdSupportAgent } from "react-icons/md";
 import { useState } from "react"
 import { TbClockDollar } from "react-icons/tb"
 import PayOut from "@/components/payout"
+import WhyChooseUs from "@/components/new-why-choose-us"
 
 
 export default function Component() {
@@ -118,6 +119,7 @@ export default function Component() {
           ))}
         </div>
       </section>
+      <WhyChooseUs/>
  
       <AnimatePresence>
         {(selectedAdvantage || selectedAdFormat) && (

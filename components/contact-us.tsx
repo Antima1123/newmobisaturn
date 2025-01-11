@@ -7,11 +7,14 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Label } from "@/components/ui/label"
-import { ChevronRight, Send, ArrowLeft, X, Loader2 } from 'lucide-react'
+import { Send, Loader2 } from 'lucide-react'
 import { useOpenContactUs } from '@/hook/contact-open'
 import { useCreateContact } from '@/features/api/use-contact'
 import { toast } from 'sonner'
 import { stdCodes } from '@/std/std'
+import { ContactInfo } from './contact-us-sidebar'
+import { isValidPhoneNumber } from 'libphonenumber-js';
+import { z } from 'zod';
 
 interface FormData {
   name: string
@@ -23,6 +26,17 @@ interface FormData {
   interests: string
   std: string
 }
+
+const validateEmail = (email: string) => {
+  const emailSchema = z.string().email();
+  return emailSchema.safeParse(email).success;
+};
+
+const validatePhone = (phone: string, std: string) => {
+  if (!phone) return true; // Phone is optional
+  const fullPhone = std + phone;
+  return isValidPhoneNumber(fullPhone);
+};
 
 export default function ContactUsPage() {
   const [step, setStep] = useState(1)
@@ -53,6 +67,16 @@ export default function ContactUsPage() {
       [name]: value
     }))
   }
+
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    if (name === 'email' && !validateEmail(value)) {
+      toast.error('Please enter a valid email address');
+    }
+    if (name === 'phone' && !validatePhone(value, formData.std)) {
+      toast.error('Please enter a valid phone number');
+    }
+  };
 
   const handleSelectChange = (name: string, value: string) => {
     setFormData(prevData => ({
@@ -104,7 +128,13 @@ export default function ContactUsPage() {
 
   const validateStep = () => {
     if (step === 1) {
-      return formData.name && formData.interests && formData.email && formData.company;
+      return (
+        formData.name &&
+        validateEmail(formData.email) &&
+        validatePhone(formData.phone, formData.std) &&
+        formData.company &&
+        formData.interests
+      );
     } else if (step === 2) {
       return formData.marketingSpend && formData.location;
     }
@@ -133,7 +163,7 @@ export default function ContactUsPage() {
         className="relative bg-white rounded-lg shadow-xl overflow-hidden w-full max-w-4xl"
       >
         <div className="grid md:grid-cols-5">
-          <div className="md:col-span-2 bg-gradient-to-br from-emerald-600 to-purple-600 p-6 md:p-8 text-white">
+          {/* <div className="md:col-span-2 bg-gradient-to-br from-emerald-600 to-purple-600 p-6 md:p-8 text-white">
             <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Boost Your Marketing Game</h2>
             <p className="mb-4 text-sm md:text-base">Ready to skyrocket your brand? Fill out this form and let&apos;s create marketing magic together!</p>
             <div className="space-y-2 hidden md:block">
@@ -148,6 +178,9 @@ export default function ContactUsPage() {
                 </div>
               ))}
             </div>
+          </div> */}
+          <div className='md:col-span-2 h-full'>
+             <ContactInfo/>
           </div>
           <div className="md:col-span-3 p-6 md:p-8">
             <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
@@ -194,12 +227,29 @@ export default function ContactUsPage() {
                           )}
                         </SelectContent>
                       </Select>
-                      <Input placeholder='Phone number (optional)' id="phone" name="phone" value={formData.phone} onChange={handleInputChange} required />
+                      <Input 
+                        placeholder='Phone number (optional)' 
+                        id="phone" 
+                        name="phone" 
+                        value={formData.phone} 
+                        onChange={handleInputChange} 
+                        onBlur={handleBlur}
+                        required 
+                      />
                       </div>
                     </div>
                     <div>
                       <Label htmlFor="email">Email Address</Label>
-                        <Input placeholder='email@email.com' id="email" name="email" type="email" value={formData.email} onChange={handleInputChange} required />
+                        <Input 
+                          placeholder='email@email.com' 
+                          id="email" 
+                          name="email" 
+                          type="email" 
+                          value={formData.email} 
+                          onChange={handleInputChange} 
+                          onBlur={handleBlur}
+                          required 
+                        />
                     </div>
                     <div>
                       <Label htmlFor="company">Company Name</Label>

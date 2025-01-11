@@ -10,6 +10,9 @@ import ContactForm from "@/components/contact-form"
 import ServicesAll from "@/components/aboutus-services"
 import HoverDevCards from "@/components/hover-cards"
 import Head from "next/head"
+import SocialMediaServices from "@/components/social-media-component"
+import EmailMarketing from "@/components/emailmarketing"
+import { IndustriesWeServe } from "@/components/aboutus/feature-card"
 
 const AboutUs = () => {
   const { onOpen, isOpen } = useOpenContactUs()
@@ -87,13 +90,18 @@ const AboutUs = () => {
           </div>
         </section>
 
+        {/* <SocialMediaServices/> */}
+
         {/* Services and Hover Cards */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <ServicesAll />
-            <HoverDevCards />
+            {/* <HoverDevCards /> */}
+            <IndustriesWeServe/>
           </div>
         </section>
+
+        {/* <EmailMarketing/> */}
 
         {/* CTA Section */}
         <section className="bg-gradient-to-br from-emerald-600 to-purple-600 p-6 py-16">

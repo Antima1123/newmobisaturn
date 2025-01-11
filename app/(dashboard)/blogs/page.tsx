@@ -29,6 +29,12 @@ export default function BlogPage() {
     post.subtitle.toLowerCase().includes(searchTerm.toLowerCase())
   )
 
+  if(queryBlog.isLoading){
+    return <div className='w-full min-h-screen justify-center items-center flex bg-gradient-to-br from-purple-50 to-indigo-100'>
+      Loading
+    </div>
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-100">
       <main className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">

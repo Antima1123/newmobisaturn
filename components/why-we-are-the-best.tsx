@@ -46,11 +46,11 @@ export default function FeatureSection() {
   }
 
   return (
-    <section className="py-20 px-4 md:px-6 bg-gray-50">
+    <section className="py-20 px-4 md:px-6 bg-gray-100">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Why We Are The Best</h2>
-          <div className="w-24 h-1 bg-primary mx-auto" />
+          <h2 className="text-6xl font-bold mb-4">Why We Are The Best</h2>
+          <p className="text-xl text-gray-400 max-w-4xl mx-auto">AdByteHub delivers innovative digital solutions that accelerate growth, boost engagement, and enhance your brand&apos;s online presence.</p>
         </div>
 
         <motion.div 

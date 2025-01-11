@@ -12,11 +12,12 @@ import { useParams } from "next/navigation"
 export default function BlogPost() {
   const params = useParams();
   const blogQuery = useGetBlogById(params)
-  const post = blogQuery.data
+  const post = blogQuery.data;
+  const isLoading = blogQuery.isLoading
   const content = post?.content!.replace(/[`'"]/g, "").trim();
   const {onOpen, isOpen} = useOpenContactUs()
 
-  if(blogQuery.isLoading){
+  if(isLoading){
     return (
       <div className=" min-h-screen w-full items-center justify-center flex">
         <h2>Please wait</h2>
