@@ -24,7 +24,7 @@ export const WhyMobiSaturn = () =>{
     const as = `'`;
     return(
         <motion.div 
-        className="flex flex-col md:px-36 px-4 mt-8 py-20 pt-0 w-full">
+        className="flex flex-col md:px-36 px-4 md:mt-8 md:py-20 w-full">
             <PremiumText
                 items={text}
             />
@@ -37,7 +37,7 @@ export const WhyMobiSaturn = () =>{
                             initial={{ opacity: 0, x: 300 }}
                             transition={{ duration: 0.5, ease: "easeIn" }}
                             whileInView={{ opacity: [0, 1], x: 0 }}
-                            className="mt-4 w-full lg:justify-end flex items-center h-full"
+                            className="md:mt-4 w-full lg:justify-end flex items-center h-full"
                         >
                            <Image
                                 src="/homepage/performance.png"
@@ -52,7 +52,7 @@ export const WhyMobiSaturn = () =>{
                     initial={{ opacity: 0, x: -300 }}
                     transition={{ duration: 0.5, ease: "easeIn" }}
                     whileInView={{ opacity: [0,1], x:0 }}
-                    className="flex flex-col gap-y-8 md:pt-16 w-full items-center">
+                    className="flex flex-col gap-y-8 md:pt-16 pt-6 w-full items-center">
 
 
                         <div className="flex gap-8 md:w-[30rem] w-[22rem] h-[7rem] items-center group hover:scale-110 hover:shadow-md transition-all duration-300 rounded-lg hover:bg-gray-100 px-2 cursor-pointer">

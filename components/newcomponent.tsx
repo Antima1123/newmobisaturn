@@ -20,7 +20,7 @@ export const MarketingSolutions = () => {
     }
 
     return (
-        <section className="bg-gradient-to-b from-gray-50 to-white w-full py-24">
+        <section className="bg-gradient-to-b from-gray-50 to-white w-full md:py-24">
             <div className="max-w-7xl mx-auto flex flex-col gap-8 py-8 px-4">
                 <motion.h2 
                     className="text-center text-4xl md:text-6xl font-bold text-gray-800"

@@ -49,7 +49,7 @@ export default function FeatureSection() {
     <section className="py-20 px-4 md:px-6 bg-gray-100">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-6xl font-bold mb-4">Why We Are The Best</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">Why We Are The Best</h2>
           <p className="text-xl text-gray-400 max-w-4xl mx-auto">AdByteHub delivers innovative digital solutions that accelerate growth, boost engagement, and enhance your brand&apos;s online presence.</p>
         </div>
 
