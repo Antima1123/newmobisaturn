@@ -5,10 +5,11 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { Button } from "@/components/ui/button"
+import { useOpenContactUs } from '@/hook/contact-open'
 
 export const MarketingSolutions = () => {
     const [expandedSection, setExpandedSection] = useState<string | null>(null)
-
+    const {onOpen, isOpen} = useOpenContactUs();
     const toggleSection = (section: string) => {
         setExpandedSection(expandedSection === section ? null : section)
     }
@@ -55,8 +56,9 @@ export const MarketingSolutions = () => {
                             </button>
                             {expandedSection === 'customized' && (
                                 <p className="mt-4 text-gray-600 leading-relaxed">
-                                    Our team crafts bespoke marketing strategies aligned with your unique business objectives. By meticulously analyzing your target audience, market trends, and competitive landscape, we design campaigns that resonate with your customers. From email marketing to social media management, every step is optimized to boost engagement, drive conversions, and deliver measurable growth. Our tailored approach ensures you stand out in a crowded market and achieve long-term success.
+                                    Our team creates customized marketing strategies tailored to your business goals. By analyzing your audience, market trends, and competitors, we design campaigns that connect with your customers. From social media management to targeted advertising, we focus on boosting engagement, driving conversions, and ensuring lasting success.                              
                                 </p>
+                                
                             )}
                         </motion.div>
 
@@ -81,15 +83,14 @@ export const MarketingSolutions = () => {
                             )}
                         </motion.div>
 
-                        <motion.div
-                            initial="hidden"
-                            animate="visible"
-                            variants={fadeInUp}
-                        >
-                            <Button size="lg" className="w-full md:w-auto">
-                                Get Your Free Consultation
+                        
+                        <Button 
+                            onClick={() => onOpen()}
+                                className="bg-gradient-to-br from-emerald-600 to-purple-600 p-6 text-[16px] font-[400] z-[110] hover:scale-105 transition-all "
+                            >
+                                Contact Us
                             </Button>
-                        </motion.div>
+                        
                     </div>
                     <motion.div 
                         className="md:col-span-1"

@@ -98,12 +98,12 @@ export default function WhyChooseUs() {
             <div className="absolute -top-4 -right-4 w-8 h-8 bg-purple-600 rounded-lg transform rotate-45" />
           </div>
           <div className="absolute bottom-0 right-0 w-2/3 aspect-square">
-            <Image
+            {/* <Image
               src="/placeholder.svg"
               alt="Professional at work"
               fill
               className="object-cover rounded-full"
-            />
+            /> */}
             <div className="absolute -bottom-6 -right-6 w-12 h-12 text-purple-600">
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 0L14.59 8.41L23 11L14.59 13.59L12 22L9.41 13.59L1 11L9.41 8.41L12 0Z" />
