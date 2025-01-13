@@ -64,10 +64,10 @@ const tables = [
       },
       {
         name: "publish_date",
-        type: "text",
+        type: "timestamp without time zone",
         notNull: false,
         unique: false,
-        defaultValue: null,
+        defaultValue: "now()",
         comment: "",
       },
       {
@@ -186,6 +186,7 @@ export type DatabaseSchema = {
 };
 
 const DatabaseClient = buildClient();
+
 
 const defaultOptions = {
   databaseURL: process.env.HTTP_URL,

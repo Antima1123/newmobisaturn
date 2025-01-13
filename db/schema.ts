@@ -1,4 +1,4 @@
-import { date, pgTable, text } from "drizzle-orm/pg-core";
+import { date, pgTable, text, timestamp } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod"
 
 
@@ -8,7 +8,7 @@ export const newsTable = pgTable("news_table", {
     email: text("email").notNull(),
     phone: text("phone").notNull(),
     company: text("company").notNull(),
-    marketingSpend: text("marketing_spend"),
+    marketingSpend: timestamp("marketing_spend").defaultNow(),
     location: text("location").notNull(),
     content: text("content").notNull(),
 });
