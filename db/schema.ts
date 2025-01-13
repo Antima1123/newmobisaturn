@@ -8,7 +8,7 @@ export const newsTable = pgTable("news_table", {
     email: text("email").notNull(),
     phone: text("phone").notNull(),
     company: text("company").notNull(),
-    marketingSpend: timestamp("marketing_spend").defaultNow(),
+    marketingSpend: text("marketing_spend"),
     location: text("location").notNull(),
     content: text("content").notNull(),
 });
@@ -21,7 +21,7 @@ export const blogTable = pgTable("blog-table", {
     title: text("title").notNull(),
     subtitle:  text("sub_title").notNull(),
     content:  text("content").notNull(),
-    publishdate:  text("publish_date"),
+    publishdate:  timestamp("publish_date").defaultNow(),
     coverimage:  text("cover_image").notNull(),
     authorName:  text("author").notNull(),
     authorAvatar: text("author_avatar"),

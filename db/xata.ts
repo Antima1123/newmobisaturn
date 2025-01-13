@@ -187,7 +187,6 @@ export type DatabaseSchema = {
 
 const DatabaseClient = buildClient();
 
-
 const defaultOptions = {
   databaseURL: process.env.HTTP_URL,
   branch: process.env.XATA_BRANCH,
