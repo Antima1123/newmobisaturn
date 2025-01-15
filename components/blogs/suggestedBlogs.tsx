@@ -12,8 +12,8 @@ export function SuggestedBlogs() {
             <h2 className="text-2xl font-bold mb-8">Suggested Articles</h2>
             <div className="grid  grid-cols-1 md:grid-cols-4 gap-6">
                 {data?.map((blog) => (
-                    <Link href={`${process.env.NEXT_PUBLIC_APP_TYPE}/blog/${blog?.slug}`}>
-                    <div  key={blog.id} className="overflow-hidden hover:cursor-pointer rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <Link  key={blog.id} href={`${process.env.NEXT_PUBLIC_APP_TYPE}/blog/${blog?.slug}`}>
+                    <div className="overflow-hidden hover:cursor-pointer rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
                         <div className="relative h-32">
                             <img
                                 src={blog.coverimage}
