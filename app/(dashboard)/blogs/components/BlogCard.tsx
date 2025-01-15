@@ -27,14 +27,14 @@ export function BlogCard({ post, onClick }: BlogCardProps) {
           alt={post.title}
           width={400}
           height={300}
-          className="w-full h-48 object-cover"
+          className="w-full h-40 object-cover"
           loading="lazy"
           quality={75}
         />
       </CardHeader>
       <CardContent className="flex-grow p-6">
-        <CardTitle className="text-xl font-bold mb-2">{post.title}</CardTitle>
-        <p className="text-gray-600 mb-4">{post.subtitle}</p>
+        <CardTitle className="text-xl font-bold mb-2 line-clamp-2">{post.title}</CardTitle>
+        <p className="text-gray-600 mb-4 line-clamp-2">{post.subtitle}</p>
         <div className="flex items-center space-x-4 text-sm text-gray-500 mb-4">
           <span className="flex items-center">
             <User size={16} className="mr-1" /> {post.authorName}

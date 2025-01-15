@@ -17,7 +17,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "AdByteHub - Premier Digital Marketing Agency for Business Growth",
+  title: "AdBytehub - Premier Digital Marketing Agency for Business Growth",
   description: "Boost your website's success with our powerful tools and strategies. Elevate your online presence, attract more visitors, and drive growth with expert marketing solutions.",
 };
 
@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
+      <head>
       <title>Adbytehub | Digital Marketing Experts</title>
         <meta name='impact-site-verification' content='f70338ff-5702-4d32-a198-dd35a546cdc3'/>
         <meta name="verify-admitad" content="4b176ae02c" />
@@ -77,7 +77,7 @@ export default function RootLayout({
             `,
           }}
         ></script>
-      </Head>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
