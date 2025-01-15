@@ -31,6 +31,7 @@ export default function RootLayout({
       <Head>
       <title>Adbytehub | Digital Marketing Experts</title>
         <meta name='impact-site-verification' content='f70338ff-5702-4d32-a198-dd35a546cdc3'/>
+        <meta name="verify-admitad" content="4b176ae02c" />
         <meta name="clckd" content="2e8885973edd3528c89dedfd47b45021" />
         {/* Meta Tags for SEO */}
         <meta name="description" content="Drive your website's growth with Adbytehub. Our cutting-edge digital marketing solutions, including SEO, PPC, and lead generation, ensure maximum online visibility and success." />
