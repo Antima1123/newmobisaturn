@@ -113,6 +113,9 @@ export const SkillsSection = () => {
             </div>
           ))}
         </div>
+        <p className="text-center text-gray-400 text-sm mt-10 max-w-6xl mx-auto">
+        Our team excels in implementing advanced strategies such as Cost Per Impression (CPI), Pay Per Click (PPC), Cost Per Acquisition (CPA), and Cost Per Retention (CPR). These key performance indicators highlight our ability to revolutionize digital experiences by driving meaningful results. Through a data-driven approach and innovative techniques, we empower businesses to optimize their marketing efforts, boost engagement, and achieve sustainable growth in an ever-evolving digital landscape.
+        </p>
         </div>
       </div>
     )

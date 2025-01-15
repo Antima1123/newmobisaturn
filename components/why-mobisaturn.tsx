@@ -24,7 +24,7 @@ export const WhyMobiSaturn = () =>{
     const as = `'`;
     return(
         <motion.div 
-        className="flex flex-col md:px-36 px-4 md:mt-8 md:py-20 w-full">
+        className="flex flex-col md:px-36 px-4 md:py-20 md:pt-0 w-full">
             <PremiumText
                 items={text}
             />

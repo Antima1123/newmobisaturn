@@ -16,6 +16,7 @@ import EmailMarketing from "@/components/emailmarketing";
 import { FeaturesSection } from "@/components/feature-section";
 import WhyChooseUs from "@/components/new-why-choose-us";
 import ContactUsPage from "@/components/contact-us";
+import { SuggestedBlogs } from "@/components/blogs/suggestedBlogs";
 
 export default function Home() {
   const {isOpen} = useOpenContactUs()
@@ -77,6 +78,7 @@ export default function Home() {
                 </div>
               </section>
           {/* <FeaturesSection/> */}
+          <SuggestedBlogs/>
           <BlockInText/>
     </motion.div>
   );
