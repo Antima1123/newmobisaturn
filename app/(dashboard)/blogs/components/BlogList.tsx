@@ -1,38 +1,35 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { BlogCard } from './BlogCard'
 import { useRouter } from 'next/navigation'
 import { Input } from "@/components/ui/input"
 import { Search } from 'lucide-react'
+import { useVirtualizer } from '@tanstack/react-virtual'
 
 export default function BlogList({ initialBlogs }: { initialBlogs: any[] }) {
     const router = useRouter()
     const [searchTerm, setSearchTerm] = useState("")
     const [currentPage, setCurrentPage] = useState(1)
-    const postsPerPage = 8
+    const parentRef = useRef<HTMLDivElement>(null)
 
     const filteredPosts = initialBlogs.filter(post => 
         post.title.toLowerCase().includes(searchTerm.toLowerCase())
     )
 
-    const totalPages = Math.ceil(filteredPosts.length / postsPerPage)
-    const indexOfLastPost = currentPage * postsPerPage
-    const indexOfFirstPost = indexOfLastPost - postsPerPage
-    const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost)
+    const rowVirtualizer = useVirtualizer({
+        count: filteredPosts.length,
+        getScrollElement: () => parentRef.current,
+        estimateSize: () => 400,
+        overscan: 5
+    })
 
     const handleRoute = (slug: string) => {
         router.push(`/blog/${slug}`)
     }
 
     return (
-        <motion.div 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="space-y-8"
-        >
+        <div className="space-y-8">
             <h1 className="text-4xl font-extrabold text-center text-gray-900">Our Blog</h1>
             
             <div className="flex justify-center">
@@ -51,40 +48,28 @@ export default function BlogList({ initialBlogs }: { initialBlogs: any[] }) {
                 </div>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                {currentPosts.map((post, index) => (
-                    <motion.div
-                        key={post.id}
-                        layout
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.3, delay: index * 0.1 }}
-                    >
-                        <BlogCard 
-                            post={post}
-                            onClick={handleRoute}
-                        />
-                    </motion.div>
-                ))}
-            </div>
-
-            {totalPages > 1 && (
-                <div className="flex justify-center gap-2">
-                    {[...Array(totalPages)].map((_, i) => (
-                        <button
-                            key={i}
-                            onClick={() => setCurrentPage(i + 1)}
-                            className={`px-4 py-2 rounded-lg transition-colors duration-200 ${
-                                currentPage === i + 1 
-                                    ? 'bg-indigo-600 text-white' 
-                                    : 'bg-white text-gray-700 hover:bg-gray-50 border'
-                            }`}
-                        >
-                            {i + 1}
-                        </button>
-                    ))}
+            <div 
+                ref={parentRef} 
+                className="h-[800px] overflow-auto"
+            >
+                <div
+                    style={{
+                        height: `${rowVirtualizer.getTotalSize()}px`,
+                        width: '100%',
+                        position: 'relative',
+                    }}
+                >
+                    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 absolute top-0 left-0 w-full">
+                        {rowVirtualizer.getVirtualItems().map((virtualRow) => (
+                            <BlogCard
+                                key={filteredPosts[virtualRow.index].id}
+                                post={filteredPosts[virtualRow.index]}
+                                onClick={handleRoute}
+                            />
+                        ))}
+                    </div>
                 </div>
-            )}
-        </motion.div>
+            </div>
+        </div>
     )
 } 
