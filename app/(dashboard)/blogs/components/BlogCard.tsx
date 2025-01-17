@@ -20,18 +20,17 @@ interface BlogCardProps {
 
 export function BlogCard({ post, onClick }: BlogCardProps) {
   return (
-    <Card onClick={() => onClick(post.slug)} className="h-full hover:cursor-pointer flex flex-col overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-105 transform">
+    <Card onClick={() => onClick(post.slug)} className="h-full hover:cursor-pointer flex flex-col overflow-hidden transition-all duration-300 hover:shadow-xl">
       <CardHeader className="p-0">
         <Image
           src={post.coverimage}
           alt={post.title}
-          width={400}
-          height={300}
+          width={300}
+          height={200}
           className="w-full h-40 object-cover"
           loading="lazy"
-          placeholder="blur"
-          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHSQtJSEkMjU1LC0yMi4xODY6OTg2MDQ0PkE9P0RHSktLS0xMTU1NTU1NTU3/2wBDAR"
-          quality={75}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          quality={60}
         />
       </CardHeader>
       <CardContent className="flex-grow p-6">

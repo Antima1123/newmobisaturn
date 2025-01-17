@@ -1,90 +1,38 @@
 'use client'
 
-import { useState } from 'react'
-import { motion } from 'framer-motion'
-import { Search } from 'lucide-react'
-import { Input } from "@/components/ui/input"
+import { useVirtualizer } from '@tanstack/react-virtual'
+import { useEffect, useRef, useState } from 'react'
 import { BlogCard } from './BlogCard'
 import { useRouter } from 'next/navigation'
 
-export function BlogList({ initialBlogs }: { initialBlogs: any[] }) {
-    const router = useRouter();
+export default function BlogList({ initialBlogs }: { initialBlogs: any[] }) {
+    const router = useRouter()
     const [searchTerm, setSearchTerm] = useState("")
-    const [currentPage, setCurrentPage] = useState(1)
-    const postsPerPage = 9
+    const parentRef = useRef<HTMLDivElement>(null)
 
     const filteredPosts = initialBlogs.filter(post => 
-        post.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
-        post.subtitle.toLowerCase().includes(searchTerm.toLowerCase())
+        post.title.toLowerCase().includes(searchTerm.toLowerCase())
     )
 
-    const indexOfLastPost = currentPage * postsPerPage
-    const indexOfFirstPost = indexOfLastPost - postsPerPage
-    const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost)
-    const totalPages = Math.ceil(filteredPosts.length / postsPerPage)
-
-    const handleRoute = (slug: string) => {
-        router.push(`/blog/${slug}`)
-    }
+    const rowVirtualizer = useVirtualizer({
+        count: filteredPosts.length,
+        getScrollElement: () => parentRef.current,
+        estimateSize: () => 400,
+        overscan: 5
+    })
 
     return (
-        <motion.div 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-        >
-            <h1 className="text-4xl font-extrabold text-center text-gray-900 mb-8">Our Blog</h1>
-            
-            <div className="flex justify-center mb-8">
-                <div className="relative w-full max-w-md">
-                    <Input
-                        type="text"
-                        placeholder="Search articles..."
-                        value={searchTerm}
-                        onChange={(e) => {
-                            setSearchTerm(e.target.value)
-                            setCurrentPage(1)
-                        }}
-                        className="pl-10"
+        <div ref={parentRef} style={{ height: '800px', overflow: 'auto' }}>
+            {/* Search input */}
+            <div style={{ height: `${rowVirtualizer.getTotalSize()}px`, position: 'relative' }}>
+                {rowVirtualizer.getVirtualItems().map((virtualRow) => (
+                    <BlogCard
+                        key={virtualRow.key}
+                        post={filteredPosts[virtualRow.index]}
+                        onClick={(slug) => router.push(`/blog/${slug}`)}
                     />
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
-                </div>
-            </div>
-
-            <div className="grid gap-8 md:grid-cols-3 lg:grid-cols-4">
-                {currentPosts.map((post, index) => (
-                    <motion.div
-                        key={index}
-                        layout
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.3 }}
-                    >
-                        <BlogCard 
-                            post={post}
-                            onClick={() => handleRoute(post.slug)}
-                        />
-                    </motion.div>
                 ))}
             </div>
-
-            {totalPages > 1 && (
-                <div className="mt-8 flex justify-center gap-2">
-                    {[...Array(totalPages)].map((_, i) => (
-                        <button
-                            key={i}
-                            onClick={() => setCurrentPage(i + 1)}
-                            className={`px-4 py-2 rounded ${
-                                currentPage === i + 1 
-                                    ? 'bg-indigo-600 text-white' 
-                                    : 'bg-white text-gray-700 hover:bg-gray-50'
-                            }`}
-                        >
-                            {i + 1}
-                        </button>
-                    ))}
-                </div>
-            )}
-        </motion.div>
+        </div>
     )
 } 
