@@ -6,7 +6,7 @@ import { Share } from "@/components/share"
 import { useOpenContactUs } from "@/hook/contact-open"
 import { useGetBlogById } from "@/features/api/use-get-blogs-byId"
 import { useParams } from "next/navigation"
-import { SuggestedBlogs } from "@/components/blogs/suggestedBlogs"
+import SuggestedBlogs from "@/components/blogs/suggestedBlogs"
 
 export default function BlogPost() {
   const params = useParams();
