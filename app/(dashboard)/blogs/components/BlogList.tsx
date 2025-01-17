@@ -1,28 +1,26 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 import { BlogCard } from './BlogCard'
 import { useRouter } from 'next/navigation'
 import { Input } from "@/components/ui/input"
 import { Search } from 'lucide-react'
-import { useVirtualizer } from '@tanstack/react-virtual'
+
+const ITEMS_PER_PAGE = 12
 
 export default function BlogList({ initialBlogs }: { initialBlogs: any[] }) {
     const router = useRouter()
     const [searchTerm, setSearchTerm] = useState("")
     const [currentPage, setCurrentPage] = useState(1)
-    const parentRef = useRef<HTMLDivElement>(null)
 
     const filteredPosts = initialBlogs.filter(post => 
         post.title.toLowerCase().includes(searchTerm.toLowerCase())
     )
 
-    const rowVirtualizer = useVirtualizer({
-        count: filteredPosts.length,
-        getScrollElement: () => parentRef.current,
-        estimateSize: () => 400,
-        overscan: 5
-    })
+    const totalPages = Math.ceil(filteredPosts.length / ITEMS_PER_PAGE)
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE
+    const endIndex = startIndex + ITEMS_PER_PAGE
+    const currentPosts = filteredPosts.slice(startIndex, endIndex)
 
     const handleRoute = (slug: string) => {
         router.push(`/blog/${slug}`)
@@ -48,28 +46,33 @@ export default function BlogList({ initialBlogs }: { initialBlogs: any[] }) {
                 </div>
             </div>
 
-            <div 
-                ref={parentRef} 
-                className="h-[800px] overflow-auto"
-            >
-                <div
-                    style={{
-                        height: `${rowVirtualizer.getTotalSize()}px`,
-                        width: '100%',
-                        position: 'relative',
-                    }}
-                >
-                    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 absolute top-0 left-0 w-full">
-                        {rowVirtualizer.getVirtualItems().map((virtualRow) => (
-                            <BlogCard
-                                key={filteredPosts[virtualRow.index].id}
-                                post={filteredPosts[virtualRow.index]}
-                                onClick={handleRoute}
-                            />
-                        ))}
-                    </div>
-                </div>
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                {currentPosts.map((post) => (
+                    <BlogCard
+                        key={post.id}
+                        post={post}
+                        onClick={handleRoute}
+                    />
+                ))}
             </div>
+
+            {totalPages > 1 && (
+                <div className="flex justify-center gap-2 py-4">
+                    {Array.from({ length: totalPages }, (_, i) => (
+                        <button
+                            key={i}
+                            onClick={() => setCurrentPage(i + 1)}
+                            className={`px-4 py-2 rounded-lg transition-colors duration-200 ${
+                                currentPage === i + 1 
+                                    ? 'bg-indigo-600 text-white' 
+                                    : 'bg-white text-gray-700 hover:bg-gray-50 border'
+                            }`}
+                        >
+                            {i + 1}
+                        </button>
+                    ))}
+                </div>
+            )}
         </div>
     )
 } 

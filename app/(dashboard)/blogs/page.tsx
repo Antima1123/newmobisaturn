@@ -25,12 +25,12 @@ export default async function BlogPage() {
     return (
         <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-100">
             <main className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-                <Suspense fallback={<BlogListSkeleton />}>
+                {/* <Suspense fallback={<BlogListSkeleton />}> */}
                     <BlogList initialBlogs={blogs} />
-                </Suspense>
-                <Suspense fallback={null}>
+                {/* </Suspense> */}
+                {/* <Suspense fallback={null}> */}
                     <SuggestedBlogsWrapper />
-                </Suspense>
+                {/* </Suspense> */}
             </main>
         </div>
     )
