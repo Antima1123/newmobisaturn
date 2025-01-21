@@ -92,36 +92,6 @@ export default function RootLayout({
             `,
           }}
         />
-        <script
-          id="Cookiebot"
-          src="https://consent.cookiebot.com/uc.js"
-          data-cbid="59b2e504-2ede-4ed2-8597-3d995a5a18b9"
-          type="text/javascript"
-          async
-        ></script>
-        <script
-          data-cookieconsent="ignore"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag() {
-                  dataLayer.push(arguments);
-              }
-              gtag("consent", "default", {
-                  ad_personalization: "denied",
-                  ad_storage: "denied",
-                  ad_user_data: "denied",
-                  analytics_storage: "denied",
-                  functionality_storage: "denied",
-                  personalization_storage: "denied",
-                  security_storage: "granted",
-                  wait_for_update: 500,
-              });
-              gtag("set", "ads_data_redaction", true);
-              gtag("set", "url_passthrough", false);
-            `,
-          }}
-        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
