@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
       <title>Adbytehub | Digital Marketing Experts</title>
-        <meta name='impact-site-verification' content='f70338ff-5702-4d32-a198-dd35a546cdc3'/>
+        <meta name="fo-verify" content="5cbb66c7-e5bf-456b-9359-3803038beb2b" />
         <meta name="verify-admitad" content="4b176ae02c" />
         <meta name="clckd" content="2e8885973edd3528c89dedfd47b45021" />
         {/* Meta Tags for SEO */}
@@ -77,6 +77,21 @@ export default function RootLayout({
             `,
           }}
         ></script>
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function () { 
+                var scriptProto = document.location.protocol === 'https:' ? 'https://' : 'http://'; 
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.async = true;
+                script.src = scriptProto + 'js.trckprf.com/v1/js?api_key=16d2e9b4df29a826d567777fcad68a97&site_id=bd1af1e93ef74ce881e8580932fe5e5c';
+                (document.getElementsByTagName('head')[0] || document.body).appendChild(script); 
+              })();
+            `,
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
