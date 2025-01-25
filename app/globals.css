@@ -4,6 +4,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  /* @apply bg-gradient-to-b from-[#a7a3a3] to-[#FFF] bg-fixed */
 }
 
 @layer base {

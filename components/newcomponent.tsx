@@ -20,10 +20,10 @@ export const MarketingSolutions = () => {
     }
 
     return (
-        <section className="bg-gradient-to-b from-gray-50 to-white w-full md:py-24 md:pb-8">
+        <section className="w-full pt-0 md:-mt-24 md:py-24 md:pb-8 bg-gray-100">
             <div className="max-w-7xl mx-auto flex flex-col gap-8 py-8 px-4">
                 <motion.h2 
-                    className="text-center text-4xl md:text-6xl font-bold text-gray-800"
+                    className="text-center text-4xl md:text-6xl font-bold text-gray-600"
                     initial="hidden"
                     animate="visible"
                     variants={fadeInUp}
@@ -31,7 +31,7 @@ export const MarketingSolutions = () => {
                     Elevate Your Brand with Innovative Marketing Solutions
                 </motion.h2>
                 <motion.h3 
-                    className="text-center text-xl font-medium text-gray-600 md:max-w-4xl w-full mx-auto mb-12"
+                    className="text-center text-xl font-medium text-gray-400 md:max-w-4xl w-full mx-auto mb-12"
                     initial="hidden"
                     animate="visible"
                     variants={fadeInUp}
@@ -40,6 +40,50 @@ export const MarketingSolutions = () => {
                 </motion.h3>
                 <div className="md:grid md:grid-cols-2 flex flex-col-reverse gap-12 items-center">
                     <div className="col-span-1 space-y-8">
+
+                       
+                        <motion.div 
+                            className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                            whileHover={{ scale: 1.02 }}
+                            initial="hidden"
+                            animate="visible"
+                            variants={fadeInUp}
+                        >
+                            <button 
+                                onClick={() => toggleSection('Data')}
+                                className="w-full flex justify-between items-center"
+                            >
+                                <h3 className="font-bold text-2xl text-gray-600">Data-Driven Marketing</h3>
+                                {expandedSection === 'Data' ? <ChevronUp /> : <ChevronDown />}
+                            </button>
+                            {expandedSection === 'Data' && (
+                                <p className="mt-4 text-gray-600 leading-relaxed">
+                                    Data-driven marketing is a way to advertise and promote goods or services that depends on collecting and analyzing a lot of information about how people act and what they like.By analyzing this data,marketers can gain insights into what drives customer behavior and tailor their marketingefforts to better meet their needs and preferences.This can include developing tar-geted campaigns, personalizing messaging, and optimizing marketing channels to reachthe right audience at the right time with the right message Overall, data-driven marketing is focused on using data and insights to improve the effectiveness and efﬁciency of marketing efforts. 
+                                </p>
+                            )}
+                        </motion.div>
+
+                        <motion.div 
+                            className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                            whileHover={{ scale: 1.02 }}
+                            initial="hidden"
+                            animate="visible"
+                            variants={fadeInUp}
+                        >
+                            <button 
+                                onClick={() => toggleSection('User')}
+                                className="w-full flex justify-between items-center"
+                            >
+                                <h3 className="font-bold text-2xl text-gray-600">User Engagement</h3>
+                                {expandedSection === 'User' ? <ChevronUp /> : <ChevronDown />}
+                            </button>
+                            {expandedSection === 'User' && (
+                                <p className="mt-4 text-gray-600 leading-relaxed">
+                                    User engagement is the measure of a user&apos;s involvement and interaction with a digital platform or content, evaluated through user engagement metrics. It goes beyond isolated actions like clicks, likes, and shares, incorporating a broader understanding of the user journey and overall user experience.
+                                    For marketing experts, having a strong user engagement strategy, comprehending your target audience, and crafting high-quality content is paramount to achieving customer engagement. When your campaigns effectively resonate with your intended audience, you&apos;ll witness a surge in engagement metrics but also experience a reduced cost per interaction.                                    </p>
+                            )}
+                        </motion.div>
+
                         <motion.div 
                             className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
                             whileHover={{ scale: 1.02 }}
@@ -51,7 +95,7 @@ export const MarketingSolutions = () => {
                                 onClick={() => toggleSection('customized')}
                                 className="w-full flex justify-between items-center"
                             >
-                                <h3 className="font-bold text-2xl text-gray-800">Customized Marketing Plans</h3>
+                                <h3 className="font-bold text-2xl text-gray-600">Customized Marketing Plans</h3>
                                 {expandedSection === 'customized' ? <ChevronUp /> : <ChevronDown />}
                             </button>
                             {expandedSection === 'customized' && (
@@ -73,7 +117,7 @@ export const MarketingSolutions = () => {
                                 onClick={() => toggleSection('expert')}
                                 className="w-full flex justify-between items-center"
                             >
-                                <h3 className="font-bold text-2xl text-gray-800">Expert Support and Guidance</h3>
+                                <h3 className="font-bold text-2xl text-gray-600">Expert Support and Guidance</h3>
                                 {expandedSection === 'expert' ? <ChevronUp /> : <ChevronDown />}
                             </button>
                             {expandedSection === 'expert' && (
@@ -82,14 +126,6 @@ export const MarketingSolutions = () => {
                                 </p>
                             )}
                         </motion.div>
-
-                        
-                        <Button 
-                            onClick={() => onOpen()}
-                                className="bg-gradient-to-br from-emerald-600 to-purple-600 p-6 text-[16px] font-[400] z-[110] hover:scale-105 transition-all "
-                            >
-                                Contact Us
-                            </Button>
                         
                     </div>
                     <motion.div 

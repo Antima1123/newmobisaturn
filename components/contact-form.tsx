@@ -171,13 +171,13 @@ export default function ContactForm() {
           <X/>
         </div>
         <div className="grid md:grid-cols-5">
-          <div className="md:col-span-2 bg-gradient-to-br from-emerald-600 to-purple-600 p-6 md:p-8 text-white">
+          <div className="md:col-span-2 bg-gradient-to-r from-red-500  to-red-800 p-6 md:p-8 text-white">
             <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Boost Your Marketing Game</h2>
             <p className="mb-4 text-sm md:text-base">Ready to skyrocket your brand? Fill out this form and let&apos;s create marketing magic together!</p>
             <div className="space-y-2 hidden md:block">
               {[1].map((i) => (
                 <div key={i} className="flex items-center">
-                  <div className={`w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center ${step >= i ? 'bg-white text-emerald-600' : 'bg-emerald-300 text-white'} mr-3`}>
+                  <div className={`w-6 h-6 md:w-8 md:h-8 rounded-full flex items-center justify-center ${step >= i ? 'bg-white text-red-600' : 'bg-red-300 text-white'} mr-3`}>
                     {i}
                   </div>
                   <span className={`text-sm md:text-base ${step >= i ? 'font-semibold' : 'text-purple-200'}`}>
@@ -319,7 +319,7 @@ export default function ContactForm() {
                 </motion.div>
               )}
               <div className="flex flex-col sm:flex-row justify-end mt-6 space-y-4 sm:space-y-0">
-                  <Button type="button" disabled={!validateStep()} onClick={handleFinalSubmit} className="bg-gradient-to-br from-emerald-600 to-purple-600 p-6">
+                  <Button type="button" disabled={!validateStep()} onClick={handleFinalSubmit} className="bg-gradient-to-r from-red-500  to-red-800 rounded-3xl p-6">
                     {isPending? <div className='flex items-center space-x-2'>Submitting <Loader2 className=' animate-spin transition-all ml-2'/></div>:<div className='flex items-center space-x-2'>Submit <Send className="ml-2" /></div>}
                   </Button>
               </div>

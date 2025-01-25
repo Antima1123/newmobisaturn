@@ -27,7 +27,7 @@ export default function Cardunique({
     <Card className="overflow-hidden shadow-lg max-w-4xl py-6 px-8">
       <div className={`flex flex-col gap-6 ${imageOnRight ? "md:flex-row" : "md:flex-row-reverse"}`}>
         <div className="flex-1  items-center justify-center">
-          <h2 className="mb-4 text-xl font-bold tracking-tight">{title}</h2>
+          <h2 className="mb-4 text-xl font-bold tracking-tight text-gray-600">{title}</h2>
           <ul className="mb-6 space-y-2">
             {points.map((point, index) => (
               <li key={index} className="flex items-start   gap-3">
@@ -36,7 +36,7 @@ export default function Cardunique({
               </li>
             ))}
           </ul>
-          <Button onClick={() => onOpen()} size="lg" className="w-full md:w-auto bg-gradient-to-br from-emerald-600 to-purple-600 p-6">
+          <Button onClick={() => onOpen()} size="lg" className="w-full md:w-auto bg-gradient-to-r from-red-600 to-red-800 rounded-3xl p-6">
             {buttonText}
           </Button>
         </div>

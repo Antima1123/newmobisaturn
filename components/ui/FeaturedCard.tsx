@@ -37,14 +37,14 @@ const GlareEffect = ({ className }: { className?: string }) => (
 export const FeatureCard = React.forwardRef<HTMLDivElement, FeatureCardProps>(
   ({ features, variant = 'light', className }, ref) => {
     return (
-      <section ref={ref} className={cn("py-16 md:py-24 md:pt-0 overflow-hidden", className)}>
+      <section ref={ref} className={cn("py-16 md:py-24 md:pt-0 overflow-hidden w-full", className)}>
         <motion.div 
           initial={{ y: 100 }}
           animate={{ y: 0 }}
           transition={{ duration: 0.8 }}
           className="container px-4"
         >
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 place-items-center w-full gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -78,7 +78,7 @@ export const FeatureCard = React.forwardRef<HTMLDivElement, FeatureCardProps>(
                     </div>
                     <h3 
                       className={cn(
-                        "text-xl font-semibold mb-2",
+                        "text-xl font-semibold mb-2 h-16",
                         variant === 'light' 
                           ? "text-slate-900" 
                           : "text-white"
@@ -88,7 +88,7 @@ export const FeatureCard = React.forwardRef<HTMLDivElement, FeatureCardProps>(
                     </h3>
                     <p 
                       className={cn(
-                        "mb-4",
+                        "mb-4 h-24",
                         variant === 'light' 
                           ? "text-slate-600" 
                           : "text-slate-300"

@@ -24,10 +24,10 @@ export const WhyMobiSaturn = () =>{
     const as = `'`;
     return(
         <motion.div 
-        className="flex flex-col md:px-36 px-4 md:py-20 md:pt-0 w-full">
-            <PremiumText
-                items={text}
-            />
+        className="flex flex-col md:px-36 px-4 py-10 md:py-20 w-full">
+           <h2 className="text-center text-4xl md:text-6xl font-bold text-gray-600 mb-4">
+                    Why AdByteHub ?
+                </h2>
             <p className="text-center text-gray-400 text-xl">Empowering businesses with innovative marketing techniques and solutions that get results.</p>
             {/* <h2 className="md:text-6xl text-3xl font-[700] md:max-w-md w-full leading-16">Empowering skills to help you</h2> */}
             <div className=" justify-center items-center flex flex-col max-w-screen-2xl mx-auto w-full ">
@@ -56,41 +56,41 @@ export const WhyMobiSaturn = () =>{
 
 
                         <div className="flex gap-8 md:w-[30rem] w-[22rem] h-[7rem] items-center group hover:scale-110 hover:shadow-md transition-all duration-300 rounded-lg hover:bg-gray-100 px-2 cursor-pointer">
-                            <div className="w-20 h-20 rounded-full bg-emerald-100 text-emerald-600 items-center justify-center flex hover:scale-100 hover:shadow-md transition-all duration-300">
+                            <div className="w-20 h-20 rounded-full bg-red-100 text-red-600 items-center justify-center flex hover:scale-100 hover:shadow-md transition-all duration-300">
                                 <HiChartPie className="transition-all duration-300 size-8 group-hover:size-10 "/>
                             </div>
                             <div>
-                                <h3 className="text-2xl font-[600]">Quality Traffic</h3>
+                                <h3 className="text-2xl font-[600] text-gray-600">Quality Traffic</h3>
                                 <p className="w-[13rem] md:w-[20rem] text-md text-gray-400">We hand select publishers and partnerships to ensure brand safety.</p>
                             </div>
                         </div>
 
                         <div className="flex gap-8 md:w-[30rem] w-[22rem] h-[7rem] items-center group hover:scale-110 hover:shadow-md transition-all duration-300 rounded-lg hover:bg-gray-100 px-2 cursor-pointer">
-                            <div className="w-20 h-20 rounded-full bg-emerald-100 text-emerald-600 items-center justify-center flex hover:scale-100 hover:shadow-md transition-all duration-300">
+                            <div className="w-20 h-20 rounded-full bg-red-100 text-red-600 items-center justify-center flex hover:scale-100 hover:shadow-md transition-all duration-300">
                                 <FaEye className="transition-all duration-300 size-8 group-hover:size-10 "/>
                             </div>
                             <div>
-                                <h3 className="text-2xl font-[600]">Transparency</h3>
+                                <h3 className="text-2xl font-[600] text-gray-600">Transparency</h3>
                                 <p className="w-[13rem] md:w-[20rem] text-md text-gray-400">We have nothing to hide. You can see where the traffic is deriving.</p>
                             </div>
                         </div>
 
                         <div className="flex gap-8 md:w-[30rem] w-[22rem] h-[7rem] items-center  group hover:scale-110 hover:shadow-md transition-all duration-300 rounded-lg hover:bg-gray-100 px-2 cursor-pointer">
-                            <div className="w-20 h-20 rounded-full bg-emerald-100 text-emerald-600 items-center justify-center flex hover:scale-100 hover:shadow-md transition-all duration-300">
+                            <div className="w-20 h-20 rounded-full bg-red-100 text-red-600 items-center justify-center flex hover:scale-100 hover:shadow-md transition-all duration-300">
                                 <RiCustomerService2Fill className="transition-all duration-300 size-8 group-hover:size-10 "/>
                             </div>
                             <div>
-                                <h3 className="text-2xl font-[600]">Full Service</h3>
+                                <h3 className="text-2xl font-[600] text-gray-600">Full Service</h3>
                                 <p className="w-[13rem] md:w-[20rem] text-md text-gray-400">Account maintenance, optimization, and reporting are all covered.</p>
                             </div>
                         </div>
 
                         <div className="flex gap-8 md:w-[30rem] w-[22rem] h-[7rem] items-center  group hover:scale-110 hover:shadow-md transition-all duration-300 rounded-lg hover:bg-gray-100 px-2 cursor-pointer">
-                            <div className="w-20 h-20 rounded-full bg-emerald-100 text-emerald-600 items-center justify-center flex hover:scale-100 hover:shadow-md transition-all duration-300">
+                            <div className="w-20 h-20 rounded-full bg-red-100 text-red-600 items-center justify-center flex hover:scale-100 hover:shadow-md transition-all duration-300">
                                 <FaHandshake className="transition-all duration-300 size-8 group-hover:size-10 "/>
                             </div>
                             <div>
-                                <h3 className="text-2xl font-[600]">Our Promise</h3>
+                                <h3 className="text-2xl font-[600] text-gray-600">Our Promise</h3>
                                 <p className="w-[13rem] md:w-[20rem] text-md text-gray-400">Your performance & satisfaction are our top priority.</p>
                             </div>
                         </div>

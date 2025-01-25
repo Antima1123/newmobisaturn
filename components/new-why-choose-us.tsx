@@ -24,7 +24,7 @@ function Feature({ icon, title, description }: FeatureProps) {
       transition={{ duration: 0.5, delay: 0.2 }}
       className="flex items-start gap-4 p-6 rounded-lg bg-white hover:shadow-lg transition-shadow"
     >
-      <div className="flex-shrink-0 w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-600">
+      <div className="flex-shrink-0 w-12 h-12 rounded-full bg-red-100 flex items-center justify-center text-red-600">
         {icon}
       </div>
       <div className="space-y-2">
@@ -58,7 +58,7 @@ export default function WhyChooseUs() {
   ]
 
   return (
-    <section className=" bg-gray-100 w-full border-t border-white">
+    <section className=" w-full border-t border-white">
       <div className="grid lg:grid-cols-2 gap-12 items-center py-16 px-4  md:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="space-y-8">
           <div className="space-y-4">
@@ -68,13 +68,13 @@ export default function WhyChooseUs() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.7, delay: 0.2 }}
             >
-              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+              <h2 className="text-4xl md:text-6xl font-bold leading-tight text-gray-600">
                 Experience the Advantage
                 <br />
                 Why We&apos;re the Right Choice
               </h2>
             </motion.div>
-            <p className="text-gray-600 text-lg">
+            <p className="text-gray-400 text-xl">
               At AdByteHub we understand that you have many options when it comes to digital
               marketing services. So why should you choose us? Here are a few reasons
             </p>
@@ -95,7 +95,7 @@ export default function WhyChooseUs() {
               fill
               className="object-cover rounded-full"
             />
-            <div className="absolute -top-4 -right-4 w-8 h-8 bg-purple-600 rounded-lg transform rotate-45" />
+            <div className="absolute -top-4 -right-4 w-8 h-8 bg-red-600 rounded-lg transform rotate-45" />
           </div>
           <div className="absolute bottom-0 right-0 w-2/3 aspect-square">
             {/* <Image
@@ -104,7 +104,7 @@ export default function WhyChooseUs() {
               fill
               className="object-cover rounded-full"
             /> */}
-            <div className="absolute -bottom-6 -right-6 w-12 h-12 text-purple-600">
+            <div className="absolute -bottom-6 -right-6 w-12 h-12 text-red-600">
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 0L14.59 8.41L23 11L14.59 13.59L12 22L9.41 13.59L1 11L9.41 8.41L12 0Z" />
               </svg>

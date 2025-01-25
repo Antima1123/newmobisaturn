@@ -23,7 +23,7 @@ export default async function BlogPage() {
     const blogs = await getStaticBlogs(1, 6)
     
     return (
-        <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-100">
+        <div className="min-h-screen bg-gray-100">
             <main className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
                 {/* <Suspense fallback={<BlogListSkeleton />}> */}
                     <BlogList initialBlogs={blogs} />

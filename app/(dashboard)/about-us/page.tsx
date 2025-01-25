@@ -39,27 +39,27 @@ const AboutUs = () => {
 
       <div className="flex flex-col min-h-screen">
         {isOpen && (
-          <div className="w-screen h-screen inset-0 fixed top-0 right-0 bg-black bg-opacity-75 items-center justify-center flex z-[100]">
+          <div className="w-screen h-screen inset-0 fixed top-0 right-0 bg-gray-800 bg-opacity-75 items-center justify-center flex z-[100]">
             <ContactForm />
           </div>
         )}
 
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-emerald-600 to-purple-600 p-6 py-20">
+        <section className="relative p-6 py-20">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center text-white">
-              <h1 className="text-3xl md:text-4xl font-bold mb-6">
+            <div className="max-w-5xl mx-auto text-center ">
+              <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-6 text-red-600">
                 Fueling Growth with Data-Driven Marketing & Creative Excellence
               </h1>
-              <div className={`relative mb-8 ${isExpand ? "" : "line-clamp-3"}`}>
+              <div className={`relative mb-8 ${isExpand ? "" : "line-clamp-3"} text-gray-400`}>
                 {paragraph.map((para, index) => (
-                  <p key={index} onClick={() => setIsExpand(!isExpand)} className="cursor-pointer text-md md:text-lg text-start mb-4">
+                  <p key={index} onClick={() => setIsExpand(!isExpand)} className="cursor-pointer max-w-3xl mx-auto text-md md:text-lg text-start mb-4">
                     {para}
                   </p>
                 ))}
               </div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button onClick={() => onOpen()} size="lg" className="bg-white text-emerald-600 hover:bg-white/90">
+                <Button onClick={() => onOpen()} size="lg" className="text-white bg-gradient-to-r from-red-600 to-red-800 hover:bg-white/90">
                   Contact us
                 </Button>
               </motion.div>
@@ -68,16 +68,16 @@ const AboutUs = () => {
         </section>
 
         {/* Marketing Specialties */}
-        <section className="py-16">
+        <section className="py-16 bg-gray-100">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Our Marketing Expertise</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-600">Our Marketing Expertise</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { icon: <ChartBar className="w-10 h-10 text-emerald-600" />, title: "Performance Marketing", description: "Data-driven campaigns optimized for maximum ROI across multiple channels and platforms." },
-                { icon: <Users className="w-10 h-10 text-emerald-600" />, title: "User Acquisition", description: "Strategic user acquisition campaigns focused on quality and retention." },
-                { icon: <Target className="w-10 h-10 text-emerald-600" />, title: "Targeted Advertising", description: "Precision targeting using advanced data analytics and audience segmentation." },
+                { icon: <ChartBar className="w-10 h-10 text-red-600" />, title: "Performance Marketing", description: "Data-driven campaigns optimized for maximum ROI across multiple channels and platforms." },
+                { icon: <Users className="w-10 h-10 text-red-600" />, title: "User Acquisition", description: "Strategic user acquisition campaigns focused on quality and retention." },
+                { icon: <Target className="w-10 h-10 text-red-600" />, title: "Targeted Advertising", description: "Precision targeting using advanced data analytics and audience segmentation." },
               ].map((specialty, index) => (
-                <Card key={index} className="p-6">
+                <Card key={index} className="p-6 shadow-lg">
                   <CardContent className="flex flex-col items-center text-center">
                     <div className="mb-4">{specialty.icon}</div>
                     <h3 className="text-xl font-semibold mb-2">{specialty.title}</h3>
@@ -89,29 +89,21 @@ const AboutUs = () => {
           </div>
         </section>
 
-        {/* <SocialMediaServices/> */}
-
-        {/* Services and Hover Cards */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 ">
           <div className="container mx-auto px-4">
             <ServicesAll />
-            {/* <HoverDevCards /> */}
-            <IndustriesWeServe/>
           </div>
         </section>
 
-        {/* <EmailMarketing/> */}
-
-        {/* CTA Section */}
-        <section className="bg-gradient-to-br from-emerald-600 to-purple-600 p-6 py-16">
+        <section className=" p-6 py-16 bg-gray-100">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center text-white">
-              <h2 className="text-3xl font-bold mb-6">Ready to Grow Your Business?</h2>
-              <p className="text-lg mb-8">
+              <h2 className="text-3xl md:text-4xl text-gray-600  font-bold mb-6">Ready to Grow Your Business?</h2>
+              <p className="text-lg mb-8 text-gray-400">
                 Join our network of successful partners and take your marketing performance to the next level.
               </p>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button onClick={() => onOpen()} size="lg" className="bg-white text-emerald-600 hover:bg-white/90">
+                <Button onClick={() => onOpen()} size="lg" className="text-white bg-gradient-to-r from-red-600 to-red-800">
                   Contact us
                 </Button>
               </motion.div>

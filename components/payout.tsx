@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { useOpenContactUs } from "@/hook/contact-open"
@@ -9,7 +8,7 @@ import PaymentSchedule from "./payout-card"
 export default function PayOut() {
   const { onOpen } = useOpenContactUs();
   return (
-    <div className="py-32 bg-gradient-to-br from-emerald-600 to-purple-600 p-8 flex items-center justify-center">
+    <div className="py-32 p-8 flex items-center justify-center">
       <motion.div
         // variants={container}
         initial="hidden"
@@ -21,11 +20,11 @@ export default function PayOut() {
           //  variants={item} 
            className="space-y-4 flex-1">
             <h2 className="text-5xl font-bold">
-              <span className="text-sky-400">Pay</span>
-              <span className="text-white">out</span>
-              <span className="text-white"> schedule</span>
+              <span className="text-red-600">Pay</span>
+              <span className="text-gray-600">out</span>
+              <span className="text-gray-600"> schedule</span>
             </h2>
-            <p className="text-white text-lg">
+            <p className="text-gray-400 text-lg">
             AdByteHub offers flexible payment options for Publishers, 
             allowing payouts to be made weekly, twice a month, or monthly,
             based on mutual agreement. The minimum payout threshold is just $250!
@@ -36,7 +35,7 @@ export default function PayOut() {
             >
               <Button 
                 onClick={() => onOpen()}
-                size="lg" className="bg-white text-emerald-600 hover:bg-white/90">
+                size="lg" className="text-white bg-gradient-to-r from-red-600 to-red-800 hover:bg-white/90">
                   Contact us
               </Button>
             </motion.div>

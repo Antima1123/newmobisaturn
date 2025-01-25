@@ -36,7 +36,7 @@ export function ContactInfo() {
   ]
 
   return (
-    <div className="w-full h-full max-w-md rounded-xl bg-gradient-to-br from-emerald-600 to-purple-600 p-8 text-white">
+    <div className="w-full h-full max-w-md rounded-xl bg-gradient-to-r from-red-500  to-red-800 p-8 text-white">
       <motion.h2 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}

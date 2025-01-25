@@ -13,14 +13,14 @@ interface Service {
 
 const services: Service[] = [
   {
-    icon: <Layout className="h-6 w-6" />,
-    title: "Search Engine Optimization",
-    description: "Boost your website's visibility on search engines to attract more organic traffic and improve rankings."
+    icon: <BiSolidUserVoice className="h-6 w-6" />,
+    title: "Mobile Marketing",
+    description: "Engage your audience on-the-go with targeted, effective mobile strategies designed to boost conversions"
   },
   {
-    icon: <Smartphone className="h-6 w-6" />,
-    title: "Social Media Marketing",
-    description: "Engage with your audience, build your brand, and drive sales through strategic social media campaigns."
+    icon: <TbDeviceMobileMessage className="h-6 w-6" />,
+    title: "Affiliate Marketing",
+    description: "we specialize in creating and managing impactful affiliate marketing programs that drive measurable results."
   },
   {
     icon: <Globe className="h-6 w-6" />,
@@ -28,29 +28,19 @@ const services: Service[] = [
     description: "Generate instant traffic with targeted ads that deliver measurable results on platforms like Google and Facebook."
   },
   {
-    icon: <Layers className="h-6 w-6" />,
-    title: "Content Development and Marketing",
-    description: "Craft compelling content to educate, engage, and convert your audience across blogs, videos, and more.r"
-  },
-  {
-    icon: <Box className="h-6 w-6" />,
-    title: "Website Design and Development",
-    description: "Create stunning, user-friendly websites that deliver seamless experiences and reflect your brand identity."
-  },
-  {
     icon: <Crown className="h-6 w-6" />,
     title: "E-commerce Marketing",
     description: "Grow your online store with tailored strategies that drive sales and enhance customer loyalty."
   },
   {
-    icon: <BiSolidUserVoice className="h-6 w-6" />,
-    title: "Mobile Marketing",
-    description: "Engage your audience on-the-go with targeted, effective mobile strategies designed to boost conversions"
+    icon: <Smartphone className="h-6 w-6" />,
+    title: "Social Media Marketing",
+    description: "Engage with your audience, build your brand, and drive sales through strategic social media campaigns."
   },
   {
-    icon: <TbDeviceMobileMessage className="h-6 w-6" />,
-    title: "Affiliates Marketing",
-    description: "we specialize in creating and managing impactful affiliate marketing programs that drive measurable results."
+    icon: <Layout className="h-6 w-6" />,
+    title: "Search Engine Optimization",
+    description: "Boost your website's visibility on search engines to attract more organic traffic and improve rankings."
   },
 
 ]
@@ -78,14 +68,14 @@ const itemVariants = {
 
 export default function ServicesAll() {
   return (
-    <section className="pb-20 px-4 bg-gray-50">
+    <section className="pb-20 px-4 py-16">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <motion.h2
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-4xl font-bold text-navy-900"
+            className="text-3xl md:text-4xl font-bold text-gray-600"
           >
             <h2>What We Provide?</h2>
           </motion.h2>
@@ -106,7 +96,7 @@ export default function ServicesAll() {
             >
               <div className="flex items-start space-x-4">
                 <div className="bg-white rounded-full p-3 shadow-md">
-                  <div className="text-blue-600">
+                  <div className="text-red-600">
                     {service.icon}
                   </div>
                 </div>

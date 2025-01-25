@@ -26,11 +26,11 @@ const Header = () =>{
     }
 
     return(
-        <div className=" sticky top-0 w-full bg-gradient-to-r from-emerald-100 to-purple-50 z-[99] bg-opacity-35 backdrop-blur-lg">
-            <div className=" z-[90] flex lg:hidden justify-between items-center px-4  ">
+        <div className="md:p-8 pb-0 sticky top-0 w-full  z-[99] ">
+            <div className=" z-[90] bg-white flex lg:hidden justify-between items-center px-4  ">
                 {/* Mobile */}
                 <Link href="/" className="text-2xl font-[600] text-emerald-600 flex">
-                <Image src="/logo1.png" height={240} width={240} alt="logo" className='w-[4rem]'/>
+                <Image src="/logo2.png" height={240} width={240} alt="logo" className='w-[4rem]'/>
                     {/* <p className="text-black">adbyte</p><p>hub</p> */}
                 </Link>
 
@@ -40,17 +40,17 @@ const Header = () =>{
 
                     <motion.div className={`flex flex-col items-center justify-center gap-[6px] z-[100]`} onClick={handleClick}>
                         <motion.div 
-                            className={`h-[3px] w-6 origin-left bg-[#472282]`} 
+                            className={`h-[3px] w-6 origin-left bg-red-500`} 
                             animate={{rotate: active ? 45 : 0}}>
                         </motion.div>
 
                         <motion.div 
-                            className="h-[3px] w-6 bg-[#472282]"  
+                            className="h-[3px] w-6 bg-red-500"  
                             animate={{opacity: active ? 0 : 1}}>
                         </motion.div>
                         
                         <motion.div 
-                            className={`h-[3px] w-6 origin-left bg-[#472282] `} 
+                            className={`h-[3px] w-6 origin-left bg-red-500 `} 
                             animate={{rotate: active ? -45 : 0}}>
                         </motion.div>
                     </motion.div>
@@ -88,9 +88,9 @@ const Header = () =>{
                                 >
                                     <Button 
                                             onClick={() => onOpen()}
-                                            className="bg-gradient-to-br from-emerald-600 to-purple-600 p-6 text-[16px] font-[400] z-[110] "
+                                            className="bg-gradient-to-r from-red-500  to-red-800 rounded-3xl p-6 text-[16px] font-[400] z-[110] "
                                     >
-                                            Contact Us
+                                            Get In Touch
                                 </Button>
                             </motion.div>
                         </nav>
@@ -98,28 +98,28 @@ const Header = () =>{
                 )}
             </div>
              {/* large screen  */}
-            <div className="lg:flex hidden py-0 justify-between items-center px-24 border border-b shadow-md z-[90] ">
-                <div className="text-2xl font-[600] text-emerald-600 flex">
-                    <Image src="/logo1.png" height={240} width={240} alt="logo" className='w-[5rem]'/>
+            <div className="bg-opacity-35 backdrop-blur-lg rounded-full bg-white lg:flex hidden py-0 justify-between items-center px-24 border border-b shadow-md z-[90] ">
+                <div className="text-2xl font-[600] text-emeredald-600 flex">
+                    <Image src="/logo2.png" height={240} width={240} alt="logo" className='w-[5rem]'/>
                     {/* <p className="text-black">adbyte</p><p>hub</p> */}
                 </div>
 
                 <div className="gap-x-16 flex">
-                    <Link href="/" className='items-center hover:text-emerald-600 transition-colors' >
+                    <Link href="/" className='items-center hover:text-red-600 transition-colors' >
                         Home
                     </Link>
-                    <Link href="/advertiser" className="items-center hover:text-emerald-600 transition-colors">
+                    <Link href="/advertiser" className="items-center hover:text-red-600 transition-colors">
                         Advertiser
                     </Link>
-                    <Link href="/publisher" className="items-center hover:text-emerald-600 transition-colors">
+                    <Link href="/publisher" className="items-center hover:text-red-600 transition-colors">
                         Publisher
                     </Link>
 
-                    <Link href="/blogs" className="items-center hover:text-emerald-600 transition-colors">
+                    <Link href="/blogs" className="items-center hover:text-red-600 transition-colors">
                         Blog
                     </Link>
 
-                    <Link href="/about-us" className="items-center hover:text-emerald-600 transition-colors">
+                    <Link href="/about-us" className="items-center hover:text-red-600 transition-colors">
                         About Us
                     </Link>
                 </div>
@@ -129,9 +129,9 @@ const Header = () =>{
                 >
                     <Button 
                             onClick={() => onOpen()}
-                            className="bg-gradient-to-br from-emerald-600 to-purple-600 p-6 text-[16px] font-[400] z-[110] "
+                            className="bg-gradient-to-r from-red-500  to-red-800 rounded-3xl p-6 text-[16px] font-[400] z-[110] "
                     >
-                            Contact Us
+                            Get In Touch
                    </Button>
               </motion.div>
             </div>

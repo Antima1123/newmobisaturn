@@ -57,18 +57,18 @@ export default function Component() {
         )
       }
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-emerald-600 to-purple-600">
+        <section className="w-full py-12 md:py-24 lg:py-32 ">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="container px-4 md:px-6 max-w-screen-2xl mx-auto"
           >
-            <div className="flex flex-col items-center space-y-4 text-center text-white">
+            <div className="flex flex-col items-center space-y-4 text-center text-red-600">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
                 Made for publishers
               </h1>
-              <p className="mx-auto max-w-[700px] text-white/80">
+              <p className="mx-auto max-w-[1000px] text-lg text-gray-600">
                 Our specialty at AdByteHub is assisting publishers in realizing their maximum income potential via effective digital marketing techniques. We provide customized solutions to increase audience engagement, improve ad effectiveness, and generate more revenue, regardless of the size of your media outlet—from small blogs to major media conglomerates. Our team of professionals collaborates closely with publishers to create tailored plans that optimize user experience, increase visibility, and expedite monetization initiatives. Allow us to assist you in turning your platform into an effective digital resource.
               </p>
               <motion.div
@@ -77,7 +77,7 @@ export default function Component() {
               >
                 <Button 
                 onClick={() => onOpen()}
-                size="lg" className="bg-white text-emerald-600 hover:bg-white/90">
+                size="lg" className="text-white bg-gradient-to-r from-red-600 to-red-800 hover:bg-red-500">
                   Contact us
                 </Button>
               </motion.div>
@@ -91,7 +91,7 @@ export default function Component() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-extrabold text-center text-gray-900 mb-12"
+          className="text-4xl font-[600] text-center text-gray-600 mb-12"
         >
           Our Unparalleled Advantages
         </motion.h2>
@@ -108,10 +108,10 @@ export default function Component() {
                 onClick={() => setSelectedAdvantage(advantage)}
               >
                 <CardContent className="flex flex-col items-center p-6 text-center h-full">
-                  <div className="mb-4 p-3 rounded-full bg-gradient-to-r from-emerald-400 to-blue-500 text-white">
+                  <div className="mb-4 p-3 rounded-full bg-gradient-to-r from-red-600 to-red-800 text-white">
                     {advantage.icon}
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{advantage.title}</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-gray-600">{advantage.title}</h3>
                   <p className="text-gray-600">{advantage.description}</p>
                 </CardContent>
               </Card>
@@ -119,7 +119,6 @@ export default function Component() {
           ))}
         </div>
       </section>
-      <WhyChooseUs/>
  
       <AnimatePresence>
         {(selectedAdvantage || selectedAdFormat) && (
@@ -127,7 +126,7 @@ export default function Component() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
+            className="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center p-4 z-50"
             onClick={() => {
               setSelectedAdvantage(null)
               setSelectedAdFormat(null)
@@ -143,18 +142,18 @@ export default function Component() {
               {selectedAdvantage && (
                 <>
                   <div className="flex justify-center mb-6">
-                    <div className="p-4 rounded-full bg-gradient-to-r from-emerald-400 to-blue-500 text-white">
+                    <div className="p-4 rounded-full bg-gradient-to-r from-red-600 to-red-800 text-white">
                       {selectedAdvantage.icon}
                     </div>
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-center">{selectedAdvantage.title}</h3>
+                  <h3 className="text-2xl font-bold mb-4 text-center text-gray-600">{selectedAdvantage.title}</h3>
                   <p className="text-gray-600 mb-6 text-center">{selectedAdvantage.description}</p>
                 </>
               )}
               {selectedAdFormat && (
                 <>
                   <div className="flex justify-center mb-6">
-                    <div className="p-4 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 text-white">
+                    <div className="p-4 rounded-full bg-gradient-to-r from-red-600 to-red-800 text-white">
                       {selectedAdFormat.icon}
                     </div>
                   </div>
@@ -168,7 +167,7 @@ export default function Component() {
                     setSelectedAdvantage(null)
                     setSelectedAdFormat(null)
                   }}
-                  className="bg-gradient-to-r from-emerald-400 to-blue-500 text-white"
+                  className="bg-gradient-to-r from-red-600 to-red-800 text-white"
                 >
                   Close
                 </Button>
@@ -180,7 +179,7 @@ export default function Component() {
     </div>
     <PayOut/>
 
-        <section className="w-full py-12 md:py-24 lg:py-32">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
           <div className="container px-4 md:px-6 max-w-screen-2xl mx-auto">
             <div className="grid gap-12 md:grid-cols-2 items-center justify-between">
               <motion.div
@@ -198,19 +197,19 @@ export default function Component() {
                 className="space-y-4"
               >
                 <div className="space-y-2">
-                  <h3 className="text-2xl font-bold">Need help?</h3>
+                  <h3 className="text-2xl font-bold  text-gray-600">Need help?</h3>
                   <p className="text-gray-500">
                     Please, visit our help center to discover complete functionalities
                   </p>
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-2xl font-bold">Have some partnership offer?</h3>
+                  <h3 className="text-2xl font-bold text-gray-600">Have some partnership offer?</h3>
                   <p className="text-gray-500">
                     Fill out the form, tell us more about you and contact with you as soon as possible.
                   </p>
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-2xl font-bold">Don&apos;t miss news and tips</h3>
+                  <h3 className="text-2xl font-bold text-gray-600">Don&apos;t miss news and tips</h3>
                   <p className="text-gray-500">
                     Our blog will help you find how to provide, save, analyze and tips
                   </p>

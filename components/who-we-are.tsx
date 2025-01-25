@@ -41,7 +41,7 @@ export default function WhatWeAre() {
   ]
 
   return (
-    <section className="w-full bg-gray-100 pb-12 -mt-24 md:py-24 ">
+    <section className="w-full bg-gray-100 pb-12 md:py-24 ">
       <div className="container px-4 md:px-6 max-w-screen-2xl py-24 pb-6 mx-auto">
         <motion.div
           initial="initial"

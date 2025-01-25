@@ -18,7 +18,7 @@ export default function GetStartedSection() {
   const {onOpen} = useOpenContactUs()
 
   return (
-    <section className="bg-gradient-to-br from-emerald-600 to-purple-600 py-20">
+    <section className="bg-gray-100 py-20">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -26,8 +26,8 @@ export default function GetStartedSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-          <p className="text-xl text-emerald-100">Join thousands of successful advertisers and start growing your business today.</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-600 mb-4">Ready to Get Started?</h2>
+          <p className="text-xl text-gray-400">Join thousands of successful advertisers and start growing your business today.</p>
         </motion.div>
 
         <motion.div
@@ -69,7 +69,7 @@ export default function GetStartedSection() {
         >
           <Button 
             onClick={() => onOpen()}
-            size="lg" className="bg-white text-emerald-600 hover:bg-white/90">
+            size="lg" className="text-white bg-gradient-to-r from-red-600 to-red-800 hover:bg-red-800">
               Contact us
           </Button>
         </motion.div>

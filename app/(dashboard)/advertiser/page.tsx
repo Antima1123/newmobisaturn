@@ -9,6 +9,7 @@ import ContactForm from "@/components/contact-form"
 import { AnimatePresence, motion } from "framer-motion"
 import { useState } from "react"
 import GetStartedSection from "@/components/payment-carousel"
+import WhyChooseUs from "@/components/new-why-choose-us"
 
 const LearMore = [
   {
@@ -105,7 +106,7 @@ const uniqueCard = [
             text: "Boost your revenue with privacy-focused solutions, consent management, and more.",
           },
         ],
-        buttonText : "Grow Your Brand",
+        buttonText : "Monetize Your Game",
         imageUrl : "/adv-4.jpg",
         imageOnRight : false,
       },
@@ -126,7 +127,7 @@ const uniqueCard = [
             text: "Drive app growth with privacy-focused, future-ready solutions.",
           },
         ],
-        buttonText : "Grow Your Brand",
+        buttonText : "Grow Your Users",
         imageUrl : "/adv-5.jpg",
         imageOnRight : true,
       }
@@ -146,19 +147,26 @@ export default function AdvertiserPage() {
           <div className="w-screen h-screen inset-0 fixed top-0 right-0 bg-black bg-opacity-75 items-center justify-center flex z-[100]"><ContactForm/></div>
         )
       }
-        <section className="max-w-screen-2xl mx-auto w-full py-12 md:py-24 lg:py-32 xl:py-48">
+        <section className="max-w-screen-2xl mx-auto w-full py-12 md:py-24 lg:py-32 md:pb-0 xl:py-20">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-emerald-600">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-6xl none text-red-600">
                   Reach Your Perfect Audience
-                </h1>
-                <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                Tap into the power of targeted advertising to engage with billions of users worldwide and accelerate your brand’s growth                </p>
+                </h2>
+                <h2 className="text-gray-600 md:text-3xl font-[600]">
+                  Get The Most Of Internet
+                </h2>
+                <p className="mx-auto max-w-[1000px] text-gray-500 md:text-lg dark:text-gray-400">
+                
+                Still, avoiding internet marketing? Or haven&apos;t established your existence yet? Then figure it out, and go online right now! As many of your customers are online and they keep on searching for a business like yours, if they don&apos;t find you then they&apos;ll choose someone else. Tap into the power of targeted advertising to engage with billions of users worldwide and accelerate your brand&apos;s growth 
+                </p>
+                
               </div>
+
               <div className="space-x-4">
-                <Button size="lg" className="bg-gradient-to-br from-emerald-600 to-purple-600 p-6" onClick={()=> onOpen()}>Get Started</Button>
-                <Button variant="outline" size="lg" onClick={() => setLearMore(true)}>
+                <Button size="lg" className="bg-gradient-to-r from-red-500  to-red-800 rounded-3xl p-6" onClick={()=> onOpen()}>Get Started</Button>
+                <Button variant="outline" className="rounded-3xl" size="lg" onClick={() => setLearMore(true)}>
                   Learn More
                 </Button>
               </div>
@@ -179,16 +187,16 @@ export default function AdvertiserPage() {
               initial={{ scale: 0.9, y: 50 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 50 }}
-              className="bg-gradient-to-br from-emerald-600 to-purple-600 rounded-lg overflow-hidden shadow-xl max-w-7xl w-full"
+              className="bg-gradient-to-r from-red-50  to-red-100 rounded-lg overflow-hidden shadow-xl max-w-7xl w-full"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="p-8 flex flex-col gap-6">
                 {/* main content */}
-                <div className=" py-8 overflow-y-auto overflow-hidden max-h-[32rem]">
+                <div className=" py-8 overflow-y-auto overflow-hidden max-h-[28rem]">
                   {LearMore.map((learn,index)=> (
                     <div className="flex flex-col gap-3 mb-6" key={index}>
-                      <h2 className="text-[22px] font-[600] text-white">{learn.title}</h2>
-                      <p className="text-gray-100">{learn.descriptiom}</p>
+                      <h2 className="text-[22px] font-[600] text-gray-800">{learn.title}</h2>
+                      <p className="text-gray-600">{learn.descriptiom}</p>
                     </div>
                   ))}
                 </div>
@@ -198,35 +206,57 @@ export default function AdvertiserPage() {
           </motion.div>
         )}
       </AnimatePresence>
-        <section className="w-screen py-12 md:py-24 lg:py-32 bg-gradient-to-br from-emerald-600 to-purple-600 p-6">
+      
+        <section className="w-screen py-12 md:pt-0 md:py-24 lg:py-24 bg-gray-100 p-6">
           <div className="container px-4 md:px-6 max-w-screen-2xl mx-auto">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 text-white">Why Choose Us</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-4 text-gray-600">Why Choose Us As Your Digital Marketing Agency?
+            </h2>
+            <p className="mx-auto max-w-[1000px] text-gray-500 md:text-md dark:text-gray-400 text-center mb-16">
+              We are not just another digital marketing company in India. We are a company driven by the passion and purpose to help your business find the success it deserves. Our team of 20+ marketing experts at Sun Media Marketing have what it takes to build and execute result-driven and effective digital strategies for your brand.
+              We understand that no two businesses are alike. And, that is why we offer custom Digital Marketing Solutions tailored to your specific needs and business objectives, whether it is boosting your brand awareness, enhancing your online visibility, building an email list, fetching more leads, or increasing sales and revenue. No matter what your goals are, our focus remains on delivering real results for our clients.
+              We specialize in providing cost efficient, reliable, high quality services that can benefit you and your clients by creating a solid digital presence. Get the manpower and support your business needs with our premium white label services.
+            </p>
             <div className="grid gap-6 lg:grid-cols-3 ">
-              <Card className="flex flex-col items-center text-center p-6">
-                <Globe className="h-12 w-12 mb-4 text-primary " color="rgb(5 150 105)" />
-                <h3 className="text-xl font-bold mb-2 text-emerald-600">Global Reach</h3>
+              <Card className="flex flex-col items-center text-center p-6 shadow-lg">
+                <Globe className="h-12 w-12 mb-4 text-primary " color="red"  />
+                <h3 className="text-xl font-bold mb-2 text-red-600 ">Global Reach</h3>
                 <p className="text-gray-500 dark:text-gray-400">Access a diverse audience of over two billion users across the globe.</p>
               </Card>
-              <Card className="flex flex-col items-center text-center p-6">
-                <Target color="rgb(5 150 105)" className="h-12 w-12 mb-4 text-primary"  />
-                <h3 className="text-xl font-bold mb-2 text-emerald-600">Precision Targeting</h3>
+              <Card className="flex flex-col items-center text-center p-6 shadow-lg">
+                <Target color="red" className="h-12 w-12 mb-4 text-primary"  />
+                <h3 className="text-xl font-bold mb-2 text-red-600">Precision Targeting</h3>
                 <p className="text-gray-500 dark:text-gray-400">Reach the right audience with our advanced targeting capabilities.</p>
               </Card>
-              <Card className="flex flex-col items-center text-center p-6">
-                <TrendingUp className="h-12 w-12 mb-4 text-primary" color="rgb(5 150 105)" />
-                <h3 className="text-xl font-bold mb-2 text-emerald-600">Performance Tracking</h3>
+              <Card className="flex flex-col items-center text-center p-6 shadow-lg">
+                <TrendingUp className="h-12 w-12 mb-4 text-primary" color="red" />
+                <h3 className="text-xl font-bold mb-2 text-red-600">Performance Tracking</h3>
                 <p className="text-gray-500 dark:text-gray-400">Monitor and optimize your campaigns with real-time analytics.</p>
               </Card>
             </div>
           </div>
         </section>
+        <WhyChooseUs/>
 
-        <section className="max-w-7xl mx-auto">
+        <section className="w-full py-20 bg-gray-100">
+          <div className="max-w-screen-2xl mx-auto container px-4 md:px-6 flex flex-col w-full items-center gap-8">
+            {uniqueCard.map((card,index)=>(
+                <Cardunique
+                key={index}
+                  title={card.title}
+                  points={card.points}
+                  buttonText={card.buttonText}
+                  imageUrl={card.imageUrl}
+                  imageOnRight={card.imageOnRight}
+                />
+              ))}
+          </div>
+        </section>
+        <section className="max-w-7xl mx-auto pb-16">
         <motion.h2 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-extrabold text-center text-gray-900 mb-12 py-20"
+          className="text-4xl md:text-5xl font-[600] text-center text-gray-600 mb-12 py-20"
         >
           Cutting-Edge Ad Formats
         </motion.h2>
@@ -243,23 +273,25 @@ export default function AdvertiserPage() {
                 onClick={() => setSelectedAdFormat(format)}
               >
                 <CardContent className="flex flex-col items-center p-6 text-center h-full">
-                  <div className="mb-4 p-3 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 text-white">
+                  <div className="mb-4 p-3 rounded-full bg-gradient-to-r from-red-600 to-red-800 text-white">
                     {format.icon}
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{format.title}</h3>
-                  <p className="text-gray-600">{format.description}</p>
+                  <h3 className="text-xl font-semibold mb-2 text-gray-600">{format.title}</h3>
+                  <p className="text-gray-400">{format.description}</p>
                 </CardContent>
               </Card>
             </motion.div>
+            
           ))}
         </div>
+        
         <AnimatePresence>
         {(selectedAdFormat) && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
+            className="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center p-4 z-50"
             onClick={() => {
               setSelectedAdFormat(null)
             }}
@@ -274,7 +306,7 @@ export default function AdvertiserPage() {
               {selectedAdFormat && (
                 <>
                   <div className="flex justify-center mb-6">
-                    <div className="p-4 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 text-white">
+                    <div className="p-4 rounded-full bg-gradient-to-r from-red-600 to-red-800 text-white">
                       {selectedAdFormat.icon}
                     </div>
                   </div>
@@ -287,7 +319,7 @@ export default function AdvertiserPage() {
                   onClick={() => {
                     setSelectedAdFormat(null)
                   }}
-                  className="bg-gradient-to-r from-emerald-400 to-blue-500 text-white"
+                  className="bg-gradient-to-r from-red-600 to-red-800 text-white"
                 >
                   Close
                 </Button>
@@ -297,21 +329,6 @@ export default function AdvertiserPage() {
         )}
       </AnimatePresence>
       </section>
-
-        <section className="w-full py-20">
-          <div className="max-w-screen-2xl mx-auto container px-4 md:px-6 flex flex-col w-full items-center gap-8">
-            {uniqueCard.map((card,index)=>(
-                <Cardunique
-                key={index}
-                  title={card.title}
-                  points={card.points}
-                  buttonText={card.buttonText}
-                  imageUrl={card.imageUrl}
-                  imageOnRight={card.imageOnRight}
-                />
-              ))}
-          </div>
-        </section>
         <GetStartedSection/>
       </main>
     </div>

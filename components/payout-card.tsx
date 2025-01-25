@@ -14,8 +14,8 @@ const ScheduleCard: React.FC<ScheduleCardProps> = ({ title, description, isActiv
     <motion.div
       className={`gap-2 py-4 border rounded-lg w-full h-full px-4 flex flex-col ${
         isActive
-          ? "bg-white text-black"
-          : "bg-gray-400 bg-opacity-30 backdrop-blur-md border text-white"
+        ? "bg-gray-500 text-white bg-opacity-30 backdrop-blur-md border"
+        : "bg-red-200 text-gray-600"
       }`}
     >
       <h2 className="font-semibold text-xl capitalize">{title}</h2>

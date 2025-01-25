@@ -39,12 +39,12 @@ const features = [
 
 export const IndustriesWeServe = () => {
   return (
-    <div>
+    <div className='py-16 md:pb-0 items-center justify-center w-full flex flex-col max-w-screen-2xl mx-auto'>
         <motion.h2
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-4xl font-bold text-navy-900 text-center mb-8"
+            className="text-4xl w-full md:text-6xl font-bold text-gray-600 text-center md:mb-8 "
           >
             <h2>Industries Served</h2>
           </motion.h2>
