@@ -31,7 +31,6 @@ const Header = () =>{
                 {/* Mobile */}
                 <Link href="/" className="text-2xl font-[600] text-emerald-600 flex">
                 <Image src="/logo2.png" height={240} width={240} alt="logo" className='w-[4rem]'/>
-                    {/* <p className="text-black">adbyte</p><p>hub</p> */}
                 </Link>
 
                 {
@@ -90,7 +89,7 @@ const Header = () =>{
                                             onClick={() => onOpen()}
                                             className="bg-gradient-to-r from-red-500  to-red-800 rounded-3xl p-6 text-[16px] font-[400] z-[110] "
                                     >
-                                            Get In Touch
+                                    Get In Touch
                                 </Button>
                             </motion.div>
                         </nav>
@@ -99,10 +98,9 @@ const Header = () =>{
             </div>
              {/* large screen  */}
             <div className="bg-opacity-35 backdrop-blur-lg rounded-full bg-white lg:flex hidden py-0 justify-between items-center px-24 border border-b shadow-md z-[90] ">
-                <div className="text-2xl font-[600] text-emeredald-600 flex">
+                <Link href="/" className="text-2xl font-[600] text-emeredald-600 flex">
                     <Image src="/logo2.png" height={240} width={240} alt="logo" className='w-[5rem]'/>
-                    {/* <p className="text-black">adbyte</p><p>hub</p> */}
-                </div>
+                </Link>
 
                 <div className="gap-x-16 flex">
                     <Link href="/" className='items-center hover:text-red-600 transition-colors' >
