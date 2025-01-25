@@ -59,7 +59,7 @@ export default function WhyChooseUs() {
 
   return (
     <section className=" w-screen-2xl mx-auto border-t bg-gray-100 border-white">
-      <div className="grid lg:grid-cols-2 gap-12 items-center py-16 px-4  md:px-6 lg:px-8 ">
+      <div className="grid lg:grid-cols-2 gap-12 items-center py-16 px-4  md:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="space-y-8">
           <div className="space-y-4">
             <motion.div

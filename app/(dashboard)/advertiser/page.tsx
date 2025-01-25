@@ -228,7 +228,7 @@ export default function AdvertiserPage() {
           <div className="container px-4 md:px-6 max-w-screen-2xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-4 text-gray-600">Why Choose Us As Your Digital Marketing Agency?
             </h2>
-            <p className="mx-auto max-w-[1000px] text-gray-500 md:text-md dark:text-gray-400 text-center mb-16">
+            <p className="mx-auto max-w-[1000px] text-gray-500 md:text-md dark:text-gray-400 mb-16 text-justify">
               We are not just another digital marketing company in India. We are a company driven by the passion and purpose to help your business find the success it deserves. Our team of 20+ marketing experts at AdBytehub.com have what it takes to build and execute result-driven and effective digital strategies for your brand.
               We understand that no two businesses are alike. And, that is why we offer custom Digital Marketing Solutions tailored to your specific needs and business objectives, whether it is boosting your brand awareness, enhancing your online visibility, building an email list, fetching more leads, or increasing sales and revenue. No matter what your goals are, our focus remains on delivering real results for our clients.
               We specialize in providing cost efficient, reliable, high quality services that can benefit you and your clients by creating a solid digital presence. Get the manpower and support your business needs with our premium white label services.
