@@ -92,6 +92,27 @@ export default function RootLayout({
             `,
           }}
         />
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+              atOptions = {
+                'key' : '7dd0345cb5296afee220dde460b7e33b',
+                'format' : 'iframe',
+                'height' : 300,
+                'width' : 160,
+                'params' : {}
+              };
+            `,
+          }}
+        />
+        {/* External Script */}
+        <script
+          type="text/javascript"
+          src="//perkyexcitedlyscenario.com/7dd0345cb5296afee220dde460b7e33b/invoke.js"
+          async
+        ></script>
+        
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
