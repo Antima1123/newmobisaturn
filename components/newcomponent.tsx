@@ -53,7 +53,7 @@ export const MarketingSolutions = () => {
                                 onClick={() => toggleSection('Data')}
                                 className="w-full flex justify-between items-center"
                             >
-                                <h3 className="font-bold text-2xl text-gray-600">Data-Driven Marketing</h3>
+                                <h3 className="font-bold md:text-2xl text-lg text-gray-600 ">Data-Driven Marketing</h3>
                                 {expandedSection === 'Data' ? <ChevronUp /> : <ChevronDown />}
                             </button>
                             {expandedSection === 'Data' && (
@@ -74,7 +74,7 @@ export const MarketingSolutions = () => {
                                 onClick={() => toggleSection('User')}
                                 className="w-full flex justify-between items-center"
                             >
-                                <h3 className="font-bold text-2xl text-gray-600">User Engagement</h3>
+                                <h3 className="font-bold md:text-2xl text-lg text-gray-600">User Engagement</h3>
                                 {expandedSection === 'User' ? <ChevronUp /> : <ChevronDown />}
                             </button>
                             {expandedSection === 'User' && (
@@ -95,7 +95,7 @@ export const MarketingSolutions = () => {
                                 onClick={() => toggleSection('customized')}
                                 className="w-full flex justify-between items-center"
                             >
-                                <h3 className="font-bold text-2xl text-gray-600">Customized Marketing Plans</h3>
+                                <h3 className="font-bold md:text-2xl text-lg text-gray-600">Customized Marketing Plans</h3>
                                 {expandedSection === 'customized' ? <ChevronUp /> : <ChevronDown />}
                             </button>
                             {expandedSection === 'customized' && (
@@ -117,7 +117,7 @@ export const MarketingSolutions = () => {
                                 onClick={() => toggleSection('expert')}
                                 className="w-full flex justify-between items-center"
                             >
-                                <h3 className="font-bold text-2xl text-gray-600">Expert Support and Guidance</h3>
+                                <h3 className="font-bold md:text-2xl text-lg text-gray-600">Expert Support and Guidance</h3>
                                 {expandedSection === 'expert' ? <ChevronUp /> : <ChevronDown />}
                             </button>
                             {expandedSection === 'expert' && (

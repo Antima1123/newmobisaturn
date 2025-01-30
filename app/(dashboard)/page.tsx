@@ -10,11 +10,47 @@ import SuggestedBlogs from "@/components/blogs/suggestedBlogs";
 import HeroPage2 from "@/components/hero-section-2";
 import MetricsSection from "@/components/metrics-section";
 import { IndustriesWeServe } from "@/components/aboutus/feature-card";
+import { useEffect, useRef } from "react";
 
 export default function Home() {
   const {isOpen} = useOpenContactUs()
+  const bannerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Check if the banner reference exists and if it already has a child
+    if (!bannerRef.current || bannerRef.current.firstChild) return;
+
+    // Define the Adsterra banner options
+    const atOptions = {
+      key: "7dd0345cb5296afee220dde460b7e33b",
+      format: "iframe",
+      height: 300,
+      width: 160,
+      params: {},
+    };
+
+    // Create the script elements
+    const configScript = document.createElement("script");
+    const invokeScript = document.createElement("script");
+
+    // Set the configuration script content
+    configScript.innerHTML = `atOptions = ${JSON.stringify(atOptions)};`;
+
+    // Set the source for the invoke script
+    invokeScript.src = "//perkyexcitedlyscenario.com/7dd0345cb5296afee220dde460b7e33b/invoke.js";
+    invokeScript.type = "text/javascript";
+    invokeScript.async = true;
+
+    // Append scripts to the banner reference
+    bannerRef.current.appendChild(configScript);
+    bannerRef.current.appendChild(invokeScript);
+  }, []);
   return (
     <motion.div className=" relative">
+      <div
+      ref={bannerRef}
+      className="w-[160px] h-[300px] mx-auto my-5 border border-gray-300 flex justify-center items-center"
+       />
       {/* <HeroSection/> */}
       <HeroPage2/>
       <MarketingSolutions/>
