@@ -25,7 +25,7 @@ export default function HeroPage2() {
   }, [])
 
   return (
-    <div className="flex pb-0 flex-col md:flex-row min-h-screen max-w-screen-2xl mx-auto items-center justify-between px-4 md:py-0 mt-0 md:-mt-24 py-12 md:px-6 lg:px-8">
+    <div className="flex flex-col md:flex-row min-h-screen max-w-screen-2xl mx-auto items-center justify-between px-4 md:py-0 mt-0 md:-mt-24 py-12 md:px-6 lg:px-8">
       <div className="max-w-3xl">
         <h1 className=" leading-24 mb-6 text-4xl font-bold tracking-tight text-gray-600 md:text-6xl">
         Empower Your Online Business With{" "}
@@ -43,7 +43,7 @@ export default function HeroPage2() {
         </p>
         <Button 
             onClick={() => onOpen()}
-            className="bg-gradient-to-r from-red-500  to-red-800 rounded-3xl p-6 text-[16px] font-[400] z-[110] hover:scale-110 transition-all duration-300 ease-in-out "
+            className=" hidden md:flex bg-gradient-to-r from-red-500  to-red-800 rounded-3xl p-6 text-[16px] font-[400] z-[110] hover:scale-110 transition-all duration-300 ease-in-out "
         >
             Contact Us
         </Button>
