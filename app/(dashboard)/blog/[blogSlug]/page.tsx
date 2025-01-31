@@ -7,6 +7,7 @@ import { useOpenContactUs } from "@/hook/contact-open"
 import { useGetBlogById } from "@/features/api/use-get-blogs-byId"
 import { useParams } from "next/navigation"
 import SuggestedBlogs from "@/components/blogs/suggestedBlogs"
+import AdsBanner from "@/components/adstera/banner/AdsBanner"
 export default function BlogPost() {
   const params = useParams();
   const blogQuery = useGetBlogById(params)
@@ -66,11 +67,28 @@ export default function BlogPost() {
           />
         </div>
       </header>
+      <AdsBanner
+        formate="iframe"
+        width="728"
+        height="90"
+        key_id="df451ec6bc6b5969843143bf81a0eca3"
+        src="//perkyexcitedlyscenario.com/df451ec6bc6b5969843143bf81a0eca3/invoke.js"
+        type="text/javascript"
+      />
 
       <div 
         className="prose prose-gray max-w-none dark:prose-invert"
         dangerouslySetInnerHTML={{ __html: content! }}
       />
+
+      <AdsBanner
+        formate="iframe"
+        width="728"
+        height="90"
+        key_id="df451ec6bc6b5969843143bf81a0eca3"
+        src="//perkyexcitedlyscenario.com/df451ec6bc6b5969843143bf81a0eca3/invoke.js"
+        type="text/javascript"
+      />      
 
       <div className="mt-12 pt-6 border-t">
         <div className="flex items-center gap-4">

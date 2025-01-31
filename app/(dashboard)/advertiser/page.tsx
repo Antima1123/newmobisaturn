@@ -10,6 +10,7 @@ import { AnimatePresence, motion } from "framer-motion"
 import { useState } from "react"
 import GetStartedSection from "@/components/payment-carousel"
 import WhyChooseUs from "@/components/new-why-choose-us"
+import AdsBanner from "@/components/adstera/banner/AdsBanner"
 
 const LearMore = [
   {
@@ -173,6 +174,14 @@ export default function AdvertiserPage() {
             </div>
           </div>
         </section>
+      <AdsBanner
+        formate="iframe"
+        width="728"
+        height="90"
+        key_id="df451ec6bc6b5969843143bf81a0eca3"
+        src="//perkyexcitedlyscenario.com/df451ec6bc6b5969843143bf81a0eca3/invoke.js"
+        type="text/javascript"
+      />
 
         <AnimatePresence>
         {learnMore && (
