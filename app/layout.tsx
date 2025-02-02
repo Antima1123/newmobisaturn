@@ -30,6 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
       <title>Adbytehub | Digital Marketing Experts</title>
+        <meta name="agd-partner-manual-verification" />
         <meta name="fo-verify" content="5cbb66c7-e5bf-456b-9359-3803038beb2b" />
         <meta name="verify-admitad" content="4b176ae02c" />
         <meta name="clckd" content="2e8885973edd3528c89dedfd47b45021" />
