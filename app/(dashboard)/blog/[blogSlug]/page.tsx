@@ -67,14 +67,14 @@ export default function BlogPost() {
           />
         </div>
       </header>
-      <AdsBanner
+      {/* <AdsBanner
         formate="iframe"
         width="728"
         height="90"
         key_id="df451ec6bc6b5969843143bf81a0eca3"
         src="//perkyexcitedlyscenario.com/df451ec6bc6b5969843143bf81a0eca3/invoke.js"
         type="text/javascript"
-      />
+      /> */}
 
       <div 
         className="prose prose-gray max-w-none dark:prose-invert"
