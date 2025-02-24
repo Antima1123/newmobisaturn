@@ -5,6 +5,7 @@ import { BlogCard } from './BlogCard'
 import { useRouter } from 'next/navigation'
 import { Input } from "@/components/ui/input"
 import { Search } from 'lucide-react'
+import AdsBanner from '@/components/adstera/banner/AdsBanner'
 
 const ITEMS_PER_PAGE = 12
 
@@ -45,6 +46,14 @@ export default function BlogList({ initialBlogs }: { initialBlogs: any[] }) {
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
                 </div>
             </div>
+            <AdsBanner
+                        formate="iframe"
+                        width="728"
+                        height="90"
+                        key_id="df451ec6bc6b5969843143bf81a0eca3"
+                        src="//perkyexcitedlyscenario.com/df451ec6bc6b5969843143bf81a0eca3/invoke.js"
+                        type="text/javascript"
+                    />
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {currentPosts.map((post) => (
