@@ -40,6 +40,7 @@ export default async function BlogPage() {
                 {/* </Suspense> */}
                 {/* <Suspense fallback={null}> */}
                     <SuggestedBlogsWrapper />
+                    <a target="_blank" rel="nofollow" href="https://rzekl.com/g/4zoo8srvfz4b176ae02c312b8f391a/?i=4&subid=adbytehubweb"><img className='max-w-5xl mx-auto mt-24' src="https://ad.admitad.com/b/4zoo8srvfz4b176ae02c312b8f391a/" alt="ChicMe WW"/></a>
                 {/* </Suspense> */}
             </main>
         </div>

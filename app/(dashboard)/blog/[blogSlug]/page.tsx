@@ -30,6 +30,7 @@ export default function BlogPost() {
 
   return (
     <article className="max-w-3xl mx-auto px-4 py-8">
+      <a target="_blank" rel="nofollow" href="https://dhwnh.com/g/8j6x5hd3wi4b176ae02c42f9f2178b/?i=4&subid=adbytehbweb&erid=2VSb5z8Ntit"><img className="w-full" src="https://aflink.ru/b/8j6x5hd3wi4b176ae02c42f9f2178b/" alt="Puzzle Movies"/></a>
       <header className="space-y-8 mb-12">
         <div className="space-y-2">
           <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
@@ -114,6 +115,7 @@ export default function BlogPost() {
         </div>
       </div>
       <SuggestedBlogs />
+      <a target="_blank" rel="nofollow" href="https://xnmik.com/g/pahj4nwr3g4b176ae02c85d7708882/?i=4&subid=adbyteweb"><img className='max-w-5xl mx-auto mt-24' src="https://ad.admitad.com/b/pahj4nwr3g4b176ae02c85d7708882/" alt="Tradeling Promo codes AE"/></a>
     </article>
   )
 }
