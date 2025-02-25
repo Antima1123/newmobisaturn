@@ -36,7 +36,7 @@ export default async function BlogPage() {
                         src="//perkyexcitedlyscenario.com/df451ec6bc6b5969843143bf81a0eca3/invoke.js"
                         type="text/javascript"
                     /> */}
-                    <a target="_blank" rel="nofollow" href="https://dhwnh.com/g/t7abkvu4yb4b176ae02c42f9f2178b/?i=4&subid=Adweb&erid=2VSb5z5QvAC"><img className='w-80 h-80 mt-24' src="https://aflink.ru/b/t7abkvu4yb4b176ae02c42f9f2178b/" alt="Puzzle Movies"/></a>
+                    <a target="_blank"  rel="nofollow" href="http://tjzuh.com/g/2cfs9quawo4b176ae02c367a95e887/?i=4&subid=adbyteweb"><img className='w-1200 h-80 mt-24' src="http://ad.admitad.com/b/2cfs9quawo4b176ae02c367a95e887/" alt="Puzzle Movies"/></a>
                 {/* </Suspense> */}
                 {/* <Suspense fallback={null}> */}
                     <SuggestedBlogsWrapper />
