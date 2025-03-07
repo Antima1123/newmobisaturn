@@ -86,7 +86,7 @@ export default function BlogPost() {
         dangerouslySetInnerHTML={{ __html: content! }}
       />
 
-<a target="_blank" rel="nofollow" href="http://tjzuh.com/g/2cfs9quawo4b176ae02c367a95e887/?i=4&subid=adbyteweb"><img className='w-1200 h-300 mt-24 rounded-md' src="http://ad.admitad.com/b/2cfs9quawo4b176ae02c367a95e887/" alt="Pocket 52 APK [CPA] IN"/></a>
+          <a target="_blank" rel="nofollow" href="http://tjzuh.com/g/2cfs9quawo4b176ae02c367a95e887/?i=4&subid=adbyteweb"><img className='w-1200 h-300 mt-24 rounded-md' src="http://ad.admitad.com/b/2cfs9quawo4b176ae02c367a95e887/" alt="Pocket 52 APK [CPA] IN"/></a>
       
 
       <div className="mt-12 pt-6 border-t">
