@@ -11,6 +11,7 @@ import HeroPage2 from "@/components/hero-section-2";
 import MetricsSection from "@/components/metrics-section";
 import { IndustriesWeServe } from "@/components/aboutus/feature-card";
 import { useEffect, useRef } from "react";
+import AdsBanner from "@/components/adstera/banner/AdsBanner";
 
 export default function Home() {
   const {isOpen} = useOpenContactUs()
@@ -20,6 +21,14 @@ export default function Home() {
       
       {/* <HeroSection/> */}
       <HeroPage2/>
+      <AdsBanner
+          formate="iframe"
+          width="728"
+          height="90"
+          key_id="32c7072e97a599a8adca0816881264df"
+          src="//perkyexcitedlyscenario.com/32c7072e97a599a8adca0816881264df/invoke.js"
+          type="text/javascript"
+      />
       <MarketingSolutions/>
       <WhyMobiSaturn/>
       <MetricsSection/>

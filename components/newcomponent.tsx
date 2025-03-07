@@ -20,7 +20,7 @@ export const MarketingSolutions = () => {
     }
 
     return (
-        <section className="w-full pt-0 md:-mt-24 md:py-24 md:pb-8 bg-gray-100">
+        <section className="w-full pt-0 md:-mt-18 md:py-24 md:pb-8 bg-gray-100">
             <div className="max-w-7xl mx-auto flex flex-col gap-8 py-8 px-4">
                 <motion.h2 
                     className="text-center text-4xl md:text-6xl font-bold text-gray-600"
