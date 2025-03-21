@@ -36,7 +36,10 @@ export default async function BlogPage() {
                         src="//perkyexcitedlyscenario.com/df451ec6bc6b5969843143bf81a0eca3/invoke.js"
                         type="text/javascript"
                     /> */}
-                    <a target="_blank"  rel="nofollow" href="http://tjzuh.com/g/2cfs9quawo4b176ae02c367a95e887/?i=4&subid=adbyteweb"><img className='w-1200 h-80 mt-24' src="http://ad.admitad.com/b/2cfs9quawo4b176ae02c367a95e887/" alt="Puzzle Movies"/></a>
+                   <div className='flex gap-4'>
+                        <a target="_blank"  rel="nofollow" href="http://tjzuh.com/g/2cfs9quawo4b176ae02c367a95e887/?i=4&subid=adbyteweb"><img className='w-1200 h-80 mt-24' src="http://ad.admitad.com/b/2cfs9quawo4b176ae02c367a95e887/" alt="Puzzle Movies"/></a>
+                        <a target="_blank" rel="nofollow" href="https://naiawork.com/g/y8c1lkxl9o4b176ae02c1715a9e553/?i=4&subid=AdbyteWeb"><img className='w-1200 h-80 mt-24' src="https://ad.admitad.com/b/y8c1lkxl9o4b176ae02c1715a9e553/" alt="War Thunder [CPP] Many GEOs"/></a>
+                   </div>
                 {/* </Suspense> */}
                 {/* <Suspense fallback={null}> */}
                     <SuggestedBlogsWrapper />
